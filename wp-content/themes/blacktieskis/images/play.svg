@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+<title>play</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1">
+	<g id="Homepage-Large---2000px" transform="translate(-950.000000, -504.000000)">
+		<g id="HEADER" transform="translate(-821.000000, -282.000000)">
+			<g id="play-btn" transform="translate(1773.000000, 766.000000)">
+				<g id="play" transform="translate(0.000000, 22.000000)">
+					<g>
+						<polygon class="st0" points="5.6,12.2 5.6,3.8 12.2,8.1 						"/>
+					</g>
+					<g id="Path">
+						<path class="st0" d="M8,18C2.5,18-2,13.5-2,8C-2,2.5,2.5-2,8-2c5.5,0,10,4.5,10,10C18,13.5,13.5,18,8,18z M8,0
+							C3.6,0,0,3.6,0,8s3.6,8,8,8s8-3.6,8-8S12.4,0,8,0z"/>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,20 @@
+<svg width="800" height="400" viewBox="0 0 24 12" xmlns="http://www.w3.org/2000/svg">
+  <!-- Toggle track -->
+  <rect x="0" y="0" width="24" height="12" rx="6" ry="6" fill="#ffffff"/>
+  
+  <!-- Toggle knob (left side, dark) -->
+  <circle cx="6" cy="6" r="5" fill="#111111"/>
+  
+  <!-- Sun icon (white, centered on knob) -->
+  <g transform="translate(6,6)" fill="white">
+    <circle cx="0" cy="0" r="1.5"/>
+    <line x1="0" y1="-2.8" x2="0" y2="-2.1" stroke="white" stroke-width="0.55" stroke-linecap="round"/>
+    <line x1="0" y1="2.1" x2="0" y2="2.8" stroke="white" stroke-width="0.55" stroke-linecap="round"/>
+    <line x1="-2.8" y1="0" x2="-2.1" y2="0" stroke="white" stroke-width="0.55" stroke-linecap="round"/>
+    <line x1="2.1" y1="0" x2="2.8" y2="0" stroke="white" stroke-width="0.55" stroke-linecap="round"/>
+    <line x1="-1.98" y1="-1.98" x2="-1.48" y2="-1.48" stroke="white" stroke-width="0.55" stroke-linecap="round"/>
+    <line x1="1.48" y1="1.48" x2="1.98" y2="1.98" stroke="white" stroke-width="0.55" stroke-linecap="round"/>
+    <line x1="1.48" y1="-1.48" x2="1.98" y2="-1.98" stroke="white" stroke-width="0.55" stroke-linecap="round"/>
+    <line x1="-1.98" y1="1.98" x2="-1.48" y2="1.48" stroke="white" stroke-width="0.55" stroke-linecap="round"/>
+  </g>
+</svg>
