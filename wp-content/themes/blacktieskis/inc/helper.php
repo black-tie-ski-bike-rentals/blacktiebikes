@@ -37,10 +37,11 @@ function blacktieskis_setup() {
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
-	// This theme uses wp_nav_menu() in two locations.	
 	register_nav_menus( array(
-		'main_menu' => __( 'Main Menu', 'blacktieskis' ),
-		'footer_menu'  => __( 'Footer Menu', 'blacktieskis' )
+		'main_menu'    => __( 'Main Menu', 'blacktieskis' ),
+		'footer_menu'  => __( 'Footer Menu', 'blacktieskis' ),
+		'global-nav'   => __( 'Global Nav', 'blacktieskis' ),
+		'location-nav' => __( 'Location Nav', 'blacktieskis' ),
 	) );
 }
 endif;

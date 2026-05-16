@@ -5,9 +5,10 @@
  */
 function blacktieskis_main_menu()
 {
-	
+	$theme_location = is_page_template( 'page-location.php' ) ? 'location-nav' : 'global-nav';
+
 	$main_menus = array();
-	$menu_items =  blacktieskis_get_menu_item('main_menu');
+	$menu_items = blacktieskis_get_menu_item( $theme_location );
 	$current_uri = explode('/', $_SERVER['REQUEST_URI']);
 	$home_url = get_home_url();
 	$active_pages = array();	
@@ -52,11 +53,11 @@ function blacktieskis_main_menu()
         'item_spacing'         => 'preserve',
          'depth'                => 0,
         'walker'               => '',
-        'theme_location'       => '',
+        'theme_location'       => $theme_location,
     );
-		
+
 		//blacktieskis_main_menu();
-			
+
 echo wp_nav_menu( $args );
 		?> 
 		<!--
