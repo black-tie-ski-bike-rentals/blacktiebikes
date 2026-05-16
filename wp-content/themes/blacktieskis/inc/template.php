@@ -42,7 +42,7 @@ function blacktieskis_main_menu()
         'container_id'         => '',
         'container_aria_label' => '',
         'menu_class'           => 'ml-auto main-menu-ul navbar-nav',
-        'menu_id'              => '',
+        'menu_id'              => 'menu-main-menu',
         'echo'                 => true,
         'fallback_cb'          => 'wp_page_menu',
         'before'               => '',
