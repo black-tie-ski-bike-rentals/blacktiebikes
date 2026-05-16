@@ -36,9 +36,19 @@ See `wp-content/themes/blacktieskis/README.md` for full theme documentation incl
 
 The `wp-content/themes/blacktieskis/acf-json/` folder exists in the repo but ACF local JSON is not yet active — field groups are currently stored in the database only. Once ACF local JSON is configured in `functions.php`, field group changes will be saved automatically to that folder. When it is enabled, commit the folder whenever field groups are added or modified so other environments stay in sync.
 
-## A Note on Naming
+## Environment Reference
 
-The theme folder and all code-level identifiers (`blacktieskis_` function prefix, `blacktieskis` text domain, etc.) are inherited from the original build for the ski rental site at blacktieskis.com. This project is for the bike rental site at blacktiebikes.com. Both are the same client — two separate domains, one shared codebase. The naming discrepancy is intentional and expected.
+This project spans multiple environments with inconsistent naming inherited from the original build. The table below is the source of truth.
+
+| Environment | Name | URL |
+|-------------|------|-----|
+| Local | `blacktiebikes-sent` | `https://blacktiebikes-sent.local` |
+| Staging | `blacktiebikstg` | `https://blacktiebikstg.wpenginepowered.com` |
+| Production | `blacktiesummer` | `https://www.blacktiebikes.com` |
+
+**Theme:** The active theme is named `blacktieskis` — inherited from the original ski rental site at `blacktieskis.com`. This is intentional. Do not rename it. All function prefixes, text domains, and internal references use `blacktieskis_` throughout the codebase.
+
+**WP Engine:** Environment names are permanent and cannot be changed. The staging environment name (`blacktiebikstg`) contains a typo and predates this project.
 
 ## Known Issues
 
