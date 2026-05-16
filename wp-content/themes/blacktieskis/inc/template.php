@@ -58,6 +58,16 @@ function blacktieskis_main_menu()
 
 		//blacktieskis_main_menu();
 
+// When a per-location menu exists (built by ww-5-build-location-menus.php),
+// use it by slug. Falls back to the 'location-nav' theme location otherwise.
+if ( is_page_template( 'page-location.php' ) ) {
+	$per_location_slug = 'btb-' . sanitize_title( get_the_title() ) . '-nav';
+	if ( wp_get_nav_menu_object( $per_location_slug ) ) {
+		$args['menu']           = $per_location_slug;
+		$args['theme_location'] = '';
+	}
+}
+
 echo wp_nav_menu( $args );
 		?> 
 		<!--
