@@ -1046,10 +1046,17 @@ font-size: 30px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Logo: 100px wide at all scroll states */
+/* Logo: 100px wide, fixed padding at all scroll states — prevents header height shift */
 html body #header #header-logo,
 html body #header.pin-header #header-logo {
   max-width: 100px !important;
+  padding: 13px 0 !important;
+}
+@media (min-width: 992px) {
+  html body #header #header-logo,
+  html body #header.pin-header #header-logo {
+    padding: 3px 0 !important;
+  }
 }
 html body #header #header-logo img,
 html body #header.pin-header #header-logo img {
