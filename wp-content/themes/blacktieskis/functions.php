@@ -64,3 +64,24 @@ function add_attribute_to_current_menu_item( $atts, $item, $args ) {
     return $atts;
 }
 add_filter( 'nav_menu_link_attributes', 'add_attribute_to_current_menu_item', 10, 3 );
+
+// WW-5: About Us — on the contact page, rewrite /#about to the homepage root
+// so the smooth-scroll JS in app.js (which intercepts any href containing #)
+// can't swallow the click. The browser navigates cleanly to the homepage.
+add_filter( 'nav_menu_link_attributes', 'btb_about_us_contact_page_redirect', 10, 3 );
+function btb_about_us_contact_page_redirect( $atts, $item, $args ) {
+	if ( is_page( 'contact' ) && isset( $atts['href'] ) && $atts['href'] === '/#about' ) {
+		$atts['href'] = home_url( '/' );
+	}
+	return $atts;
+}
+
+// WW-5: Jobs — add the data-id attribute needed by the popup-is-open-v2 trigger.
+// The CSS class (popup-is-open-v2) is set on the menu item in WP Admin.
+add_filter( 'nav_menu_link_attributes', 'btb_jobs_popup_attrs', 10, 3 );
+function btb_jobs_popup_attrs( $atts, $item, $args ) {
+	if ( isset( $item->title ) && $item->title === 'Jobs' ) {
+		$atts['data-id'] = '#careers';
+	}
+	return $atts;
+}
