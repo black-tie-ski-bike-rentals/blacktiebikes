@@ -49,12 +49,14 @@ blacktieskis/
 │   ├── enqueue.php             # Registers CSS (Google Fonts, app.css, custom.css, print.css)
 │   ├── custom-post-type.php    # "Resort" CPT + "State/Location" taxonomy
 │   ├── ajax-action.php         # AJAX: star rating handler
-│   ├── api-helpers.php         # External API utilities
-│   ├── custom-query.php        # WP_Query helpers
+│   ├── api-helpers.php         # External API stub
+│   ├── api/
+│   │   └── api-home.php        # Stub file — empty
+│   ├── custom-query.php        # Rating query helpers
 │   ├── custom-paginate.php     # Pagination
-│   ├── nav-walker.php          # Custom Bootstrap nav walker
+│   ├── nav-walker.php          # Three Bootstrap-compatible nav walkers (header, footer, mobile)
 │   ├── schema-markup.php       # JSON-LD structured data
-│   ├── shortcode.php           # Custom shortcodes
+│   ├── shortcode.php           # Stub file — currently empty
 │   └── remove-tags.php         # Filters to strip unwanted WP output
 │
 ├── template-parts/
@@ -69,7 +71,7 @@ blacktieskis/
 │       ├── content-reviews_section.php
 │       ├── content-tabs_section.php
 │       ├── content-team_section.php
-│       ├── content-steps_15.php
+│       ├── content-steps_15.php            # ⚠️ 157KB — appears to be a one-off resort landing page
 │       ├── content-locations_map.php
 │       ├── content-cta_and_footer.php
 │       └── content-cta_bottom.php
@@ -86,7 +88,8 @@ blacktieskis/
 │   └── jquery.fancybox.js      # Lightbox (unclear if active)
 │
 ├── stylesheets/
-│   ├── app.css                 # Compiled bundle (Bootstrap + Slick + all custom CSS)
+│   ├── app.css                 # Compiled bundle (Bootstrap + Slick + all custom CSS) — treat as read-only
+│   ├── custom.css              # Overrides and new styles — all new CSS should go here
 │   └── print.css               # Print styles
 │
 ├── images/                     # Theme images and SVG icons
@@ -169,12 +172,19 @@ Another copy of the minified webpack bundle (GSAP 2.0.2). Likely a scratch backu
 
 ## Known Issues
 
-### Bug — broken contact form handler (`inc/helper.php:414`)
-A `die` statement sits outside its intended conditional block because the reCAPTCHA check that was supposed to wrap it got commented out. This means `wpcf7_change_mail_recipient` always terminates with a JSON error response, breaking form submissions that don't include a location field.
+### Bug — broken contact form handler (`inc/helper.php:383,414`)
+The reCAPTCHA check that was supposed to gate the mail handler got commented out at `:383`, leaving a `die` statement at `:414` outside its intended conditional block. This means `wpcf7_change_mail_recipient` always terminates with a JSON error response, breaking form submissions that don't include a location field.
 
 ```php
-// This runs unconditionally — kills the request
-echo json_encode(array("status"=>0,"message"=>"invalid recaptcha")); die;
+// :383 — the guard that should wrap everything below is commented out
+// if(verify_captcha_contact_form()){
+
+    // ... mail routing logic ...
+
+// } else {
+    // :414 — this now runs unconditionally
+    echo json_encode(array("status"=>0,"message"=>"invalid recaptcha")); die;
+// }
 ```
 
 ### Hardcoded IDs in `functions.php`
@@ -183,14 +193,26 @@ Menu item ID `42` and post ID `29175` are wired directly into the codebase, alon
 ### `flush_rewrite_rules()` on every request
 Called inside both `init` hooks in `inc/custom-post-type.php`. This is a heavy operation that should only run on theme activation, not on every page load.
 
-### `query_posts()` used in `inc/template.php`
-`query_posts()` is a deprecated WordPress function that corrupts the main query. Should be replaced with a direct `WP_Query` instantiation.
+### `query_posts()` used in two places
+`query_posts()` is a deprecated WordPress function that corrupts the main query. Should be replaced with a direct `WP_Query` instantiation in both locations:
+- `inc/template.php:177` — resort data query
+- `template-parts/page/content-reviews_section.php:14` — review carousel
 
 ### No nonce verification on AJAX handler (`inc/ajax-action.php`)
 The star rating AJAX endpoint accepts `$_POST` data without verifying a nonce, leaving it open to cross-site request forgery.
 
 ### Typo baked into the codebase
 "Resort" is misspelled as "resport" throughout — in the post type slug (`bt_resport`), function names (`blacktiekis_get_resport_datas`), variable names, and the taxonomy. This is load-bearing at this point (changing it would break URLs and database queries) but worth noting.
+
+### Debug code in production (`template-parts/page/content-locations_map.php:50`)
+An IP-specific debug block added by a previous developer in 2021 is still present. The output is commented out so it's harmless, but it exposes a former developer's IP and includes internal array dump logic that shouldn't live in production code.
+
+```php
+if($_SERVER['REMOTE_ADDR']=="24.67.25.73"){
+    # Locations: print_r($location_datas); exit;
+    # Resorts: print_r($resports); exit;
+}
+```
 
 ### No build tooling
 There is no `package.json` or build config. Any changes to library versions (Bootstrap, GSAP, etc.) would require reconstructing the webpack source from scratch.
