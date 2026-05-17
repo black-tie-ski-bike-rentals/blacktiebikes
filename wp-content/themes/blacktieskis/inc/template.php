@@ -58,14 +58,24 @@ function blacktieskis_main_menu()
 
 		//blacktieskis_main_menu();
 
-// When a per-location menu exists (built by ww-5-build-location-menus.php),
-// use it by slug. Falls back to the 'location-nav' theme location otherwise.
+// Find a per-location menu for this page or any location page above it in
+// the hierarchy (handles service pages nested under location pages).
+$location_menu_slug = '';
+
 if ( is_page_template( 'page-location.php' ) ) {
-	$per_location_slug = 'btb-' . sanitize_title( get_the_title() ) . '-nav';
-	if ( wp_get_nav_menu_object( $per_location_slug ) ) {
-		$args['menu']           = $per_location_slug;
-		$args['theme_location'] = '';
+	$location_menu_slug = 'btb-' . sanitize_title( get_the_title() ) . '-nav';
+} elseif ( is_page() ) {
+	foreach ( get_ancestors( get_the_ID(), 'page' ) as $ancestor_id ) {
+		if ( get_page_template_slug( $ancestor_id ) === 'page-location.php' ) {
+			$location_menu_slug = 'btb-' . sanitize_title( get_the_title( $ancestor_id ) ) . '-nav';
+			break;
+		}
 	}
+}
+
+if ( $location_menu_slug && wp_get_nav_menu_object( $location_menu_slug ) ) {
+	$args['menu']           = $location_menu_slug;
+	$args['theme_location'] = '';
 }
 
 echo wp_nav_menu( $args );
