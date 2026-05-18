@@ -42,6 +42,7 @@ blacktieskis/
 ├── footer.php                  # Footer, popups, JS loading
 ├── style.css                   # WordPress theme header (metadata only)
 ├── index.php / page.php / single.php / archive.php / 404.php
+├── page-location.php               # Page template: switches header nav to location-specific menu
 │
 ├── inc/
 │   ├── helper.php              # Theme setup, ACF config, utility functions
@@ -132,12 +133,11 @@ Pages are built using **ACF Flexible Content** — the CMS user stacks modular s
 
 ---
 
-## Recent Changes
+## Project History
 
-1. **Initialized git** — the repo had no version control; all changes were being tracked manually via hand-saved backup files
-2. **Committed the full codebase** as a baseline snapshot (`9a0c7be`)
-3. **Deleted 15 backup files** — these are now redundant with git history (`41ef3d4`)
-4. **Reverted `app.css`** to the pre-header-redesign baseline (`e3ce2dd`) — restores the scroll-animated transparent header as the starting point for new work
+This theme originated on `blacktieskis.com` (a ski rental site) and was copied over to power `blacktiebikes.com`. The theme name `blacktieskis` and all its function prefixes, slugs, and internal references are inherited from that origin.
+
+Over multiple development iterations without version control, changes were tracked manually by saving `.bk` backup files before each session. Git was introduced at the start of the current project — the initial commit captured the full codebase as a baseline, the `.bk` files were deleted (now redundant with git history). Active feature work is tracked on branches per ticket (e.g. `ww-5-nav-restructure`).
 
 ---
 
@@ -172,40 +172,54 @@ Another copy of the minified webpack bundle (GSAP 2.0.2). Likely a scratch backu
 
 ## Known Issues
 
-### Bug — broken contact form handler (`inc/helper.php:383,414`)
-The reCAPTCHA check that was supposed to gate the mail handler got commented out at `:383`, leaving a `die` statement at `:414` outside its intended conditional block. This means `wpcf7_change_mail_recipient` always terminates with a JSON error response, breaking form submissions that don't include a location field.
+Pre-existing bugs inherited from the original build. None are regressions.
+
+### Actively affecting live users
+
+**Broken contact form** (`inc/helper.php`)
+The reCAPTCHA check that was supposed to gate the mail handler got commented out, leaving a `die` statement outside its intended conditional block. `wpcf7_change_mail_recipient` always terminates with a JSON error response, breaking form submissions that don't include a location field.
 
 ```php
-// :383 — the guard that should wrap everything below is commented out
+// the guard that should wrap everything below is commented out
 // if(verify_captcha_contact_form()){
 
     // ... mail routing logic ...
 
 // } else {
-    // :414 — this now runs unconditionally
+    // this now runs unconditionally
     echo json_encode(array("status"=>0,"message"=>"invalid recaptcha")); die;
 // }
 ```
 
-### Hardcoded IDs in `functions.php`
-Menu item ID `42` and post ID `29175` are wired directly into the codebase, along with a hardcoded production URL (`btsr.flywheelsites.com`). These will silently break if content is reorganized.
+### Security
 
-### `flush_rewrite_rules()` on every request
-Called inside both `init` hooks in `inc/custom-post-type.php`. This is a heavy operation that should only run on theme activation, not on every page load.
+**No nonce on AJAX rating handler** (`inc/ajax-action.php`)
+The star rating endpoint accepts `$_POST` data without verifying a nonce, leaving it open to cross-site request forgery.
 
-### `query_posts()` used in two places
-`query_posts()` is a deprecated WordPress function that corrupts the main query. Should be replaced with a direct `WP_Query` instantiation in both locations:
-- `inc/template.php:177` — resort data query
-- `template-parts/page/content-reviews_section.php:14` — review carousel
+### Performance
 
-### No nonce verification on AJAX handler (`inc/ajax-action.php`)
-The star rating AJAX endpoint accepts `$_POST` data without verifying a nonce, leaving it open to cross-site request forgery.
+**`flush_rewrite_rules()` on every request** (`inc/custom-post-type.php`)
+Called inside both `init` hooks. This is expensive and should only run on theme activation, not on every page load.
 
-### Typo baked into the codebase
-"Resort" is misspelled as "resport" throughout — in the post type slug (`bt_resport`), function names (`blacktiekis_get_resport_datas`), variable names, and the taxonomy. This is load-bearing at this point (changing it would break URLs and database queries) but worth noting.
+### Deprecated
 
-### Debug code in production (`template-parts/page/content-locations_map.php:50`)
-An IP-specific debug block added by a previous developer in 2021 is still present. The output is commented out so it's harmless, but it exposes a former developer's IP and includes internal array dump logic that shouldn't live in production code.
+**`query_posts()` used in two places**
+`query_posts()` is deprecated and corrupts the main WP query. Should be replaced with `new WP_Query()` in both locations:
+- `inc/template.php` — resort data query
+- `template-parts/page/content-reviews_section.php` — review carousel
+
+### Fragile / will silently break
+
+**Hardcoded Telluride redirect** (`header.php`, `functions.php`)
+The Telluride page (post ID `29175`) redirects to a defunct staging URL (`btsr.flywheelsites.com`). Wired in two places with hardcoded post ID and menu item ID `42` — will break silently if content is reorganized.
+
+### Cleanup
+
+**Orphaned ski site content** (`template-parts/page/content-3col_section.php`)
+Entirely hardcoded ski rental copy from the original `blacktieskis.com` site — not connected to ACF fields. If this layout is added to any page via the CMS it will output incorrect ski content. Needs to be replaced or removed.
+
+**Debug code in production** (`template-parts/page/content-locations_map.php`)
+An IP-specific debug block from 2021 is still present. Harmless (output is commented out) but exposes a former developer's IP and shouldn't be in production.
 
 ```php
 if($_SERVER['REMOTE_ADDR']=="24.67.25.73"){
@@ -214,6 +228,9 @@ if($_SERVER['REMOTE_ADDR']=="24.67.25.73"){
 }
 ```
 
-### No build tooling
-There is no `package.json` or build config. Any changes to library versions (Bootstrap, GSAP, etc.) would require reconstructing the webpack source from scratch.
+### Very difficult to fix
+
+**`resport` typo** — "Resort" is misspelled throughout: post type slug (`bt_resport`), function names, taxonomy. Load-bearing — changing it would break URLs and database queries.
+
+**No build tooling** — No `package.json` or webpack config. Modifying library versions would require reconstructing the bundle from scratch.
 

@@ -52,22 +52,18 @@ This project spans multiple environments with inconsistent naming inherited from
 
 ## Known Issues
 
-Pre-existing bugs inherited from the original build. None are regressions — documented here for visibility.
+Pre-existing bugs inherited from the original build. None are regressions. See `wp-content/themes/blacktieskis/README.md` for full details.
 
-**Hardcoded staging redirect** (`header.php:35`, `functions.php:46,59`)
-The Telluride page (post ID `29175`) redirects to a defunct Flywheel staging URL (`btsr.flywheelsites.com`). The redirect is wired in two places: a `header()` call in `header.php` and a nav link filter in `functions.php` that also hardcodes menu item ID `42`. Both will silently break if post IDs or menu IDs change.
+**Actively affecting live users** — Broken contact form: reCAPTCHA guard commented out in `inc/helper.php`, causing the mail handler to always return a JSON error response.
 
-**Hotlinked images from blacktieskis.com** (`template-parts/page/content-3col_section.php:21,27,34`)
-Three package images (Premium, Performance, Junior) are loaded directly from `//www.blacktieskis.com/images/`. If that domain moves or those files are removed, the images will break with no local fallback.
+**Security** — No nonce on AJAX star rating handler (`inc/ajax-action.php`), vulnerable to CSRF.
 
-**reCAPTCHA check bypassed** (`inc/helper.php:383`)
-The `if(verify_captcha_contact_form())` check is commented out, so all CF7 submissions bypass reCAPTCHA verification entirely. The form sends regardless of whether recaptcha passes or fails. The original else-branch `die` at line 414 is now unreachable dead code.
+**Performance** — `flush_rewrite_rules()` called on every page load in `inc/custom-post-type.php`.
 
-**No nonce verification on AJAX rating handler** (`inc/ajax-action.php:18-19`)
-`$_POST['currentRate']` and `$_POST['currentPostID']` are read and written to the database with no nonce check and no sanitization, making the endpoint vulnerable to CSRF.
+**Deprecated** — `query_posts()` used in `inc/template.php` and `template-parts/page/content-reviews_section.php`.
 
-**`flush_rewrite_rules()` on every request** (`inc/custom-post-type.php:36,89`)
-Called inside both `blacktieskis_create_taxonomies()` and `blacktieskis_create_post_type()`, which are hooked to `init` and run on every page load. This is an expensive operation that should only run on theme activation.
+**Fragile** — Hardcoded Telluride redirect in `header.php` and `functions.php` (defunct URL, hardcoded post ID and menu item ID).
 
-**`query_posts()` used** (`inc/template.php:177`, `template-parts/page/content-reviews_section.php:14`)
-`query_posts()` is deprecated and corrupts the main WordPress query. Both instances should be replaced with `new WP_Query()`.
+**Cleanup** — Orphaned ski site content in `content-3col_section.php`; debug IP block in `content-locations_map.php`.
+
+**Hard to fix** — `resport` typo (load-bearing throughout codebase); no build tooling.
