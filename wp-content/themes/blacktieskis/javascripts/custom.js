@@ -42,27 +42,18 @@
   });
 
 
-  // Logo shrink on desktop. scrollT:0 means app.js adds pin-header in the same
-  // scroll tick, so by the time rAF fires the CSS pin-header rule has already
-  // jumped width to 100px — jQuery animates 100→100 and nothing moves.
-  // Fix: set the FROM value as an inline style in the same tick (inline beats CSS),
-  // then rAF into the animation so the browser has a clean frame.
-  if (window.matchMedia('(min-width: 992px)').matches) {
-    var $logo = $('#header-logo');
-    var logoPinned = $(window).scrollTop() > 0;
+  // Desktop logo: CSS transition from 160px → 100px on scroll.
+  // Uses .logo-shrunk at threshold=10px so the browser has rendered the
+  // 160px state before the class change triggers the transition.
+  var $header = $('#header');
+  var logoShrunk = $(window).scrollTop() > 10;
+  if (logoShrunk) $header.addClass('logo-shrunk');
 
-    if (logoPinned) $logo[0].style.width = '100px';
-
-    $(window).on('scroll.logoShrink', function () {
-      var pinned = $(window).scrollTop() > 0;
-      if (pinned === logoPinned) return;
-      logoPinned = pinned;
-      $logo.stop(true);
-      $logo[0].style.width = pinned ? '160px' : '100px';
-      requestAnimationFrame(function () {
-        $logo.animate({ width: pinned ? 100 : 160 }, 300);
-      });
-    });
-  }
+  $(window).on('scroll.logoShrink', function () {
+    var shouldShrink = $(window).scrollTop() > 10;
+    if (shouldShrink === logoShrunk) return;
+    logoShrunk = shouldShrink;
+    $header.toggleClass('logo-shrunk', shouldShrink);
+  });
 
 }(jQuery));

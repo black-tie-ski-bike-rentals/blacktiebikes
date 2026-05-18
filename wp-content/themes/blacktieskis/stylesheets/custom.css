@@ -1112,22 +1112,25 @@ html body #header.pin-header #header-logo img {
   max-width: 100px !important;
 }
 
-/* Logo: 160px default on desktop. JS drives the width animation via rAF.
-   No !important on width so jQuery's inline style can override during animation. */
+/* Logo: animate 160px → 100px on desktop via CSS transition.
+   Both selectors needed: pin-header (added by app.js at scrollTop>0) has the
+   same specificity as our override so we must match it to win source-order. */
 @media (min-width: 992px) {
-  html body #header #header-logo {
+  html body #header #header-logo,
+  html body #header.pin-header #header-logo {
     width: 160px;
     max-width: none !important;
     padding: 3px 0 !important;
+    transition: width 0.3s ease;
   }
-  html body #header #header-logo img {
+  html body #header #header-logo img,
+  html body #header.pin-header #header-logo img {
     width: 100% !important;
     min-width: 0 !important;
     max-width: none !important;
   }
-  html body #header.pin-header #header-logo {
+  html body #header.logo-shrunk #header-logo {
     width: 100px;
-    padding: 3px 0 !important;
   }
 }
 
