@@ -41,4 +41,28 @@
     $(targetId).find('.career-thank-message').hide();
   });
 
+
+  // Logo shrink on desktop. scrollT:0 means app.js adds pin-header in the same
+  // scroll tick, so by the time rAF fires the CSS pin-header rule has already
+  // jumped width to 100px — jQuery animates 100→100 and nothing moves.
+  // Fix: set the FROM value as an inline style in the same tick (inline beats CSS),
+  // then rAF into the animation so the browser has a clean frame.
+  if (window.matchMedia('(min-width: 992px)').matches) {
+    var $logo = $('#header-logo');
+    var logoPinned = $(window).scrollTop() > 0;
+
+    if (logoPinned) $logo[0].style.width = '100px';
+
+    $(window).on('scroll.logoShrink', function () {
+      var pinned = $(window).scrollTop() > 0;
+      if (pinned === logoPinned) return;
+      logoPinned = pinned;
+      $logo.stop(true);
+      $logo[0].style.width = pinned ? '160px' : '100px';
+      requestAnimationFrame(function () {
+        $logo.animate({ width: pinned ? 100 : 160 }, 300);
+      });
+    });
+  }
+
 }(jQuery));
