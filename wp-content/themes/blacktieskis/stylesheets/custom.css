@@ -1031,10 +1031,26 @@ font-size: 30px;
     line-height: 1.2 !important;
   }
 
-  /* Sub-menu items: match same vertical rhythm as top-level items */
+  /* Underline on open dropdown parent link — fit-content so border spans text only */
+  .main-menu-ul li.is-open-child > a {
+    width: fit-content !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-bottom: 2px solid #568f3b !important;
+    padding-bottom: 6px !important;
+  }
+
+  /* Sub-menu items: tighter spacing than top-level */
   html.is-open-menu #menu-main-menu .menu-item-has-children .sub-menu li {
-    padding: 4px 10px !important;
+    padding: 2px 10px !important;
     margin: 0 auto !important;
+  }
+
+  /* Sub-menu link: smaller font, less vertical padding */
+  html.is-open-menu .main-menu-ul .sub-menu li a {
+    font-size: 1rem !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
   }
 
 
@@ -1190,10 +1206,11 @@ html body #header.pin-header #header-logo img {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     padding: 10px 0;
   }
-  /* 3-column grid: logo left | Book Now center | hamburger right */
+  /* 3-column grid: logo sizes to content | gap fills remaining space | hamburger sizes to content
+     This ensures Book Now centers in the actual visual gap, not the full navbar width */
   #header nav.navbar {
     display: grid !important;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
     flex-wrap: unset;
   }
@@ -1207,6 +1224,7 @@ html body #header.pin-header #header-logo img {
     margin: 0 !important;
     display: flex !important;
     justify-content: center;
+    justify-self: center;
   }
   #header .hamburger-menu {
     grid-column: 3;
@@ -1216,24 +1234,26 @@ html body #header.pin-header #header-logo img {
   }
 }
 
-/* Fix X close icon — replace bogus dinesh-transform-dinesh with real transform */
+/* X close icon — translateY brings each bar to the icon center before rotating,
+   so the X appears in the same position as the hamburger (bars are 3px tall, 7px gap,
+   center = 10px from bar 1 / -10px from bar 3) */
 .hamburger-menu.is-open-menu .icon-bar:first-child {
-  -webkit-transform: rotate(45deg) !important;
-  transform: rotate(45deg) !important;
-  -webkit-transform-origin: top left !important;
-  transform-origin: top left !important;
-  top: 5px;
-  left: 2px;
+  -webkit-transform: translateY(10px) rotate(45deg) !important;
+  transform: translateY(10px) rotate(45deg) !important;
+  -webkit-transform-origin: center !important;
+  transform-origin: center !important;
+  top: 0;
+  left: 0;
 }
 .hamburger-menu.is-open-menu .icon-bar:nth-child(2) {
   opacity: 0 !important;
 }
 .hamburger-menu.is-open-menu .icon-bar:nth-child(3) {
-  -webkit-transform: rotate(-46deg) !important;
-  transform: rotate(-46deg) !important;
-  -webkit-transform-origin: left top !important;
-  transform-origin: left top !important;
-  top: 9px;
+  -webkit-transform: translateY(-10px) rotate(-45deg) !important;
+  transform: translateY(-10px) rotate(-45deg) !important;
+  -webkit-transform-origin: center !important;
+  transform-origin: center !important;
+  top: 0;
 }
 
 
