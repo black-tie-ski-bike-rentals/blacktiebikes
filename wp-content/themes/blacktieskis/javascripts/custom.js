@@ -12,6 +12,7 @@
     if (!isOpen) {
       $li.addClass('is-open-child');
     }
+
   });
 
   $(document).on('click', function (e) {

@@ -997,6 +997,17 @@ font-size: 30px;
   color: #568f3b !important;
 }
 
+/* Location page nav: current location name green + underline */
+#menu-main-menu li.btb-current-location > a {
+  color: #568f3b !important;
+  font-size: 1.05em !important;
+}
+@media (min-width: 992px) {
+  #menu-main-menu li.btb-current-location:after {
+    background: #568f3b !important;
+  }
+}
+
 /* ============================================
    MOBILE MENU
    ============================================ */
@@ -1052,6 +1063,7 @@ font-size: 30px;
     padding-top: 2px !important;
     padding-bottom: 2px !important;
   }
+
 
 
   /* CTA Book Now: always visible in the header */
