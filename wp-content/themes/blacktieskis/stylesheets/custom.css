@@ -1342,6 +1342,7 @@ html body #header.pin-header #header-logo img {
 /* Vertically center all items (globe, call link, summer/winter toggle) */
 .popup-header-content {
   align-items: center;
+  padding-right: 25px !important;
 }
 
 /* Right side: globe + call link — flex row, vertically centered */
