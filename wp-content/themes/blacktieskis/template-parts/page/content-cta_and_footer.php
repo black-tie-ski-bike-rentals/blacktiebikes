@@ -26,7 +26,7 @@ if($pageid==20){ ?>
 		endif;
 		if( !empty($footer_cta_title) ) :
 			$footer_cta_link = get_sub_field('cta_link');
-			?><a  href="javascript:void(0);" id="boonowbutton" data-id="#booknow" data-htmlclass="html-popup-content" class="popup-is-open" ><?php echo $footer_cta_title; ?></a><?php
+			?><a  href="javascript:void(0);" id="boonowbutton" data-id="#booknow" data-htmlclass="html-popup-content" class="popup-is-open btn" ><?php echo $footer_cta_title; ?></a><?php
 		endif;
 		?>       
     </div>

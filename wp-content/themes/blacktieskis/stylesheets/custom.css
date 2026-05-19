@@ -578,6 +578,13 @@ width: 100%;
   padding-top: 10px;
   padding-bottom: 70px;
 }
+.book-ski-headline .btn {
+  min-width: 175px;
+  margin: 6px;
+}
+.mod-book-ski .btn:first-of-type {
+  margin-right: 0;
+}
 #boonowbutton {
     color: #fff;
     background-color: #568F3B;
@@ -589,6 +596,7 @@ width: 100%;
     display: inline-block;
     text-decoration: none;
     font-size: 1rem;
+    vertical-align: middle;
 }
 html body #boonowbutton:hover,
 html body #boonowbutton.is-hover {
@@ -1120,7 +1128,12 @@ font-size: 30px;
   }
 }
 
-/* Fix btn-cta absolute positioning on very small screens */
+/* Fix btn-cta positioning and margin on mobile */
+@media (max-width: 580px) {
+  nav > .btn-cta a {
+    margin-left: 0 !important;
+  }
+}
 @media (max-width: 414px) {
   nav > .btn-cta {
     position: static !important;
@@ -1415,6 +1428,7 @@ h1, h2, h3, h4, h5,
   padding: 12px 30px !important;
   text-decoration: none !important;
   font-size: 1rem !important;
+  vertical-align: middle !important;
 }
 
 .btn:hover,
