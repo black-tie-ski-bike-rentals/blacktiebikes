@@ -12,10 +12,7 @@ wp_reset_query(); //important to destroy the previous query and setup a new quer
 <!-- BEGIN LOADDING -->
 <div class="module over-loader">
 	<div class="loader">
-		<div class="spinner loader-item">
-			<div class="double-bounce1"></div>
-			<div class="double-bounce2"></div>
-		</div>
+		<img class="loader-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/BTS-logo.png" alt="Black Tie Bikes">
 	</div>
 </div>
 <!-- END LOADDING -->
