@@ -1278,6 +1278,28 @@ html body #header.pin-header #header-logo img {
   }
 }
 
+/* ============================================
+   TOP BAR — popup-header
+   ============================================ */
+
+/* Vertically center all items (globe, call link, summer/winter toggle) */
+.popup-header-content {
+  align-items: center;
+  padding-right: 25px !important;
+}
+
+/* Right side: globe + call link — flex row, vertically centered */
+.popup-header-content__p2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0;
+}
+
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+  text-transform: uppercase !important;
+}
 
 
 
