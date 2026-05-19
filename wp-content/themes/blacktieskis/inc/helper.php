@@ -125,7 +125,7 @@ function blacktieskis_header_logo() {
 	if ( ! empty( $_logo ) && isset( $_logo['url'] ) ) {
 		?><img src="<?php echo $_logo['url']; ?>" alt="<?php echo $_logo_alt; ?>"><?php
 	} else {
-		?><img src="<?php echo get_stylesheet_directory_uri() . '/images/blacktie-logo.svg'; ?>" alt="<?php echo $_logo_alt; ?>"><?php
+		?><img src="<?php echo get_stylesheet_directory_uri() . '/images/BTS-logo.png'; ?>" alt="<?php echo $_logo_alt; ?>"><?php
 	}
 }
 
