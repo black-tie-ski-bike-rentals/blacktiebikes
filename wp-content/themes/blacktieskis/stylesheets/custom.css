@@ -1440,36 +1440,6 @@ h1, h2, h3, h4, h5,
   border: none !important;
 }
 
-/* Preserve Adventure Products button colors — padding/shape addressed in separate ticket */
-.btn.btn-primary1 {
-  background-color: #156BB1 !important;
-  border-color: #156BB1 !important;
-  color: #fff !important;
-  margin: 0 3px !important;
-}
-.btn.btn-primary1:hover,
-.btn.btn-primary1:focus,
-.btn.btn-primary1.is-hover {
-  background-color: #000 !important;
-  border-color: #000 !important;
-  color: #fff !important;
-}
-#products .btn.btn-primary {
-  background-color: #1ac1ff !important;
-  border-color: #1ac1ff !important;
-  color: #212529 !important;
-}
-#products .btn.btn-primary:hover,
-#products .btn.btn-primary:focus,
-#products .btn.btn-primary.is-hover {
-  background-color: #00b1f3 !important;
-  border-color: #00a8e6 !important;
-  color: #fff !important;
-}
-
-
-
-
 
 
 
