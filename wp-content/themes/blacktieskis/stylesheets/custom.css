@@ -1057,11 +1057,13 @@ font-size: 30px;
   }
 
   /* Compact menu items so locations list fits without scrolling */
-  html.is-open-menu .main-menu-ul li a {
+  html.is-open-menu .main-menu-ul > li > a {
     font-size: 1.2rem !important;
-    letter-spacing: .0625rem !important;
-    padding-top: 4px !important;
-    padding-bottom: 4px !important;
+    letter-spacing: 0 !important;
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
     line-height: 1.2 !important;
   }
 
@@ -1076,15 +1078,18 @@ font-size: 30px;
 
   /* Sub-menu items: tighter spacing than top-level */
   html.is-open-menu #menu-main-menu .menu-item-has-children .sub-menu li {
-    padding: 2px 10px !important;
+    padding: 0 10px !important;
     margin: 0 auto !important;
   }
 
-  /* Sub-menu link: smaller font, less vertical padding */
+  /* Sub-menu link: smaller font, no vertical padding */
   html.is-open-menu .main-menu-ul .sub-menu li a {
     font-size: 1rem !important;
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    line-height: 1.4 !important;
   }
 
 
