@@ -812,7 +812,7 @@ html.popup-animation .popup-inner {
 
 
 .mod-popup.popup-show.popup-show-default.popup-flex-center .mask-pop-overlay {
-    opacity: 1;
+    opacity: 0.65;
 }
 
 @media (max-width: 991px){
@@ -1438,6 +1438,65 @@ h1, h2, h3, h4, h5,
   color: #fff !important;
   text-decoration: none !important;
   border: none !important;
+}
+
+/* WW-49: Book Now locations popup */
+html.html-popup-content .cont-background-opacity {
+  background: #fff !important;
+  border-radius: 6px;
+}
+
+html.html-popup-content .popup-inner > p:first-child {
+  font-style: italic;
+  font-weight: 400;
+}
+
+html.html-popup-content .popup-inner > h3 {
+  font-size: 1.05rem;
+  font-weight: bold;
+  margin: 1rem;
+  text-transform: uppercase;
+}
+
+html.html-popup-content .popup-inner {
+  max-width: 550px !important;
+  padding: 20px 10px !important;
+}
+
+html.html-popup-content .popup-inner > p br {
+  display: none;
+}
+
+html.html-popup-content .popup-inner p {
+  margin-bottom: 0;
+}
+
+html.html-popup-content .popup-inner > p a {
+  color: #568F3B;
+  text-decoration: underline;
+  font-size: 1.05rem;
+  display: block;
+  margin-bottom: 10px;
+  line-height: 1.5 !important;
+  font-weight: bold;
+}
+
+html.html-popup-content .popup-inner > p a:hover {
+  color: #256BB2;
+}
+
+@media (max-width: 991px) {
+  html.html-popup-content .popup-inner > p:first-child em {
+    display: block;
+    padding-top: 30px;
+  }
+  html.html-popup-content .popup-inner {
+    font-size: 1rem;
+  }
+  html.html-popup-content .popup-inner > h3,
+  html.html-popup-content .popup-inner > p a {
+    font-size: 1rem;
+  }
 }
 
 
