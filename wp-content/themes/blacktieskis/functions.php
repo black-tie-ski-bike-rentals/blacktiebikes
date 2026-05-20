@@ -39,6 +39,11 @@ require get_template_directory() . '/inc/template.php';
 require get_template_directory() . '/inc/ajax-action.php';
 // add_filter('wpcf7_spam', '__return_false');
 
+// WW-49: Clear #booknow hash before app.js loads so it can't reopen the popup on refresh.
+add_action( 'wp_head', function() {
+    echo '<script>if(location.hash==="#booknow")history.replaceState(null,"",location.pathname+location.search);</script>';
+}, 1 );
+
 add_filter( 'nav_menu_link_attributes', 'wpse121123_contact_menu_atts', 10, 3 );
 function wpse121123_contact_menu_atts( $atts, $item, $args )
 {
