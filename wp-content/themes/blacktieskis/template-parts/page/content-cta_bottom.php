@@ -20,8 +20,7 @@ $image2 = get_sub_field('desk_image');
 			?><a href="https://www.blacktiebikes.com/contact/" class="btn btn-outline-primary text-uppercase" ><?php echo $footer_cta_popup_title; ?></a><?php
 		endif;
 		if( !empty($footer_cta_title) ) :
-			$footer_cta_link = get_sub_field('cta_link');
-			?> &nbsp; <a href="<?php echo (empty($footer_cta_link)) ? 'javascript:void(0);' : $footer_cta_link;?>" class="btn btn-primary text-uppercase" target="_blank"><?php echo $footer_cta_title; ?></a><?php
+			?> &nbsp; <a href="javascript:void(0);" id="boonowbutton" data-id="#booknow" data-htmlclass="html-popup-content" class="popup-is-open btn btn-primary text-uppercase"><?php echo $footer_cta_title; ?></a><?php
 		endif;
 		?>       
     </div>
