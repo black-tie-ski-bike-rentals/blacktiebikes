@@ -588,7 +588,6 @@ width: 100%;
 #boonowbutton {
     color: #fff;
     background-color: #568F3B;
-    border-color: #568F3B;
     padding: 12px 30px !important;
     border-radius: 6px;
     font-weight: bold;
@@ -597,13 +596,14 @@ width: 100%;
     text-decoration: none;
     font-size: 1rem;
     vertical-align: middle;
+    transition: all 0.3s ease !important;
 }
 html body #boonowbutton:hover,
 html body #boonowbutton.is-hover {
 	background-color: #256BB2 !important;
-	border-color: #256BB2 !important;
 	color: #fff !important;
 	text-decoration: none !important;
+	transition: all 0.3s ease !important;
 }
 .newcl a:hover {
     background: #256BB2 !important;
@@ -1116,11 +1116,6 @@ font-size: 30px;
     display: flex !important;
   }
 
-  /* CTA button size fix — header only, so it stays compact in the nav */
-  #header #boonowbutton {
-    padding: 7px 15px !important;
-  }
-
   /* Vertical alignment in mobile header */
   #header .navbar {
     align-items: center;
@@ -1429,6 +1424,7 @@ h1, h2, h3, h4, h5,
   text-decoration: none !important;
   font-size: 1rem !important;
   vertical-align: middle !important;
+  transition: all 0.3s ease !important;
 }
 
 .btn:hover,
@@ -1437,7 +1433,7 @@ h1, h2, h3, h4, h5,
   background-color: #256BB2 !important;
   color: #fff !important;
   text-decoration: none !important;
-  border: none !important;
+  transition: all 0.3s ease !important;
 }
 
 /* WW-49: Book Now locations popup */
