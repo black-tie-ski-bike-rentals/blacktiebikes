@@ -43,6 +43,13 @@
   });
 
 
+  // Intercept direct booking links in hero/content areas and open the popup instead.
+  $(document).on('click', 'a[href*="booknow.blacktiebikes.com"], a[href*="blackdiamondbanff.com/book-now"], a[href*="checkfront.com/reserve"]', function (e) {
+    if ($(this).hasClass('popup-is-open')) return;
+    e.preventDefault();
+    $('#boonowbutton').trigger('click');
+  });
+
   // Desktop logo: CSS transition from 160px → 100px on scroll.
   // Uses .logo-shrunk at threshold=10px so the browser has rendered the
   // 160px state before the class change triggers the transition.
