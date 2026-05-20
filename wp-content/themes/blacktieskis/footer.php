@@ -29,7 +29,7 @@ wp_reset_query(); //important to destroy the previous query and setup a new quer
         <div class="mask-pop-overlay"></div>
         <div class="container popup-inner cont-background-opacity" style="max-width:770px;min-height:280px;padding:30px;">
 
-          <p>Book <em>today</em> with Black Tie and let the adventures begin!</p>
+          <p><em>Book today with Black Tie and let the adventures begin!</em></p>
           <h3>Select Your Destination:</h3>
           <p>
             <a href="https://blackdiamondbanff.com/book-now/" target="_blank">Banff</a>

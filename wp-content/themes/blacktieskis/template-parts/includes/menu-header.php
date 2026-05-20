@@ -19,7 +19,6 @@
 
 <a href="tel:866-360-6433">  <img src="https://www.blacktiebikes.com/wp-content/uploads/2024/05/btn-call.webp"  width="28px"  alt="Icon"></a>
 
-      
 </p>
 
       
