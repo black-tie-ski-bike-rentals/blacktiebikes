@@ -28,11 +28,21 @@ wp_reset_query(); //important to destroy the previous query and setup a new quer
       <div class="popup-content-contact container" id="booknnnn">
         <div class="mask-pop-overlay"></div>
         <div class="container popup-inner cont-background-opacity" style="max-width:770px;min-height:280px;padding:30px;">
-          
-            <?php the_field('bt_booknow_description', 'option'); ?>
-          
-       
-          
+
+          <p><em>Book today with Black Tie and let the adventures begin!</em></p>
+          <h3>Select Your Destination:</h3>
+          <p>
+            <a href="https://blackdiamondbanff.com/book-now/" target="_blank">Banff</a>
+            <a href="https://booknow.blacktiebikes.com/reservations/step1" target="_blank">Big Sky</a>
+            <a href="https://booknow.blacktiebikes.com/reservations/step1" target="_blank">Breckenridge</a>
+            <a href="https://booknow.blacktiebikes.com/reservations/step1" target="_blank">Mammoth</a>
+            <a href="https://booknow.blacktiebikes.com/reservations/step1" target="_blank">Park City / Deer Valley</a>
+            <a href="https://booknow.blacktiebikes.com/reservations/step1" target="_blank">Sun Valley</a>
+            <a href="https://booknow.blacktiebikes.com/reservations/step1" target="_blank">Telluride</a>
+            <a href="https://booknow.blacktiebikes.com/reservations/step1" target="_blank">Vail / Beaver Creek</a>
+            <a href="https://black-diamond-bikes.checkfront.com/reserve/" target="_blank">Whistler</a>
+            <a href="https://booknow.blacktiebikes.com/reservations/step1" target="_blank">Whitefish</a>
+          </p>
 
           <a href="javascript:void(0);" class="popup-is-close">
             <span class="icomoon icon-close1"></span>
