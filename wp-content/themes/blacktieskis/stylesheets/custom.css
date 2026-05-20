@@ -1442,10 +1442,6 @@ html.html-popup-content .cont-background-opacity {
   border-radius: 6px;
 }
 
-html.html-popup-content .popup-inner > p:first-child {
-  font-style: italic;
-  font-weight: 400;
-}
 
 html.html-popup-content .popup-inner > h3 {
   font-size: 1.05rem;
