@@ -1444,7 +1444,7 @@ html.html-popup-content .cont-background-opacity {
 
 
 html.html-popup-content .popup-inner > h3 {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   font-weight: bold;
   margin: 1rem;
   text-transform: uppercase;
@@ -1460,7 +1460,7 @@ html.html-popup-content .popup-inner > p br {
 }
 
 html.html-popup-content .popup-inner p {
-  margin-bottom: 0;
+  margin-bottom: 30px;
 }
 
 html.html-popup-content .popup-inner > p a {
@@ -1478,8 +1478,7 @@ html.html-popup-content .popup-inner > p a:hover {
 }
 
 @media (max-width: 991px) {
-  html.html-popup-content .popup-inner > p:first-child em {
-    display: block;
+  html.html-popup-content .popup-inner > p:first-child {
     padding-top: 30px;
   }
   html.html-popup-content .popup-inner {
@@ -1488,6 +1487,12 @@ html.html-popup-content .popup-inner > p a:hover {
   html.html-popup-content .popup-inner > h3,
   html.html-popup-content .popup-inner > p a {
     font-size: 1rem;
+  }
+}
+
+@media screen and (max-height: 768px) {
+  html.html-popup-content .popup-inner {
+    max-height: none !important;
   }
 }
 
