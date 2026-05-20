@@ -43,6 +43,11 @@
   });
 
 
+  // Prevent app.js from reopening the popup on refresh by clearing the hash on page load.
+  if (window.location.hash === '#booknow') {
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+  }
+
   // Intercept direct booking links in hero/content areas and open the popup instead.
   // Skip if the popup is already open — links inside it should open normally in a new tab.
   $(document).on('click', 'a[href*="booknow.blacktiebikes.com"], a[href*="blackdiamondbanff.com/book-now"], a[href*="checkfront.com/reserve"]', function (e) {
