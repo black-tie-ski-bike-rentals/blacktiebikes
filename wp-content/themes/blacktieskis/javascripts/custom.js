@@ -44,10 +44,10 @@
 
 
   // Intercept direct booking links in hero/content areas and open the popup instead.
-  // Skip links inside the popup itself — those should open normally in a new tab.
+  // Skip if the popup is already open — links inside it should open normally in a new tab.
   $(document).on('click', 'a[href*="booknow.blacktiebikes.com"], a[href*="blackdiamondbanff.com/book-now"], a[href*="checkfront.com/reserve"]', function (e) {
     if ($(this).hasClass('popup-is-open')) return;
-    if ($(this).closest('#booknow').length) return;
+    if ($('html').hasClass('html-popup-content')) return;
     e.preventDefault();
     $('#boonowbutton').trigger('click');
   });
