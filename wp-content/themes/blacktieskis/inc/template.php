@@ -5,9 +5,10 @@
  */
 function blacktieskis_main_menu()
 {
-	
+	$theme_location = is_page_template( 'page-location.php' ) ? 'location-nav' : 'global-nav';
+
 	$main_menus = array();
-	$menu_items =  blacktieskis_get_menu_item('main_menu');
+	$menu_items = blacktieskis_get_menu_item( $theme_location );
 	$current_uri = explode('/', $_SERVER['REQUEST_URI']);
 	$home_url = get_home_url();
 	$active_pages = array();	
@@ -41,7 +42,7 @@ function blacktieskis_main_menu()
         'container_id'         => '',
         'container_aria_label' => '',
         'menu_class'           => 'ml-auto main-menu-ul navbar-nav',
-        'menu_id'              => '',
+        'menu_id'              => 'menu-main-menu',
         'echo'                 => true,
         'fallback_cb'          => 'wp_page_menu',
         'before'               => '',
@@ -52,12 +53,52 @@ function blacktieskis_main_menu()
         'item_spacing'         => 'preserve',
          'depth'                => 0,
         'walker'               => '',
-        'theme_location'       => '',
+        'theme_location'       => $theme_location,
     );
-		
+
 		//blacktieskis_main_menu();
-			
-echo wp_nav_menu( $args );
+
+// Find a per-location menu for this page or any location page above it in
+// the hierarchy (handles service pages nested under location pages).
+$location_menu_slug  = '';
+$location_page_title = '';
+
+if ( is_page_template( 'page-location.php' ) ) {
+	$location_page_title = get_the_title();
+	$location_menu_slug  = 'btb-' . sanitize_title( $location_page_title ) . '-nav';
+} elseif ( is_page() ) {
+	foreach ( get_ancestors( get_the_ID(), 'page' ) as $ancestor_id ) {
+		if ( get_page_template_slug( $ancestor_id ) === 'page-location.php' ) {
+			$location_page_title = get_the_title( $ancestor_id );
+			$location_menu_slug  = 'btb-' . sanitize_title( $location_page_title ) . '-nav';
+			break;
+		}
+	}
+}
+
+if ( $location_menu_slug && wp_get_nav_menu_object( $location_menu_slug ) ) {
+	$args['menu']           = $location_menu_slug;
+	$args['theme_location'] = '';
+}
+
+if ( $location_page_title ) {
+	// Strip the "Home" item and prepend a location-picker dropdown instead.
+	$_btb_rm_home = function( $items ) {
+		return array_values( array_filter( $items, function( $item ) {
+			return ! ( (int) $item->menu_item_parent === 0 && $item->title === 'Home' );
+		} ) );
+	};
+	add_filter( 'wp_nav_menu_objects', $_btb_rm_home );
+	$nav_html = wp_nav_menu( array_merge( $args, [ 'echo' => false ] ) );
+	remove_filter( 'wp_nav_menu_objects', $_btb_rm_home );
+
+	$picker = btb_location_picker_li( $location_page_title );
+	echo preg_replace_callback( '/(<ul[^>]+>)/s', function( $m ) use ( $picker ) {
+		return $m[1] . $picker;
+	}, $nav_html, 1 );
+} else {
+	echo wp_nav_menu( $args );
+}
 		?> 
 		<!--
 		
@@ -111,6 +152,59 @@ echo wp_nav_menu( $args );
 			<!--<a href="<?php echo $main_menus[$index_last_item]->url; ?>" class="btn btn-outline-white" <?php echo $target_menu; ?>><?php echo $main_menus[$index_last_item]->title; ?></a>-->
 		</div><?php
 	}
+}
+
+/*
+ * Build the location-picker <li> for the per-location nav.
+ * Renders the current location name as an active dropdown trigger whose
+ * sub-menu lists every other visible location from the taxonomy.
+ */
+function btb_location_picker_li( string $current_location_name ): string {
+	$hidden_slugs = [ 'north-tahoe' ];
+
+	$all_terms = get_terms( [ 'taxonomy' => 'category_state_location', 'hide_empty' => false ] );
+	$all_terms = is_wp_error( $all_terms ) ? [] : (array) $all_terms;
+
+	// Resolve the current location's URL from taxonomy meta so it stays
+	// correct even on child pages where get_permalink() would return the child.
+	$current_url = get_permalink();
+	foreach ( $all_terms as $term ) {
+		if ( $term->parent !== 0 && strtolower( $term->name ) === strtolower( $current_location_name ) ) {
+			$meta_url = get_term_meta( $term->term_id, 'bt_cate_parent_location_url', true );
+			if ( $meta_url ) {
+				$current_url = $meta_url;
+			}
+			break;
+		}
+	}
+
+	$other_terms = array_filter( $all_terms, fn( $t ) =>
+		$t->parent !== 0
+		&& ! in_array( $t->slug, $hidden_slugs, true )
+		&& strtolower( $t->name ) !== strtolower( $current_location_name )
+	);
+	usort( $other_terms, fn( $a, $b ) => strcmp( $a->name, $b->name ) );
+
+	$li  = '<li class="menu-item menu-item-has-children nav-item active btb-current-location">';
+	$li .= '<a class="nav-link" href="' . esc_url( $current_url ) . '">' . esc_html( $current_location_name ) . '</a>';
+
+	if ( $other_terms ) {
+		$li .= '<ul class="sub-menu">';
+		foreach ( $other_terms as $term ) {
+			$url = get_term_meta( $term->term_id, 'bt_cate_parent_location_url', true );
+			if ( ! $url ) {
+				$link = get_term_link( $term );
+				$url  = is_wp_error( $link ) ? '#' : $link;
+			}
+			$li .= '<li class="menu-item nav-item">';
+			$li .= '<a class="nav-link" href="' . esc_url( $url ) . '">' . esc_html( $term->name ) . '</a>';
+			$li .= '</li>';
+		}
+		$li .= '</ul>';
+	}
+
+	$li .= '</li>';
+	return $li;
 }
 
 /*
