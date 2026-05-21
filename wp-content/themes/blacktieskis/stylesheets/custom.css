@@ -323,7 +323,8 @@ body div.gform_wrapper div.gform_body select {
   color: #fff;
 }
 .mod-hero-image .content h1 {
-  margin: 12% auto 15px !important;
+  margin: 0px auto 15px !important;
+
 }
 
 .tab button {
@@ -389,9 +390,9 @@ background: #fff;
 #site-description {
   color: #fff;
 }
-.mod-hero-image .content h1 {
+/* .mod-hero-image .content h1 {
     margin: 76px auto 15px;
-}
+} */
 #header .navbar {
   padding: 5px 15px;
 }
@@ -588,7 +589,6 @@ width: 100%;
 #boonowbutton {
     color: #fff;
     background-color: #568F3B;
-    border-color: #568F3B;
     padding: 12px 30px !important;
     border-radius: 6px;
     font-weight: bold;
@@ -597,13 +597,14 @@ width: 100%;
     text-decoration: none;
     font-size: 1rem;
     vertical-align: middle;
+    transition: all 0.3s ease !important;
 }
 html body #boonowbutton:hover,
 html body #boonowbutton.is-hover {
 	background-color: #256BB2 !important;
-	border-color: #256BB2 !important;
 	color: #fff !important;
 	text-decoration: none !important;
+	transition: all 0.3s ease !important;
 }
 .newcl a:hover {
     background: #256BB2 !important;
@@ -812,7 +813,7 @@ html.popup-animation .popup-inner {
 
 
 .mod-popup.popup-show.popup-show-default.popup-flex-center .mask-pop-overlay {
-    opacity: 1;
+    opacity: 0.65;
 }
 
 @media (max-width: 991px){
@@ -961,7 +962,7 @@ font-size: 30px;
 }
 @media (min-width: 992px) {
   #main-content {
-    padding-top: 160px !important;
+    padding-top: 175px !important;
   }
 }
 
@@ -1114,11 +1115,6 @@ font-size: 30px;
   }
   .is-open-menu #header nav > .btn-cta {
     display: flex !important;
-  }
-
-  /* CTA button size fix — header only, so it stays compact in the nav */
-  #header #boonowbutton {
-    padding: 7px 15px !important;
   }
 
   /* Vertical alignment in mobile header */
@@ -1535,6 +1531,7 @@ h1, h2, h3, h4, h5,
   text-decoration: none !important;
   font-size: 1rem !important;
   vertical-align: middle !important;
+  transition: all 0.3s ease !important;
 }
 
 .btn:hover,
@@ -1543,12 +1540,288 @@ h1, h2, h3, h4, h5,
   background-color: #256BB2 !important;
   color: #fff !important;
   text-decoration: none !important;
-  border: none !important;
+  transition: all 0.3s ease !important;
+}
+
+/* WW-49: Book Now locations popup */
+html.html-popup-content .cont-background-opacity {
+  background: #fff !important;
+  border-radius: 6px;
 }
 
 
+html.html-popup-content .popup-inner > h3 {
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin: 1rem;
+  text-transform: uppercase;
+}
+
+html.html-popup-content .popup-inner {
+  max-width: 550px !important;
+  padding: 20px 10px !important;
+}
+
+html.html-popup-content .popup-inner > p br {
+  display: none;
+}
+
+html.html-popup-content .popup-inner p {
+  margin-bottom: 30px;
+}
+
+html.html-popup-content .popup-inner > p a {
+  color: #568F3B;
+  text-decoration: underline;
+  font-size: 1.05rem;
+  display: block;
+  margin-bottom: 10px;
+  line-height: 1.5 !important;
+  font-weight: bold;
+}
+
+html.html-popup-content .popup-inner > p a:hover {
+  color: #256BB2;
+}
+
+@media (max-width: 991px) {
+  html.html-popup-content .popup-inner > p:first-child {
+    padding-top: 30px;
+  }
+  html.html-popup-content .popup-inner {
+    font-size: 1rem;
+  }
+  html.html-popup-content .popup-inner > h3,
+  html.html-popup-content .popup-inner > p a {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-height: 768px) {
+  html.html-popup-content .popup-inner {
+    max-height: none !important;
+  }
+}
+
+/* ============================================
+   WW-21: Homepage Hero Banner
+   ============================================ */
+
+/* Same background image on all breakpoints */
+.home .bg-banner-home-fulldesk,
+.home .bg-banner-home-mobile {
+  background-image: url('../images/black-tie-bike-rentals.jpg') !important;
+}
+
+/* Fill the viewport at every breakpoint — matches the reference layout */
+.home .mod-hero-image {
+  height: 100vh !important;
+  min-height: 500px !important;
+}
+
+/* Hide JS-generated slider clone — app.js duplicates .content into .content-fix at runtime */
+.home .mod-hero-image .content-fix {
+  display: none !important;
+}
+
+/* padding-top clears the fixed header; transform:none stops the slider
+   animation from shifting the content div left and clipping the text */
+.home .mod-hero-image .content {
+  padding: 60px 20px 0 !important;
+  -webkit-transform: none !important;
+  transform: none !important;
+}
+@media (min-width: 992px) {
+  .home .mod-hero-image .content {
+    padding: 180px 100px 0 !important;
+  }
+}
+
+/* Book Now button: smaller on tablet/mobile */
+#boonowbutton {
+  font-size: 0.8rem;
+  padding: 8px 18px !important;
+}
+@media (min-width: 992px) {
+  #boonowbutton {
+    font-size: 1rem;
+    padding: 12px 30px !important;
+  }
+}
+
+/* H1: scale up from mobile → desktop */
+.home .mod-hero-image .content h1 {
+  font-size: 1.4rem;
+  line-height: 1.15;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+@media (min-width: 768px) {
+  .home .mod-hero-image .content h1 {
+    font-size: 2.25rem;
+  }
+}
+@media (min-width: 992px) {
+  .home .mod-hero-image .content h1 {
+    font-size: 3rem;
+  }
+}
+
+/* H2 */
+.home .mod-hero-image .content h2 {
+  font-size: 0.65rem;
+  line-height: 1.2;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+@media (min-width: 992px) {
+  .home .mod-hero-image .content h2 {
+    font-size: 1rem;
+  }
+}
 
 
+/* Mobile background: subtle dark overlay + green fade at bottom */
+.home .bg-banner-home-mobile {
+  background-image:
+    linear-gradient(to top, rgba(86, 143, 59, 0.75) 0%, transparent 45%),
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url('../images/black-tie-bike-rentals.jpg') !important;
+  background-size: auto, auto, 160% !important;
+  background-position: bottom, top, center 70% !important;
+}
+
+/* Mountain graphics */
+.home .bg-mountain.bg-mountain-mb {
+  height: 50% !important;
+  top: 40% !important;
+}
+@media (min-width: 992px) {
+  .home .bg-mountain-desktop-full {
+    bottom: -40px !important;
+  }
+  .home .bg-mountain-desktop {
+    top: 55% !important;
+  }
+}
+@media (min-width: 1500px) {
+  .home .mod-hero-image {
+    height: 900px !important;
+  }
+  .home .bg-mountain-desktop-full {
+    top: 60% !important;
+  }
+}
+
+/* Pull steps section up below hero */
+.home .mod-hero-image + section {
+  margin-top: -10% !important;
+}
+
+@media (max-width: 991px) {
+  #main-content {
+    padding-top: 160px !important;
+  }
+}
+
+/* ============================================
+   WW-10: Location Page Hero Banner
+   ============================================ */
+
+/* Hide JS-generated slider clone */
+.page-template-page-location .mod-hero-image .content-fix {
+  display: none !important;
+}
+
+/* Black base + clip so photo fills the hero cleanly with no overflow */
+.page-template-page-location .mod-hero-image {
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+}
+/* Mobile: grow hero via padding so the photo stretches into the gap area */
+@media (max-width: 991px) {
+  .page-template-page-location .mod-hero-image {
+    padding-bottom: 180px;
+  }
+}
+/* Desktop: extend fixed height to absorb the 180px gap (990px base + 180px) */
+@media (min-width: 992px) {
+  .page-template-page-location .mod-hero-image {
+    height: 1170px !important;
+  }
+}
+.page-template-page-location .mod-reviews {
+  position: relative;
+  z-index: 1;
+}
+
+/* Image opacity for text readability */
+.page-template-page-location .bg-banner-home-fulldesk,
+.page-template-page-location .bg-banner-home-mobile {
+  opacity: 0.8;
+}
+
+/* Clear fixed header; stop slider transform from clipping text */
+.page-template-page-location .mod-hero-image .content {
+  padding: 180px 100px 0 !important;
+  -webkit-transform: none !important;
+  transform: none !important;
+}
+
+/* H1 */
+.page-template-page-location .mod-hero-image .content h1 {
+  font-size: 3rem;
+  line-height: 1 !important;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* H2: smaller + italic */
+.page-template-page-location .mod-hero-image .content h2 {
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 0.5 !important;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Kill blue overlay at all breakpoints */
+.page-template-page-location .bg-transparent-blue {
+  display: none !important;
+}
+
+/* Ensure banner images cover the full hero */
+.page-template-page-location .bg-banner-home-fulldesk,
+.page-template-page-location .bg-banner-home-mobile {
+  background-size: cover !important;
+  background-position: center center !important;
+}
+
+/* Mountain graphics — keep within overflow:hidden hero boundary */
+@media (min-width: 992px) {
+  .page-template-page-location .bg-mountain-desktop-full {
+    bottom: 0 !important;
+  }
+  .page-template-page-location .bg-mountain-desktop {
+    top: 55% !important;
+    bottom: 0 !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+  .page-template-page-location .mod-hero-image .content {
+    padding: 140px 35px 0 !important;
+  }
+  .page-template-page-location .mod-hero-image .content h1 {
+    font-size: 1.75rem;
+  }
+  /* Lock background position so it doesn't shift at small breakpoints */
+  .page-template-page-location .bg-banner-home-mobile {
+    background-position: top center !important;
+  }
+}
+
+.page-template-page-location .mod-reviews {
+  margin-top: 0 !important;
+}
 
 
 

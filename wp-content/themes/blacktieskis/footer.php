@@ -28,11 +28,8 @@ wp_reset_query(); //important to destroy the previous query and setup a new quer
       <div class="popup-content-contact container" id="booknnnn">
         <div class="mask-pop-overlay"></div>
         <div class="container popup-inner cont-background-opacity" style="max-width:770px;min-height:280px;padding:30px;">
-          
-            <?php the_field('bt_booknow_description', 'option'); ?>
-          
-       
-          
+
+          <?php the_field('bt_booknow_description', 'option'); ?>
 
           <a href="javascript:void(0);" class="popup-is-close">
             <span class="icomoon icon-close1"></span>
