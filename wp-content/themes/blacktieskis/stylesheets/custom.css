@@ -1513,10 +1513,15 @@ html.html-popup-content .popup-inner > p a:hover {
   min-height: 500px !important;
 }
 
+/* Hide JS-generated slider clone — app.js duplicates .content into .content-fix at runtime */
+.home .mod-hero-image .content-fix {
+  display: none !important;
+}
+
 /* padding-top clears the fixed header; transform:none stops the slider
    animation from shifting the content div left and clipping the text */
 .home .mod-hero-image .content {
-  padding: 190px 35px 0 !important;
+  padding: 60px 20px 0 !important;
   -webkit-transform: none !important;
   transform: none !important;
 }
@@ -1540,7 +1545,8 @@ html.html-popup-content .popup-inner > p a:hover {
 
 /* H1: scale up from mobile → desktop */
 .home .mod-hero-image .content h1 {
-  font-size: 1.75rem;
+  font-size: 1.4rem;
+  line-height: 1.15;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 @media (min-width: 768px) {
@@ -1556,19 +1562,31 @@ html.html-popup-content .popup-inner > p a:hover {
 
 /* H2 */
 .home .mod-hero-image .content h2 {
-  font-size: 1rem;
+  font-size: 0.65rem;
+  line-height: 1.2;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
+@media (min-width: 992px) {
+  .home .mod-hero-image .content h2 {
+    font-size: 1rem;
+  }
+}
 
-/* Show green gradient overlay on all breakpoints on homepage */
-.home .bg-transparent-violet {
-  display: block !important;
+
+/* Mobile background: subtle dark overlay + green fade at bottom */
+.home .bg-banner-home-mobile {
+  background-image:
+    linear-gradient(to top, rgba(86, 143, 59, 0.75) 0%, transparent 45%),
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url('../images/black-tie-bike-rentals.jpg') !important;
+  background-size: auto, auto, 160% !important;
+  background-position: bottom, top, center 70% !important;
 }
 
 /* Mountain graphics */
 .home .bg-mountain.bg-mountain-mb {
   height: 50% !important;
-  top: 55% !important;
+  top: 40% !important;
 }
 @media (min-width: 992px) {
   .home .bg-mountain-desktop-full {
@@ -1590,6 +1608,12 @@ html.html-popup-content .popup-inner > p a:hover {
 /* Pull steps section up below hero */
 .home .mod-hero-image + section {
   margin-top: -10% !important;
+}
+
+@media (max-width: 991px) {
+  #main-content {
+    padding-top: 160px !important;
+  }
 }
 
 
