@@ -1301,6 +1301,112 @@ h1, h2, h3, h4, h5,
   text-transform: uppercase !important;
 }
 
+/* ============================================
+   WW-3: Garnett font
+   ============================================ */
+
+@font-face {
+  font-family: "Garnett";
+  src: url("../fonts/Garnett-Light.woff") format("woff"),
+       url("../fonts/Garnett-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garnett";
+  src: url("../fonts/Garnett-LightItalic.woff") format("woff"),
+       url("../fonts/Garnett-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garnett";
+  src: url("../fonts/Garnett-Regular.woff") format("woff"),
+       url("../fonts/Garnett-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garnett";
+  src: url("../fonts/Garnett-RegularItalic.woff") format("woff"),
+       url("../fonts/Garnett-RegularItalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garnett";
+  src: url("../fonts/Garnett-Medium.woff") format("woff"),
+       url("../fonts/Garnett-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garnett";
+  src: url("../fonts/Garnett-MediumItalic.woff") format("woff"),
+       url("../fonts/Garnett-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garnett";
+  src: url("../fonts/Garnett-Semibold.woff") format("woff"),
+       url("../fonts/Garnett-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garnett";
+  src: url("../fonts/Garnett-SemiboldItalic.woff") format("woff"),
+       url("../fonts/Garnett-SemiboldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garnett";
+  src: url("../fonts/Garnett-Bold.woff") format("woff"),
+       url("../fonts/Garnett-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garnett";
+  src: url("../fonts/Garnett-BoldItalic.woff") format("woff"),
+       url("../fonts/Garnett-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garnett";
+  src: url("../fonts/Garnett-Black.woff") format("woff"),
+       url("../fonts/Garnett-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garnett";
+  src: url("../fonts/Garnett-BlackItalic.woff") format("woff"),
+       url("../fonts/Garnett-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Override Poppins/Open Sans site-wide; icomoon wins via higher specificity */
+* {
+  font-family: "Garnett", sans-serif !important;
+}
+
 
 
 
