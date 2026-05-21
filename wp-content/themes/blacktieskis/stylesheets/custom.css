@@ -1616,6 +1616,107 @@ html.html-popup-content .popup-inner > p a:hover {
   }
 }
 
+/* ============================================
+   WW-10: Location Page Hero Banner
+   ============================================ */
+
+/* Hide JS-generated slider clone */
+.page-template-page-location .mod-hero-image .content-fix {
+  display: none !important;
+}
+
+/* Black base + clip so photo fills the hero cleanly with no overflow */
+.page-template-page-location .mod-hero-image {
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+}
+/* Mobile: grow hero via padding so the photo stretches into the gap area */
+@media (max-width: 991px) {
+  .page-template-page-location .mod-hero-image {
+    padding-bottom: 180px;
+  }
+}
+/* Desktop: extend fixed height to absorb the 180px gap (990px base + 180px) */
+@media (min-width: 992px) {
+  .page-template-page-location .mod-hero-image {
+    height: 1170px !important;
+  }
+}
+.page-template-page-location .mod-reviews {
+  position: relative;
+  z-index: 1;
+}
+
+/* Image opacity for text readability */
+.page-template-page-location .bg-banner-home-fulldesk,
+.page-template-page-location .bg-banner-home-mobile {
+  opacity: 0.8;
+}
+
+/* Clear fixed header; stop slider transform from clipping text */
+.page-template-page-location .mod-hero-image .content {
+  padding: 180px 100px 0 !important;
+  -webkit-transform: none !important;
+  transform: none !important;
+}
+
+/* H1 */
+.page-template-page-location .mod-hero-image .content h1 {
+  font-size: 3rem;
+  line-height: 0.5 !important;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* H2: smaller + italic */
+.page-template-page-location .mod-hero-image .content h2 {
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 0.5 !important;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Kill blue overlay at all breakpoints */
+.page-template-page-location .bg-transparent-blue {
+  display: none !important;
+}
+
+/* Ensure banner images cover the full hero */
+.page-template-page-location .bg-banner-home-fulldesk,
+.page-template-page-location .bg-banner-home-mobile {
+  background-size: cover !important;
+  background-position: center center !important;
+}
+
+/* Mountain graphics — keep within overflow:hidden hero boundary */
+@media (min-width: 992px) {
+  .page-template-page-location .bg-mountain-desktop-full {
+    bottom: 0 !important;
+  }
+  .page-template-page-location .bg-mountain-desktop {
+    top: 55% !important;
+    bottom: 0 !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+  .page-template-page-location .mod-hero-image .content {
+    padding: 140px 35px 0 !important;
+  }
+  .page-template-page-location .mod-hero-image .content h1 {
+    font-size: 1.75rem;
+  }
+  /* Lock background position so it doesn't shift at small breakpoints */
+  .page-template-page-location .bg-banner-home-mobile {
+    background-position: top center !important;
+  }
+}
+
+.page-template-page-location .mod-reviews {
+  margin-top: 0 !important;
+}
+
 
 
 
