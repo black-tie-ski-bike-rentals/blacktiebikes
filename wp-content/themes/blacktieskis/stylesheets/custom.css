@@ -310,6 +310,15 @@ body div.gform_wrapper div.gform_body select {
   color: #fff !important;
 }
 
+.mod-hero-image .bg-transparent,
+.mod-hero-image .bg-mountain {
+  pointer-events: none;
+}
+
+.mod-hero-image .content-fix {
+  pointer-events: none;
+}
+
 .mod-hero-image .content h1 {
   color: #fff;
 }
@@ -422,15 +431,15 @@ background: #fff;
     background: #000;
     border-color: #000;
 }
-.btn-primary1 { 
-background-color: #156BB1;
-  border-color: #156BB1;
-color:#fff;
+.btn-primary1 {
+background-color: #156BB1 !important;
+  border-color: #156BB1 !important;
+color:#fff !important;
 margin: 0 3px 0;}
 	.btn-primary1.is-hover, .btn-primary1:focus, .btn-primary1:hover {
-    color: #fff;
-    background: #000;
-    border-color: #000;
+    color: #fff !important;
+    background: #000 !important;
+    border-color: #000 !important;
 }
 
 
@@ -569,33 +578,37 @@ width: 100%;
   padding-top: 10px;
   padding-bottom: 70px;
 }
+.book-ski-headline .btn {
+  min-width: 175px;
+  margin: 6px;
+}
+.mod-book-ski .btn:first-of-type {
+  margin: 0;
+}
 #boonowbutton {
     color: #fff;
-    background-color: #276faf;
-    border-color: #276faf;
-    width: 105px;
-    height: 35px;
-    padding: 0 !important;
+    background-color: #568F3B;
+    border-color: #568F3B;
+    padding: 12px 30px !important;
     border-radius: 6px;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 13px;
-    letter-spacing: 0 !important;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1rem;
+    vertical-align: middle;
 }
 html body #boonowbutton:hover,
 html body #boonowbutton.is-hover {
-	background-color: #1a5a94 !important;
-	border-color: #1a5a94 !important;
+	background-color: #256BB2 !important;
+	border-color: #256BB2 !important;
 	color: #fff !important;
+	text-decoration: none !important;
 }
 .newcl a:hover {
-    background: #000 !important;
-    border-color: #000;
-
+    background: #256BB2 !important;
+    border-color: #256BB2 !important;
+    text-decoration: none !important;
 }
 .popup-content{
 	text-align:center !important;
@@ -1103,9 +1116,8 @@ font-size: 30px;
     display: flex !important;
   }
 
-  /* CTA button size fix */
-  #boonowbutton {
-    font-size: 13px !important;
+  /* CTA button size fix — header only, so it stays compact in the nav */
+  #header #boonowbutton {
     padding: 7px 15px !important;
   }
 
@@ -1116,7 +1128,12 @@ font-size: 30px;
   }
 }
 
-/* Fix btn-cta absolute positioning on very small screens */
+/* Fix btn-cta positioning and margin on mobile */
+@media (max-width: 580px) {
+  nav > .btn-cta a {
+    margin-left: 0 !important;
+  }
+}
 @media (max-width: 414px) {
   nav > .btn-cta {
     position: static !important;
@@ -1504,8 +1521,30 @@ h1, h2, h3, h4, h5,
   font-family: "Garnett", sans-serif !important;
 }
 
+/* ============================================
+   WW-4: Button Styling
+   ============================================ */
 
+.btn {
+  text-transform: uppercase !important;
+  border-radius: 6px !important;
+  border: none !important;
+  background-color: #568F3B !important;
+  color: #fff !important;
+  padding: 12px 30px !important;
+  text-decoration: none !important;
+  font-size: 1rem !important;
+  vertical-align: middle !important;
+}
 
+.btn:hover,
+.btn:focus,
+.btn.is-hover {
+  background-color: #256BB2 !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  border: none !important;
+}
 
 
 

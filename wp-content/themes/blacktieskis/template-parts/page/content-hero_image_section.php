@@ -3,7 +3,7 @@
  * Displays content for Hero Image Section
  */ 
 ?>
-<?php 
+<?php
 $hero_img_video_embed = get_sub_field('video_embed');
 ?>
 
