@@ -325,7 +325,6 @@ body div.gform_wrapper div.gform_body select {
 .mod-hero-image .content h1 {
   margin: 0px auto 15px !important;
 
-  @media ()
 }
 
 .tab button {
@@ -1517,13 +1516,25 @@ html.html-popup-content .popup-inner > p a:hover {
 /* padding-top clears the fixed header; transform:none stops the slider
    animation from shifting the content div left and clipping the text */
 .home .mod-hero-image .content {
-  padding: 120px 15px 0 !important;
+  padding: 190px 35px 0 !important;
   -webkit-transform: none !important;
   transform: none !important;
 }
 @media (min-width: 992px) {
   .home .mod-hero-image .content {
     padding: 180px 100px 0 !important;
+  }
+}
+
+/* Book Now button: smaller on tablet/mobile */
+#boonowbutton {
+  font-size: 0.8rem;
+  padding: 8px 18px !important;
+}
+@media (min-width: 992px) {
+  #boonowbutton {
+    font-size: 1rem;
+    padding: 12px 30px !important;
   }
 }
 
@@ -1549,6 +1560,11 @@ html.html-popup-content .popup-inner > p a:hover {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+/* Show green gradient overlay on all breakpoints on homepage */
+.home .bg-transparent-violet {
+  display: block !important;
+}
+
 /* Mountain graphics */
 .home .bg-mountain.bg-mountain-mb {
   height: 50% !important;
@@ -1560,6 +1576,14 @@ html.html-popup-content .popup-inner > p a:hover {
   }
   .home .bg-mountain-desktop {
     top: 55% !important;
+  }
+}
+@media (min-width: 1500px) {
+  .home .mod-hero-image {
+    height: 900px !important;
+  }
+  .home .bg-mountain-desktop-full {
+    top: 60% !important;
   }
 }
 
