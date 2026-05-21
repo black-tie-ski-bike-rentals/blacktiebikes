@@ -323,7 +323,9 @@ body div.gform_wrapper div.gform_body select {
   color: #fff;
 }
 .mod-hero-image .content h1 {
-  margin: 12% auto 15px !important;
+  margin: 0px auto 15px !important;
+
+  @media ()
 }
 
 .tab button {
@@ -389,9 +391,9 @@ background: #fff;
 #site-description {
   color: #fff;
 }
-.mod-hero-image .content h1 {
+/* .mod-hero-image .content h1 {
     margin: 76px auto 15px;
-}
+} */
 #header .navbar {
   padding: 5px 15px;
 }
@@ -961,7 +963,7 @@ font-size: 30px;
 }
 @media (min-width: 992px) {
   #main-content {
-    padding-top: 160px !important;
+    padding-top: 175px !important;
   }
 }
 
@@ -1500,44 +1502,70 @@ html.html-popup-content .popup-inner > p a:hover {
    WW-21: Homepage Hero Banner
    ============================================ */
 
-/* New homepage hero background image */
-.home .bg-banner-home-fulldesk {
+/* Same background image on all breakpoints */
+.home .bg-banner-home-fulldesk,
+.home .bg-banner-home-mobile {
   background-image: url('../images/black-tie-bike-rentals.jpg') !important;
 }
 
-/* Push hero content below fixed header on desktop */
+/* Fill the viewport at every breakpoint — matches the reference layout */
+.home .mod-hero-image {
+  height: 100vh !important;
+  min-height: 500px !important;
+}
+
+/* padding-top clears the fixed header; transform:none stops the slider
+   animation from shifting the content div left and clipping the text */
+.home .mod-hero-image .content {
+  padding: 120px 15px 0 !important;
+  -webkit-transform: none !important;
+  transform: none !important;
+}
 @media (min-width: 992px) {
   .home .mod-hero-image .content {
-    padding-top: 180px;
+    padding: 180px 100px 0 !important;
   }
 }
 
-/* H1 sizing + text shadow */
+/* H1: scale up from mobile → desktop */
 .home .mod-hero-image .content h1 {
-  font-size: 3rem;
+  font-size: 1.75rem;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
+@media (min-width: 768px) {
+  .home .mod-hero-image .content h1 {
+    font-size: 2.25rem;
+  }
+}
+@media (min-width: 992px) {
+  .home .mod-hero-image .content h1 {
+    font-size: 3rem;
+  }
+}
 
-/* H2 sizing + text shadow */
+/* H2 */
 .home .mod-hero-image .content h2 {
   font-size: 1rem;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Lower mountain graphic to reveal more of the background image */
-.home .bg-mountain-desktop-full,
-.home .bg-mountain-desktop {
-  bottom: -40px !important;
+/* Mountain graphics */
+.home .bg-mountain.bg-mountain-mb {
+  height: 50% !important;
+  top: 55% !important;
+}
+@media (min-width: 992px) {
+  .home .bg-mountain-desktop-full {
+    bottom: -40px !important;
+  }
+  .home .bg-mountain-desktop {
+    top: 55% !important;
+  }
 }
 
-/* Mobile: dark overlay for text legibility */
-@media (max-width: 991px) {
-  .home .mod-hero-image {
-    background-color: #000;
-  }
-  .home .bg-banner-home-mobile {
-    opacity: 0.8;
-  }
+/* Pull steps section up below hero */
+.home .mod-hero-image + section {
+  margin-top: -10% !important;
 }
 
 
