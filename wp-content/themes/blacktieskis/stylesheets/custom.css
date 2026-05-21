@@ -1496,9 +1496,49 @@ html.html-popup-content .popup-inner > p a:hover {
   }
 }
 
+/* ============================================
+   WW-21: Homepage Hero Banner
+   ============================================ */
 
+/* New homepage hero background image */
+.home .bg-banner-home-fulldesk {
+  background-image: url('../images/black-tie-bike-rentals.jpg') !important;
+}
 
+/* Push hero content below fixed header on desktop */
+@media (min-width: 992px) {
+  .home .mod-hero-image .content {
+    padding-top: 180px;
+  }
+}
 
+/* H1 sizing + text shadow */
+.home .mod-hero-image .content h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* H2 sizing + text shadow */
+.home .mod-hero-image .content h2 {
+  font-size: 1rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Lower mountain graphic to reveal more of the background image */
+.home .bg-mountain-desktop-full,
+.home .bg-mountain-desktop {
+  bottom: -40px !important;
+}
+
+/* Mobile: dark overlay for text legibility */
+@media (max-width: 991px) {
+  .home .mod-hero-image {
+    background-color: #000;
+  }
+  .home .bg-banner-home-mobile {
+    opacity: 0.8;
+  }
+}
 
 
 
