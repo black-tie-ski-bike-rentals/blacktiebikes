@@ -38,7 +38,7 @@ $location_name = get_the_title();
         <div class="explore-cat-block">
           <div class="explore-cat-header">
             <span class="explore-cat-label"><?php echo esc_html( $cat_label ); ?></span>
-            <?php if ( $pkg_count !== 1 && $cat_cta_text && $cat_cta_url ) : ?>
+            <?php if ( $cat_cta_text && $cat_cta_url ) : ?>
               <a href="<?php echo esc_url( $cat_cta_url ); ?>" class="explore-cat-cta"><?php echo esc_html( $cat_cta_text ); ?> &rarr;</a>
             <?php endif; ?>
           </div>
@@ -52,24 +52,21 @@ $location_name = get_the_title();
               <div class="explore-slider-viewport">
                 <div class="explore-slider-track" id="<?php echo esc_attr( $slider_id ); ?>-track">
                   <?php foreach ( $packages as $pkg ) :
-                    $img_id   = ! empty( $pkg['pkg_image'] ) ? $pkg['pkg_image'] : 0;
-                    $img_src  = $img_id ? wp_get_attachment_image_src( $img_id, 'medium' ) : false;
-                    $img_alt  = $img_id ? get_post_meta( $img_id, '_wp_attachment_image_alt', true ) : '';
-                    $card_url = ! empty( $pkg['pkg_cta_url'] ) ? $pkg['pkg_cta_url'] : '';
-                    $card_tag = $card_url ? 'a' : 'div';
-                    $card_attrs = $card_url ? ' href="' . esc_url( $card_url ) . '" target="_blank" rel="noopener"' : '';
+                    $img_id  = ! empty( $pkg['pkg_image'] ) ? $pkg['pkg_image'] : 0;
+                    $img_src = $img_id ? wp_get_attachment_image_src( $img_id, 'medium' ) : false;
+                    $img_alt = $img_id ? get_post_meta( $img_id, '_wp_attachment_image_alt', true ) : '';
                   ?>
-                    <<?php echo $card_tag; ?> class="explore-card"<?php echo $card_attrs; ?>>
+                    <div class="explore-card">
                       <div class="explore-card__img">
                         <?php if ( $img_src ) : ?>
                           <img src="<?php echo esc_url( $img_src[0] ); ?>" alt="<?php echo esc_attr( $img_alt ); ?>">
                         <?php endif; ?>
                       </div>
                       <div class="explore-card__body">
-                        <p class="explore-card__title"><?php echo esc_html( $pkg['pkg_title'] ); ?></p>
+                        <h3 class="explore-card__title"><?php echo esc_html( $pkg['pkg_title'] ); ?></h3>
                         <p class="explore-card__desc"><?php echo esc_html( $pkg['pkg_description'] ); ?></p>
                       </div>
-                    </<?php echo $card_tag; ?>>
+                    </div>
                   <?php endforeach; ?>
                 </div>
               </div>
@@ -82,36 +79,32 @@ $location_name = get_the_title();
 
             <div class="explore-grid-2">
               <?php foreach ( $packages as $pkg ) :
-                $img_id   = ! empty( $pkg['pkg_image'] ) ? $pkg['pkg_image'] : 0;
-                $img_src  = $img_id ? wp_get_attachment_image_src( $img_id, 'medium' ) : false;
-                $img_alt  = $img_id ? get_post_meta( $img_id, '_wp_attachment_image_alt', true ) : '';
-                $card_url = ! empty( $pkg['pkg_cta_url'] ) ? $pkg['pkg_cta_url'] : '';
-                $card_tag = $card_url ? 'a' : 'div';
-                $card_attrs = $card_url ? ' href="' . esc_url( $card_url ) . '" target="_blank" rel="noopener"' : '';
+                $img_id  = ! empty( $pkg['pkg_image'] ) ? $pkg['pkg_image'] : 0;
+                $img_src = $img_id ? wp_get_attachment_image_src( $img_id, 'medium' ) : false;
+                $img_alt = $img_id ? get_post_meta( $img_id, '_wp_attachment_image_alt', true ) : '';
               ?>
-                <<?php echo $card_tag; ?> class="explore-card"<?php echo $card_attrs; ?>>
+                <div class="explore-card">
                   <div class="explore-card__img">
                     <?php if ( $img_src ) : ?>
                       <img src="<?php echo esc_url( $img_src[0] ); ?>" alt="<?php echo esc_attr( $img_alt ); ?>">
                     <?php endif; ?>
                   </div>
                   <div class="explore-card__body">
-                    <p class="explore-card__title"><?php echo esc_html( $pkg['pkg_title'] ); ?></p>
+                    <h3 class="explore-card__title"><?php echo esc_html( $pkg['pkg_title'] ); ?></h3>
                     <p class="explore-card__desc"><?php echo esc_html( $pkg['pkg_description'] ); ?></p>
                   </div>
-                </<?php echo $card_tag; ?>>
+                </div>
               <?php endforeach; ?>
             </div>
 
           <?php elseif ( $pkg_count === 1 ) : ?>
 
             <?php
-            $pkg      = $packages[0];
-            $img_id   = ! empty( $pkg['pkg_image'] ) ? $pkg['pkg_image'] : 0;
-            $img_src  = $img_id ? wp_get_attachment_image_src( $img_id, 'large' ) : false;
-            $img_alt  = $img_id ? get_post_meta( $img_id, '_wp_attachment_image_alt', true ) : '';
-            $badge    = ! empty( $pkg['pkg_badge'] ) ? $pkg['pkg_badge'] : '';
-            $card_url = ! empty( $pkg['pkg_cta_url'] ) ? $pkg['pkg_cta_url'] : '';
+            $pkg     = $packages[0];
+            $img_id  = ! empty( $pkg['pkg_image'] ) ? $pkg['pkg_image'] : 0;
+            $img_src = $img_id ? wp_get_attachment_image_src( $img_id, 'large' ) : false;
+            $img_alt = $img_id ? get_post_meta( $img_id, '_wp_attachment_image_alt', true ) : '';
+            $badge   = ! empty( $pkg['pkg_badge'] ) ? $pkg['pkg_badge'] : '';
             ?>
             <div class="explore-featured">
               <div class="explore-featured__img">
@@ -123,11 +116,8 @@ $location_name = get_the_title();
                 <?php if ( $badge ) : ?>
                   <span class="explore-featured__badge"><?php echo esc_html( $badge ); ?></span>
                 <?php endif; ?>
-                <p class="explore-featured__title"><?php echo esc_html( $pkg['pkg_title'] ); ?></p>
+                <h3 class="explore-featured__title"><?php echo esc_html( $pkg['pkg_title'] ); ?></h3>
                 <p class="explore-featured__desc"><?php echo esc_html( $pkg['pkg_description'] ); ?></p>
-                <?php if ( $card_url ) : ?>
-                  <a href="<?php echo esc_url( $card_url ); ?>" class="explore-featured__cta" target="_blank" rel="noopener">Book Now &rarr;</a>
-                <?php endif; ?>
               </div>
             </div>
 
