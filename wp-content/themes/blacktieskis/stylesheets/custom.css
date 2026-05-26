@@ -1633,13 +1633,19 @@ html.html-popup-content .popup-inner > p a:hover {
   .btb-hero__mountain {
     background-image: url('../images/bg-mountain.png');
     background-position: center center;
-    top: 65%;
+    top: calc(62% + 35vw - 380px);
     height: 60%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .btb-hero__mountain {
+    display: none;
   }
 }
 @media (min-width: 1500px) {
   .btb-hero__mountain {
-    top: 65%;
+    top: 72%;
     height: 100%;
   }
 }
@@ -1648,7 +1654,7 @@ html.html-popup-content .popup-inner > p a:hover {
 .btb-hero__content {
   position: relative;
   z-index: 3;
-  padding-top: 180px;
+  padding-top: 140px;
   text-align: center;
 }
 @media (min-width: 992px) {
@@ -1716,6 +1722,7 @@ html.html-popup-content .popup-inner > p a:hover {
 
 .mod-steps {
   margin-top: 0 !important;
+  padding-top: clamp(0px, calc(16.2vw - 160px), 150px);
 }
 
 /* ============================================
