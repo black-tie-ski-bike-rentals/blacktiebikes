@@ -226,11 +226,6 @@ body div.gform_wrapper div.gform_body select {
   text-align: left;
   margin: 0 0 10px;
 }
-.mod-hero-image .content h1 {
-  font-size: 2.25rem;
-  padding: 20px 0 0;
-}
-
 #Accessories {
   padding: 29px 10px 0;
 }
@@ -321,10 +316,8 @@ body div.gform_wrapper div.gform_body select {
 
 .mod-hero-image .content h1 {
   color: #fff;
-}
-.mod-hero-image .content h1 {
-  margin: 0px auto 15px !important;
-
+  font-size: 2.25rem;
+  margin: 0 auto 15px;
 }
 
 .tab button {
@@ -555,17 +548,32 @@ width: 100%;
 }
 }
 
+.mod-hero-image .content-fix {
+  display: none !important;
+}
 .mod-hero-image .content {
-  padding:100px;
+  padding: 140px 20px 80px;
+  -webkit-transform: none !important;
+  transform: none !important;
+}
+@media (min-width: 768px) {
+  .mod-hero-image .content {
+    padding: 160px 60px 80px;
+  }
+}
+@media (min-width: 992px) {
+  .mod-hero-image .content {
+    padding: 180px 100px 80px;
+  }
 }
 
 .mod-hero-image .icon-mouse {
- position:relative;
- right:0;
- bottom:0;
- left:0;
- margin:4% auto 0;
- width:20px
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 4% auto 0;
+  width: 20px;
 }
 .mod-reviews {
   padding: 50px 0 !important;
@@ -650,76 +658,40 @@ html body #boonowbutton.is-hover {
   max-width: 800px !important;
 	max-height: 785px;
 }
-@media only screen and (max-width: 405px) {
-  .mod-hero-image .content {
-  padding: 212px 0 270px;
-  }
-.bg-mountain.bg-mountain-mb {
-  height: 52%;
-  top: 55%;
-}}
 @media only screen and (max-width: 575px) {
-  .mod-hero-image .content {
-  padding: 212px 0 370px;
+  .page-id-20 #products {
+    padding: 70px;
+    height: 550px;
   }
-.page-id-20 #products {
-  padding: 70px;
-  height: 550px;
-}
-	.bg-mountain.bg-mountain-mb {
-  height: 52%;
-  top: 45%;
-}
-.mod-about .triangle-black {
-  border-left: 400px solid transparent;
-  border-top: 299px solid #000;
-}
-.mod-about .triangle-blue {
-  border-right: 353px solid transparent;
-  border-top: 420px solid #568F3B;
-}
+  .mod-about .triangle-black {
+    border-left: 400px solid transparent;
+    border-top: 299px solid #000;
+  }
+  .mod-about .triangle-blue {
+    border-right: 353px solid transparent;
+    border-top: 420px solid #568F3B;
+  }
 }
 @media only screen and (max-width: 767px) {
-  .mod-hero-image .content {
-  padding: 212px 0 476px;
+  .page-id-20 .mod-hero-image .content {
+    margin: 0 auto -150px;
   }
-	.page-id-20 .mod-hero-image .content {
-		margin: 0 auto -150px;
+  .tab button {
+    padding: 15px 13px !important;
+    border-left: 1px solid #fff !important;
   }
-.bg-mountain.bg-mountain-mb {
-  height: 52%;
-  top: 45%;
-}
-	.tab button {
-  padding: 15px 13px !important;
-		border-left: 1px solid #fff !important;
-}
-.popup-inner {
-display: block !important;
-
-	}
-	
-.select-cnew {
-  padding: 15px 21px;
-  background: #568F3B;
-  border: 0px solid #DFE8E0;
-  text-transform: uppercase;
-	
-	 margin-top:26px;
-  margin-left: 10px;
-}
-
-
-}
-@media only screen and (max-width: 1200px) {
-  .mod-hero-image .content {
-  padding: 112px 0 476px;
+  .popup-inner {
+    display: block !important;
   }
-.bg-mountain.bg-mountain-mb {
-  height: 52%;
-  top: 51%;
+  .select-cnew {
+    padding: 15px 21px;
+    background: #568F3B;
+    border: 0px solid #DFE8E0;
+    text-transform: uppercase;
+    margin-top: 26px;
+    margin-left: 10px;
+  }
 }
-	}
 @media (min-width: 1200px) {
   .main-menu-ul > li {
     margin: 0px 11px !important;
@@ -816,43 +788,25 @@ html.popup-animation .popup-inner {
     opacity: 0.65;
 }
 
-@media (max-width: 991px){
-.mod-steps .step-item {
-  margin: 0 0 0px;
-}
-	
-	.mod-steps .step-item {
-  margin: 0 0 0px;
-}
-	
-.box-step.ani3 {
-  margin: 7px 0 0 0;
-}	
-.box-step.ani4 {
-  margin: 7px 0 0 0;
-}
-	
-	.mod-hero-image .content {
-  padding: 30px 0 406px;
-}
-	.bg-mountain.bg-mountain-mb {
-  height:70%;
-  top:30%;
-}
-	.page-id-20 .mod-hero-image .content {
-  margin: 0 auto -218px;
-}
-	
-	.animation5 .step-item-image-cont {
-  position: absolute;
-  top: 114px;
-  right: 0;
-  left: 0;
-}
-	
-	
-
-	
+@media (max-width: 991px) {
+  .mod-steps .step-item {
+    margin: 0 0 0px;
+  }
+  .box-step.ani3 {
+    margin: 7px 0 0 0;
+  }
+  .box-step.ani4 {
+    margin: 7px 0 0 0;
+  }
+  .page-id-20 .mod-hero-image .content {
+    margin: 0 auto -218px;
+  }
+  .animation5 .step-item-image-cont {
+    position: absolute;
+    top: 114px;
+    right: 0;
+    left: 0;
+  }
 }
 
 
@@ -1616,37 +1570,125 @@ html.html-popup-content .popup-inner > p a:hover {
    WW-21: Homepage Hero Banner
    ============================================ */
 
-/* Same background image on all breakpoints */
-.home .bg-banner-home-fulldesk,
-.home .bg-banner-home-mobile {
-  background-image: url('../images/black-tie-bike-rentals.jpg') !important;
-}
-
-/* Fill the viewport at every breakpoint — matches the reference layout */
-.home .mod-hero-image {
-  height: 100vh !important;
-  min-height: 500px !important;
-}
-
-/* Hide JS-generated slider clone — app.js duplicates .content into .content-fix at runtime */
-.home .mod-hero-image .content-fix {
-  display: none !important;
-}
-
-/* padding-top clears the fixed header; transform:none stops the slider
-   animation from shifting the content div left and clipping the text */
-.home .mod-hero-image .content {
-  padding: 60px 20px 0 !important;
+/* Kill GSAP parallax on non-home pages — JS targets these two selectors */
+.mod-hero-image .content,
+.mod-hero-image .bg-banner-home {
   -webkit-transform: none !important;
   transform: none !important;
 }
+
+/* --- btb-hero: clean home hero rebuild --- */
+
+.btb-hero {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  min-height: 500px;
+  max-height: 900px;
+}
+
+/* Background photo */
+.btb-hero__photo {
+  position: absolute;
+  top: -300px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('../images/black-tie-bike-rentals.jpg');
+  background-size: cover;
+  background-position: center top;
+  z-index: 0;
+}
 @media (min-width: 992px) {
-  .home .mod-hero-image .content {
-    padding: 180px 100px 0 !important;
+  .btb-hero__photo {
+    top: calc(-80px - 20vw);
   }
 }
 
-/* Book Now button: smaller on tablet/mobile */
+/* Green gradient overlay */
+.btb-hero__gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(86, 143, 59, 0.9) 0%, transparent 60%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Mountain transition — single div, CSS swaps the PNG at desktop */
+.btb-hero__mountain {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 50%;
+  top: 50%;
+  background-image: url('../images/mountain-mobile-home.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 2;
+  pointer-events: none;
+}
+@media (min-width: 992px) {
+  .btb-hero__mountain {
+    background-image: url('../images/bg-mountain.png');
+    background-position: center center;
+    top: 65%;
+    height: 60%;
+  }
+}
+@media (min-width: 1500px) {
+  .btb-hero__mountain {
+    top: 65%;
+    height: 100%;
+  }
+}
+
+/* Content */
+.btb-hero__content {
+  position: relative;
+  z-index: 3;
+  padding-top: 180px;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .btb-hero__content {
+    padding-top: calc(31px + 11vw);
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+/* H1 */
+.btb-hero__content h1 {
+  color: #fff;
+  font-size: clamp(1rem, calc(4px + 3vw), 3rem);
+  line-height: 1.15;
+  margin: 0 auto 15px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* H2 — override global uppercase + italic from <em> */
+.btb-hero__content h2,
+.btb-hero__content h2 em {
+  color: #fff;
+  font-size: clamp(0.55rem, calc(6px + 0.69vw), 1rem);
+  line-height: 1.4;
+  font-style: normal !important;
+  text-transform: none !important;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Scroll arrow */
+.btb-hero__scroll {
+  margin-top: 8%;
+}
+.btb-hero__scroll .icomoon {
+  color: #fff;
+  font-size: 1.125rem;
+}
+
+/* Book Now button */
 #boonowbutton {
   font-size: 0.8rem;
   padding: 8px 18px !important;
@@ -1658,77 +1700,22 @@ html.html-popup-content .popup-inner > p a:hover {
   }
 }
 
-/* H1: scale up from mobile → desktop */
-.home .mod-hero-image .content h1 {
-  font-size: 1.4rem;
-  line-height: 1.15;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-@media (min-width: 768px) {
-  .home .mod-hero-image .content h1 {
-    font-size: 2.25rem;
-  }
-}
-@media (min-width: 992px) {
-  .home .mod-hero-image .content h1 {
-    font-size: 3rem;
-  }
-}
-
-/* H2 */
-.home .mod-hero-image .content h2 {
-  font-size: 0.65rem;
-  line-height: 1.2;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-@media (min-width: 992px) {
-  .home .mod-hero-image .content h2 {
-    font-size: 1rem;
-  }
-}
-
-
-/* Mobile background: subtle dark overlay + green fade at bottom */
-.home .bg-banner-home-mobile {
-  background-image:
-    linear-gradient(to top, rgba(86, 143, 59, 0.75) 0%, transparent 45%),
-    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
-    url('../images/black-tie-bike-rentals.jpg') !important;
-  background-size: auto, auto, 160% !important;
-  background-position: bottom, top, center 70% !important;
-}
-
-/* Mountain graphics */
-.home .bg-mountain.bg-mountain-mb {
-  height: 50% !important;
-  top: 40% !important;
-}
-@media (min-width: 992px) {
-  .home .bg-mountain-desktop-full {
-    bottom: -40px !important;
-  }
-  .home .bg-mountain-desktop {
-    top: 55% !important;
-  }
-}
-@media (min-width: 1500px) {
-  .home .mod-hero-image {
-    height: 900px !important;
-  }
-  .home .bg-mountain-desktop-full {
-    top: 60% !important;
-  }
-}
-
-/* Pull steps section up below hero */
-.home .mod-hero-image + section {
-  margin-top: -10% !important;
+/* Section below: sits on top of mountain overlap, solid white so hero doesn't bleed through */
+.btb-hero + section {
+  position: relative;
+  z-index: 3;
+  background: #fff;
+  margin-top: -12%;
 }
 
 @media (max-width: 991px) {
   #main-content {
     padding-top: 160px !important;
   }
+}
+
+.mod-steps {
+  margin-top: 0 !important;
 }
 
 /* ============================================
