@@ -1601,15 +1601,15 @@ html.html-popup-content .popup-inner > p a:hover {
 }
 @media (min-width: 992px) {
   .btb-hero__photo {
-    top: calc(-80px - 20vw);
+    top: calc(-40px - 20vw);
   }
 }
 
-/* Green gradient overlay */
+/* Gradient overlay */
 .btb-hero__gradient {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(86, 143, 59, 0.9) 0%, transparent 60%);
+  background: linear-gradient(to top, rgb(86 143 59 / 0%) 0%, #00000000 45%), linear-gradient(rgb(5 33 62 / 34%), rgb(0 0 0 / 0%));
   z-index: 1;
   pointer-events: none;
 }
@@ -1679,6 +1679,7 @@ html.html-popup-content .popup-inner > p a:hover {
 .btb-hero__content h2 em {
   color: #fff;
   font-size: clamp(0.55rem, calc(6px + 0.69vw), 1rem);
+  font-weight: 400;
   line-height: 1.4;
   font-style: normal !important;
   text-transform: none !important;
