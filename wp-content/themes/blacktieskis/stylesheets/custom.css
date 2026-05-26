@@ -1777,16 +1777,20 @@ html.html-popup-content .popup-inner > p a:hover {
 
 /* H1 */
 .page-template-page-location .mod-hero-image .content h1 {
+  color: #fff;
   font-size: 3rem;
-  line-height: 1 !important;
+  line-height: 1.15 !important;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* H2: smaller + italic */
+/* H2 */
 .page-template-page-location .mod-hero-image .content h2 {
+  color: #fff;
   font-size: 1rem;
-  font-style: italic;
-  line-height: 0.5 !important;
+  font-weight: 400;
+  font-style: normal !important;
+  line-height: 1.4 !important;
+  text-transform: none !important;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -1831,7 +1835,67 @@ html.html-popup-content .popup-inner > p a:hover {
   margin-top: 0 !important;
 }
 
+/* ============================================
+   WW-10: Location Subpage Hero Banner
+   (default template child pages: bike rentals, 4x4, paddle, etc.)
+   ============================================ */
 
+.page-template-default.page-child .mod-hero-image .content-fix {
+  display: none !important;
+}
+
+/* Black base + clip */
+.page-template-default.page-child .mod-hero-image {
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Image opacity for text readability */
+.page-template-default.page-child .bg-banner-home-fulldesk,
+.page-template-default.page-child .bg-banner-home-mobile {
+  opacity: 0.8;
+  background-size: cover !important;
+  background-position: center center !important;
+}
+
+/* Kill blue overlay */
+.page-template-default.page-child .bg-transparent-blue {
+  display: none !important;
+}
+
+/* Clear fixed header; stop slider transform from clipping text */
+.page-template-default.page-child .mod-hero-image .content {
+  padding: 180px 100px 0 !important;
+  -webkit-transform: none !important;
+  transform: none !important;
+}
+
+.page-template-default.page-child .mod-hero-image .content h1 {
+  color: #fff;
+  font-size: 3rem;
+  line-height: 1.15 !important;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.page-template-default.page-child .mod-hero-image .content h2 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal !important;
+  line-height: 1.4 !important;
+  text-transform: none !important;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 991px) {
+  .page-template-default.page-child .mod-hero-image .content {
+    padding: 140px 35px 0 !important;
+  }
+  .page-template-default.page-child .mod-hero-image .content h1 {
+    font-size: 1.75rem;
+  }
+}
 
 
 
