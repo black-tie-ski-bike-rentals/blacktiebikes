@@ -904,19 +904,29 @@ font-size: 30px;
    MENU REDESIGN — Desktop Header & Navigation
    ============================================ */
 
+/* Prevent overscroll bounce from separating header from browser chrome */
+html {
+  overscroll-behavior-y: none;
+}
+
 /* Menu background: always white */
 #header {
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Push main content below the fixed header */
+/* Push main content below the fixed header.
+   Two values match the two header heights (full logo vs shrunk). */
 #main-content {
-  padding-top: 120px !important;
+  padding-top: 160px !important;
 }
 @media (min-width: 992px) {
   #main-content {
-    padding-top: 175px !important;
+    padding-top: 170px !important;
+    transition: padding-top 0.3s ease;
+  }
+  #header.logo-shrunk ~ #main-content {
+    padding-top: 145px !important;
   }
 }
 
@@ -1713,12 +1723,6 @@ html.html-popup-content .popup-inner > p a:hover {
   z-index: 3;
   background: #fff;
   margin-top: -12%;
-}
-
-@media (max-width: 991px) {
-  #main-content {
-    padding-top: 160px !important;
-  }
 }
 
 .mod-steps {
