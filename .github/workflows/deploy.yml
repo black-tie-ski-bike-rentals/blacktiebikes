@@ -1,0 +1,23 @@
+name: Deploy to WP Engine Production
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to WP Engine
+        uses: wpengine/github-actions-wpe-site-deploy@v3
+        with:
+          WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
+          WPE_INSTALL: blacktiesummer
+          SRC_PATH: ""
+          REMOTE_PATH: ""
+          PHP_LINT: false
+          CACHE_CLEAR: true
