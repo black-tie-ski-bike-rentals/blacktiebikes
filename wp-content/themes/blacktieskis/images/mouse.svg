@@ -1,0 +1,12 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 34">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>mouse</title>
+  <path class="cls-1" d="M10,0A10,10,0,0,0,0,10V24a10,10,0,0,0,20,0V10A10,10,0,0,0,10,0Zm8,24A8,8,0,1,1,2,24V10A8,8,0,0,1,18,10Z"/>
+  <path class="cls-1" d="M10,6.76a1,1,0,0,0-1,1v4.69a1,1,0,1,0,2,0V7.78A1,1,0,0,0,10,6.76Z"/>
+</svg>

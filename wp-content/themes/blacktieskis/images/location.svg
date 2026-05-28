@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="51px" viewBox="0 0 34 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage-Large---2000px" transform="translate(-991.000000, -2815.000000)" fill="#D46EFF" fill-rule="nonzero">
+            <g id="BODY" transform="translate(-740.000000, 790.000000)">
+                <g id="Map" transform="translate(717.000000, 1590.000000)">
+                    <g id="map-nav" transform="translate(23.000000, 129.000000)">
+                        <g id="expanded">
+                            <g id="marker-copy" transform="translate(991.000000, 306.000000)">
+                                <path d="M17,0 C8.07925,0 0,7.231375 0,16.15425 C0,25.075 7.371625,35.7255 17,51 C26.628375,35.7255 34,25.075 34,16.15425 C34,7.231375 25.922875,0 17,0 Z M17.5,24 C13.9098333,24 11,21.0901667 11,17.5 C11,13.9098333 13.9098333,11 17.5,11 C21.0901667,11 24,13.9098333 24,17.5 C24,21.0901667 21.0901667,24 17.5,24 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

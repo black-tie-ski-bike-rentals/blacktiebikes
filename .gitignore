@@ -1,0 +1,71 @@
+# WordPress Core
+/wp-admin/
+/wp-includes/
+/index.php
+/wp-*.php
+/xmlrpc.php
+/license.txt
+/readme.html
+/wp-config-sample.php
+/local-xdebuginfo.php
+
+# Sensitive
+wp-config.php
+
+# Database dumps
+*.sql
+*.sql.gz
+*.zip
+
+# Third-party plugins, mu-plugins & default themes
+wp-content/plugins/
+wp-content/mu-plugins/
+wp-content/akeebabackupwp/
+wp-content/themes/twentyseventeen/
+wp-content/themes/twentynineteen/
+wp-content/themes/twentytwenty/
+wp-content/themes/twentytwentyone/
+wp-content/themes/twentytwentytwo/
+wp-content/themes/genesis-block-theme/
+wp-content/themes/blacktieskis-old/
+
+# Uploads & generated
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/upgrade-temp-backup/
+wp-content/temp/
+wp-content/backup-db/
+wp-content/blogs.dir/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+wp-content/object-cache.php
+
+# Akeeba backup files
+wp-content/akeebabackupwp/app/backups/
+
+# OS & editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+.tmb/
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Site-level files managed by WP Engine (not tracked)
+.htaccess
+robots.txt
+wp-content/db-error.php
+wp-content/index.php
+wp-content/themes/index.php
+
+# GitHub Actions (not used in this workflow)
+.github/
+
+# Orphaned build artifacts
+wp-content/themes/blacktieskis/ddapp.js

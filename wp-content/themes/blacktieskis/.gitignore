@@ -1,0 +1,32 @@
+# OS & editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+.tmb/
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Archives
+*.zip
+
+# Server-side backup files (not tracked)
+*.bk
+*_bk.php
+*_bk.js
+*_bk.css
+*_bk[0-9].php
+*_bk[0-9].js
+*_bk[0-9].css
+*_bk_[0-9].php
+*_bk_[0-9].js
+*_bk_[0-9].css
+oldapp.css
+
+# Orphaned build artifacts
+ddapp.js
+template-parts/page/content-product_section 1.php
