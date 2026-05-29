@@ -67,5 +67,8 @@ wp-content/themes/index.php
 # GitHub Actions (not used in this workflow)
 .github/
 
+# Dev docs — local reference only, not deployed
+wp-content/themes/blacktieskis/_dev-docs/
+
 # Orphaned build artifacts
 wp-content/themes/blacktieskis/ddapp.js
