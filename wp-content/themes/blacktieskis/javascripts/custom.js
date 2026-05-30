@@ -4,10 +4,7 @@
   document.addEventListener('click', function (e) {
     var link = e.target.closest('#menu-main-menu .menu-item-has-children > a');
     if (!link) return;
-    var href = link.getAttribute('href');
-    if (!href || href === '#' || href.startsWith('#')) {
-      e.preventDefault();
-    }
+    e.preventDefault();
     e.stopPropagation();
     var $li = $(link).closest('.menu-item-has-children');
     var isOpen = $li.hasClass('is-open-child');
