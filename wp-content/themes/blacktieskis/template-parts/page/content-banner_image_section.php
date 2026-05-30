@@ -9,17 +9,9 @@ $hero_img_video_embed = get_sub_field('video_embed');
 <section class="module mod-hero-image" style="max-height:550px;">
   <div class="container content opacity" style="padding:50px;">
     <?php blacktieskis_sub_field('description'); ?>
-   
-    <div class="icon-mouse">
-      <span class="icomoon icon-arrow-down"> </span>
-    </div>
     </div>
   <div class="container content content-fix" style="padding:50px;">
     <?php blacktieskis_sub_field('description'); ?>
-   
-    <div class="icon-mouse">
-      <span class="icomoon icon-arrow-down"> </span>
-    </div>
   </div>
   <div class="bg-transparent" style="height:550px;">
     <div class="bg-banner-home bg-banner-home-fulldesk d-none d-lg-block" style="background-image:url('<?php blacktieskis_sub_field('banner_image'); ?>'); background-position: top center;"></div>

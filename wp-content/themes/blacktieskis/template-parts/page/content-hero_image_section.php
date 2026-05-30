@@ -13,9 +13,6 @@ $hero_img_video_embed = get_sub_field('video_embed');
   <div class="btb-hero__mountain"></div>
   <div class="btb-hero__content container">
     <?php blacktieskis_sub_field('description'); ?>
-    <div class="btb-hero__scroll">
-      <span class="icomoon icon-arrow-down"></span>
-    </div>
   </div>
 </section>
 
@@ -29,9 +26,6 @@ $hero_img_video_embed = get_sub_field('video_embed');
         <span class="icomoon align-self-center icon-play is-close"></span> Watch Video
       </a>
     <?php endif; ?>
-    <div class="icon-mouse">
-      <span class="icomoon icon-arrow-down"></span>
-    </div>
   </div>
   <div class="bg-transparent">
     <div class="bg-banner-home bg-banner-home-fulldesk d-none d-lg-block" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/images/bike-rentals.jpg'); background-position: top center;"></div>

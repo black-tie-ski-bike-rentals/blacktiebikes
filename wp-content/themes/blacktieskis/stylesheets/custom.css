@@ -567,14 +567,6 @@ width: 100%;
   }
 }
 
-.mod-hero-image .icon-mouse {
-  position: relative;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: 4% auto 0;
-  width: 20px;
-}
 .mod-reviews {
   padding: 50px 0 !important;
 }
@@ -1604,7 +1596,7 @@ html.html-popup-content .popup-inner > p a:hover {
 
 .btb-hero {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   height: 100vh;
   min-height: 500px;
   max-height: 900px;
@@ -1653,23 +1645,20 @@ html.html-popup-content .popup-inner > p a:hover {
   pointer-events: none;
 }
 @media (min-width: 992px) {
+  .btb-hero {
+    z-index: 4;
+  }
   .btb-hero__mountain {
     background-image: url('../images/bg-mountain.png');
-    background-position: center center;
-    top: calc(62% + 35vw - 380px);
+    background-position: top center;
+    top: calc(62% + 19vw - 309px);
     height: 60%;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1600px) {
   .btb-hero__mountain {
     display: none;
-  }
-}
-@media (min-width: 1500px) {
-  .btb-hero__mountain {
-    top: 72%;
-    height: 100%;
   }
 }
 
@@ -1691,7 +1680,7 @@ html.html-popup-content .popup-inner > p a:hover {
 /* H1 */
 .btb-hero__content h1 {
   color: #fff;
-  font-size: clamp(1rem, calc(4px + 3vw), 3rem);
+  font-size: clamp(1.8rem, calc(4px + 3vw), 3rem);
   line-height: 1.15;
   margin: 0 auto 15px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -1701,21 +1690,12 @@ html.html-popup-content .popup-inner > p a:hover {
 .btb-hero__content h2,
 .btb-hero__content h2 em {
   color: #fff;
-  font-size: clamp(0.55rem, calc(6px + 0.69vw), 1rem);
+  font-size: clamp(0.8rem, calc(6px + 0.69vw), 1rem);
   font-weight: 400;
   line-height: 1.4;
   font-style: normal !important;
   text-transform: none !important;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-/* Scroll arrow */
-.btb-hero__scroll {
-  margin-top: 8%;
-}
-.btb-hero__scroll .icomoon {
-  color: #fff;
-  font-size: 1.125rem;
 }
 
 /* Book Now button */
@@ -1791,7 +1771,7 @@ html.html-popup-content .popup-inner > p a:hover {
 /* H1 */
 .page-template-page-location .mod-hero-image .content h1 {
   color: #fff;
-  font-size: 3rem;
+  font-size: clamp(1.8rem, calc(4px + 3vw), 3rem) !important;
   line-height: 1.15 !important;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
@@ -1799,7 +1779,7 @@ html.html-popup-content .popup-inner > p a:hover {
 /* H2 */
 .page-template-page-location .mod-hero-image .content h2 {
   color: #fff;
-  font-size: 1rem;
+  font-size: clamp(0.8rem, calc(6px + 0.69vw), 1rem) !important;
   font-weight: 400;
   font-style: normal !important;
   line-height: 1.4 !important;
@@ -1836,7 +1816,7 @@ html.html-popup-content .popup-inner > p a:hover {
     padding: 140px 35px 0 !important;
   }
   .page-template-page-location .mod-hero-image .content h1 {
-    font-size: 1.75rem;
+    font-size: 1.8rem !important;
   }
   /* Lock background position so it doesn't shift at small breakpoints */
   .page-template-page-location .bg-banner-home-mobile {
@@ -1886,14 +1866,14 @@ html.html-popup-content .popup-inner > p a:hover {
 
 .page-template-default.page-child .mod-hero-image .content h1 {
   color: #fff;
-  font-size: 3rem;
+  font-size: clamp(1.8rem, calc(4px + 3vw), 3rem) !important;
   line-height: 1.15 !important;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .page-template-default.page-child .mod-hero-image .content h2 {
   color: #fff;
-  font-size: 1rem;
+  font-size: clamp(0.8rem, calc(6px + 0.69vw), 1rem) !important;
   font-weight: 400;
   font-style: normal !important;
   line-height: 1.4 !important;
@@ -1906,7 +1886,7 @@ html.html-popup-content .popup-inner > p a:hover {
     padding: 140px 35px 0 !important;
   }
   .page-template-default.page-child .mod-hero-image .content h1 {
-    font-size: 1.75rem;
+    font-size: 1.8rem !important;
   }
 }
 
