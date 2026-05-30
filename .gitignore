@@ -69,6 +69,7 @@ wp-content/themes/index.php
 
 # Dev docs — local reference only, not deployed
 wp-content/themes/blacktieskis/_dev-docs/
+!wp-content/themes/blacktieskis/_dev-docs/scripts/
 
 # Orphaned build artifacts
 wp-content/themes/blacktieskis/ddapp.js
