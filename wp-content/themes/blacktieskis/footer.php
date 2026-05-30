@@ -12,10 +12,7 @@ wp_reset_query(); //important to destroy the previous query and setup a new quer
 <!-- BEGIN LOADDING -->
 <div class="module over-loader">
 	<div class="loader">
-		<div class="spinner loader-item">
-			<div class="double-bounce1"></div>
-			<div class="double-bounce2"></div>
-		</div>
+		<img class="loader-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/BTS-logo.png" alt="Black Tie Bikes">
 	</div>
 </div>
 <!-- END LOADDING -->
@@ -31,11 +28,8 @@ wp_reset_query(); //important to destroy the previous query and setup a new quer
       <div class="popup-content-contact container" id="booknnnn">
         <div class="mask-pop-overlay"></div>
         <div class="container popup-inner cont-background-opacity" style="max-width:770px;min-height:280px;padding:30px;">
-          
-            <?php the_field('bt_booknow_description', 'option'); ?>
-          
-       
-          
+
+          <?php the_field('bt_booknow_description', 'option'); ?>
 
           <a href="javascript:void(0);" class="popup-is-close">
             <span class="icomoon icon-close1"></span>
@@ -110,6 +104,7 @@ $google_api_key = get_field('bt_google_api_key', 'option');
     $script([
 		'<?php echo TEMPLATE_URL; ?>/js/jquery-3.1.0.min.js'], 'vendor', function(){
 			$script([settings.jsPath + 'app.js?v=2.72'], 'myScript', function(){
+        $script([settings.jsPath + 'custom.js?v=1.0'], 'customScript');
 
         $script(['<?php echo TEMPLATE_URL; ?>/js/cf7.js?ver=1.3'], 'cf7Script', function(){
           $(window).trigger('load')

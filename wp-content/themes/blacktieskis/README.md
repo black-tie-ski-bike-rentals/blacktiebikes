@@ -1,78 +1,236 @@
-# blacktiebikes-theme
+# Black Tie Ski — Theme Reference
 
-Custom WordPress theme for blacktiebikes.com. Theme name: `blacktieskis` (inherited from original ski rental build — do not rename).
+**Date:** May 2026  
+**Theme:** `blacktieskis`  
+**Original author:** Carbon8 Team (based on Underscores starter theme)  
+**Environment:** Local by Flywheel (local dev)
 
-Live site: blacktiebikes.com
+---
 
-## What This Repo Tracks
+## What This Site Is
 
-This repo is the theme folder itself — the repo root is `wp-content/themes/blacktieskis/`. It tracks only theme files.
+A custom WordPress theme for **Black Tie Ski**, a ski and bike rental company operating across multiple resort locations in the US. The site is heavily content-managed — location data, resort listings, reviews, contact forms, and global settings are all controlled through the WordPress admin via **Advanced Custom Fields (ACF)**.
 
-It does not track WordPress core, uploads, plugins, or the database.
+---
 
-## Local Dev Setup
+## Tech Stack
 
-1. Install Local by Flywheel
-2. Create a local WordPress site
-3. Clone this repo directly into `wp-content/themes/blacktieskis/` inside that site
-4. Import a current database (ask the team for a `.sql` dump)
-5. Activate the `blacktieskis` theme in WP Admin → Appearance → Themes
+| Layer | Technology |
+|---|---|
+| CMS | WordPress |
+| Content management | Advanced Custom Fields (ACF) with Options Pages |
+| Forms | Contact Form 7 (CF7) |
+| CSS framework | Bootstrap 4.6 |
+| Animation | GSAP 2.1.3 (TweenMax, TimelineMax, Draggable, ScrollTo) |
+| Scroll animation | ScrollMagic |
+| Carousel | Slick (version unverifiable from bundle) |
+| Form validation | Parsley.js (version unverifiable from bundle) |
+| Maps | Google Maps API v3 |
+| jQuery | 3.1.0 (loaded from theme, not WordPress core) |
+| Fonts | Google Fonts (Open Sans, Poppins, Reenie Beanie) |
+| Icons | IcoMoon (custom icon font) |
+| PWA | Service Worker (`sw.js`) |
 
-## Branch Strategy
+---
 
-| Branch | Purpose |
-|--------|---------|
-| `main` | Mirrors WP Engine production (`blacktiesummer`) |
-| `staging` | Mirrors WP Engine staging (`blacktiebikstg`) |
-| `ww-{ticket}-description` | Per-ticket work, branched off `main` |
-
-## Deployment
-
-WP Engine git push remotes are configured on this repo:
+## File Structure
 
 ```
-git push origin staging              # GitHub
-git push wpengine-staging            # WP Engine staging
-
-git push origin main                 # GitHub
-git push wpengine-production         # WP Engine production (requires confirmation)
+blacktieskis/
+├── functions.php               # Entry point — loads all inc/ files
+├── header.php                  # <head>, opening body, navigation
+├── footer.php                  # Footer, popups, JS loading
+├── style.css                   # WordPress theme header (metadata only)
+├── index.php / page.php / single.php / archive.php / 404.php
+├── page-location.php               # Page template: switches header nav to location-specific menu
+│
+├── inc/
+│   ├── helper.php              # Theme setup, ACF config, utility functions
+│   ├── template.php            # Navigation, map data, footer, ratings output
+│   ├── enqueue.php             # Registers CSS (Google Fonts, app.css, custom.css, print.css)
+│   ├── custom-post-type.php    # "Resort" CPT + "State/Location" taxonomy
+│   ├── ajax-action.php         # AJAX: star rating handler
+│   ├── api-helpers.php         # External API stub
+│   ├── api/
+│   │   └── api-home.php        # Stub file — empty
+│   ├── custom-query.php        # Rating query helpers
+│   ├── custom-paginate.php     # Pagination
+│   ├── nav-walker.php          # Three Bootstrap-compatible nav walkers (header, footer, mobile)
+│   ├── schema-markup.php       # JSON-LD structured data
+│   ├── shortcode.php           # Stub file — currently empty
+│   └── remove-tags.php         # Filters to strip unwanted WP output
+│
+├── template-parts/
+│   ├── includes/menu-header.php        # Site header / nav markup
+│   └── page/                           # ACF flexible content section templates
+│       ├── content-hero_image_section.php
+│       ├── content-banner_image_section.php
+│       ├── content-product_section.php
+│       ├── content-3col_section.php
+│       ├── content-4col_section.php
+│       ├── content-about_section.php
+│       ├── content-reviews_section.php
+│       ├── content-tabs_section.php
+│       ├── content-team_section.php
+│       ├── content-steps_15.php            # ⚠️ 157KB — appears to be a one-off resort landing page
+│       ├── content-locations_map.php
+│       ├── content-cta_and_footer.php
+│       └── content-cta_bottom.php
+│
+├── javascripts/
+│   ├── app.js                  # Webpack bundle (Bootstrap + GSAP + Slick + Parsley + ScrollMagic)
+│   ├── custom.js               # Click-only dropdown toggle (added in this project)
+│   ├── location.js             # Custom Google Maps integration
+│   └── ddapp.js                # Orphaned webpack bundle copy — pre-git backup, not loaded anywhere
+│
+├── js/
+│   ├── jquery-3.1.0.min.js     # jQuery (loaded directly, not via WP)
+│   ├── cf7.js                  # Contact Form 7 customizations
+│   └── jquery.fancybox.js      # Lightbox (unclear if active)
+│
+├── stylesheets/
+│   ├── app.css                 # Compiled bundle (Bootstrap + Slick + all custom CSS) — treat as read-only
+│   ├── custom.css              # Overrides and new styles — all new CSS should go here
+│   └── print.css               # Print styles
+│
+├── images/                     # Theme images and SVG icons
+├── fonts/                      # IcoMoon icon font files
+└── languages/                  # i18n .pot file
 ```
 
-WP Engine handles path mapping automatically — files push to the correct theme directory on their end.
+---
 
-## Environment Reference
+## How JavaScript Loads
 
-| Environment | WP Engine Name | URL |
-|-------------|---------------|-----|
-| Local | blacktiebikes-sent | https://blacktiebikes-sent.local |
-| Staging | blacktiebikstg | https://blacktiebikstg.wpenginepowered.com |
-| Production | blacktiesummer | https://www.blacktiebikes.com |
+The theme **bypasses WordPress's standard `wp_enqueue_scripts` system** for JavaScript. Instead, `footer.php` uses a lightweight async script loader (`$script`) to chain-load scripts manually:
 
-**Theme name:** `blacktieskis` — inherited from the original ski rental site. All function prefixes, text domains, and internal references use `blacktieskis_` throughout the codebase. Do not rename.
+```
+jquery-3.1.0.min.js  (from /js/)
+  → javascripts/app.js  (the webpack bundle)
+    → javascripts/custom.js  (dropdown toggle — loads in parallel with cf7.js)
+    → js/cf7.js  (CF7 overrides)
+```
 
-**WP Engine:** Environment names are permanent and cannot be changed. The staging name (`blacktiebikstg`) contains a typo and predates this project.
+CSS is loaded the normal WordPress way via `inc/enqueue.php`.
 
-## Key Files
+---
 
-- `stylesheets/custom.css` — all new CSS goes here (not `app.css`, which is a compiled bundle)
-- `javascripts/custom.js` — all new JS goes here (not `app.js`, which is a minified webpack bundle)
-- `_dev-docs/` — Jira ticket specs and dev reference docs
-- `CLAUDE.md` — workflow notes for Claude Code
+## The `app.js` Situation
+
+`app.js` is a **webpack-compiled bundle** (~530KB). It contains Bootstrap, GSAP, ScrollMagic, Slick, and Parsley all concatenated and minified into a single file. **The original source files (SCSS partials, JS modules, `package.json`, `webpack.config.js`) no longer exist in this repo** — only the compiled output was ever committed.
+
+This means: editing `app.js` directly is editing minified output, which is why the previous workflow was saving `.bk` files by hand.
+
+---
+
+## Content Architecture
+
+Pages are built using **ACF Flexible Content** — the CMS user stacks modular sections (hero, product grid, reviews, map, etc.) and each section maps to a PHP template partial in `template-parts/page/`. There is no block editor (Gutenberg) — the page editor is intentionally disabled in `inc/helper.php`.
+
+**Custom Post Type:** `bt_resport` (Resorts)  
+**Custom Taxonomy:** `category_state_location` (State/Location grouping for the map)  
+**Global settings** (logo, phone, social links, Google API key, reCAPTCHA keys, footer content) are managed via an ACF Options page.
+
+---
+
+## Project History
+
+This theme originated on `blacktieskis.com` (a ski rental site) and was copied over to power `blacktiebikes.com`. The theme name `blacktieskis` and all its function prefixes, slugs, and internal references are inherited from that origin.
+
+Over multiple development iterations without version control, changes were tracked manually by saving `.bk` backup files before each session. Git was introduced at the start of the current project — the initial commit captured the full codebase as a baseline, the `.bk` files were deleted (now redundant with git history). Active feature work is tracked on branches per ticket (e.g. `ww-5-nav-restructure`).
+
+---
+
+## History of Previous Developer Changes (from `.bk` files)
+
+The initial commit included 14 backup files. Files named `*.laura_bk` were made by the current developer before switching to the `custom.css` approach — briefly following the same backup pattern before pivoting. The remaining files are from previous developers and reveal what was modified from the original theme.
+
+### `menu-header.php` (from `menu-header_bk.php`)
+
+The original header was ~23 lines: logo, `wp_nav_menu()` call, and a plain `<a>` pointing directly to `booknow.blacktieskis.com`. A previous developer:
+
+- Added the full top bar (ACF `content_top_bar` field, Google Translate shortcode, desktop phone link, mobile call button image)
+- Replaced the direct Book Now link with a JavaScript popup trigger — this is where the `boonowbutton` ID typo was introduced
+- Cleared the logo `alt` attribute (was `"Black Tie Ski"`, now `""`)
+- Added the COVID-19 popup div
+
+### `template.php` (from `template_bk.php`) — root cause of the dropdown fragility
+
+This is the most structurally significant change. The original theme used a **custom PHP menu builder** (`blacktieskis_main_menu()`) that manually walked `wp_get_nav_menu_items()` and built `<ul>` HTML by hand. A previous developer replaced it with WordPress's standard `wp_nav_menu()`.
+
+This is why the site has **two dropdown systems**: `.sub-menu` (standard WP nav walker output) and `.main-menu-dropdown` (original theme CSS). The custom walker never generated `.sub-menu` — that class comes from the WP replacement. The theme's own CSS was written for the custom walker's HTML structure. When the swap happened, the dropdown markup changed and the CSS partially broke — which is why dropdown behavior was so fragile and required overriding both systems in `custom.css`.
+
+### CSS backup files (`app_bk2.css`, `app_bk_3.css`, `app_bk_4.css`)
+
+All three are ~200KB — full copies of `app.css` made at different points. Confirms the pattern: developers were editing `app.css` directly and saving manual backups before each session.
+
+### `ddapp.js`
+
+Another copy of the minified webpack bundle (GSAP 2.0.2). Likely a scratch backup made during a JS editing session. It was not removed with the other backup files and still exists in the repo — it is not loaded anywhere and can be safely deleted.
+
+---
 
 ## Known Issues
 
-Pre-existing bugs inherited from the original build. None are regressions. Do not fix unless explicitly ticketed.
+Pre-existing bugs inherited from the original build. None are regressions.
 
-**Actively affecting live users** — Broken contact form: reCAPTCHA guard commented out in `inc/helper.php`, causing the mail handler to always return a JSON error response.
+### Actively affecting live users
 
-**Security** — No nonce on AJAX star rating handler (`inc/ajax-action.php`), vulnerable to CSRF.
+**Broken contact form** (`inc/helper.php`)
+The reCAPTCHA check that was supposed to gate the mail handler got commented out, leaving a `die` statement outside its intended conditional block. `wpcf7_change_mail_recipient` always terminates with a JSON error response, breaking form submissions that don't include a location field.
 
-**Performance** — `flush_rewrite_rules()` called on every page load in `inc/custom-post-type.php`.
+```php
+// the guard that should wrap everything below is commented out
+// if(verify_captcha_contact_form()){
 
-**Deprecated** — `query_posts()` used in `inc/template.php` and `template-parts/page/content-reviews_section.php`.
+    // ... mail routing logic ...
 
-**Fragile** — Hardcoded Telluride redirect in `header.php` and `functions.php` (defunct URL, hardcoded post ID and menu item ID).
+// } else {
+    // this now runs unconditionally
+    echo json_encode(array("status"=>0,"message"=>"invalid recaptcha")); die;
+// }
+```
 
-**Cleanup** — Orphaned ski site content in `content-3col_section.php`; debug IP block in `content-locations_map.php`.
+### Security
 
-**Hard to fix** — `resport` typo (load-bearing throughout codebase); no build tooling.
+**No nonce on AJAX rating handler** (`inc/ajax-action.php`)
+The star rating endpoint accepts `$_POST` data without verifying a nonce, leaving it open to cross-site request forgery.
+
+### Performance
+
+**`flush_rewrite_rules()` on every request** (`inc/custom-post-type.php`)
+Called inside both `init` hooks. This is expensive and should only run on theme activation, not on every page load.
+
+### Deprecated
+
+**`query_posts()` used in two places**
+`query_posts()` is deprecated and corrupts the main WP query. Should be replaced with `new WP_Query()` in both locations:
+- `inc/template.php` — resort data query
+- `template-parts/page/content-reviews_section.php` — review carousel
+
+### Fragile / will silently break
+
+**Hardcoded Telluride redirect** (`header.php`, `functions.php`)
+The Telluride page (post ID `29175`) redirects to a defunct staging URL (`btsr.flywheelsites.com`). Wired in two places with hardcoded post ID and menu item ID `42` — will break silently if content is reorganized.
+
+### Cleanup
+
+**Orphaned ski site content** (`template-parts/page/content-3col_section.php`)
+Entirely hardcoded ski rental copy from the original `blacktieskis.com` site — not connected to ACF fields. If this layout is added to any page via the CMS it will output incorrect ski content. Needs to be replaced or removed.
+
+**Debug code in production** (`template-parts/page/content-locations_map.php`)
+An IP-specific debug block from 2021 is still present. Harmless (output is commented out) but exposes a former developer's IP and shouldn't be in production.
+
+```php
+if($_SERVER['REMOTE_ADDR']=="24.67.25.73"){
+    # Locations: print_r($location_datas); exit;
+    # Resorts: print_r($resports); exit;
+}
+```
+
+### Very difficult to fix
+
+**`resport` typo** — "Resort" is misspelled throughout: post type slug (`bt_resport`), function names, taxonomy. Load-bearing — changing it would break URLs and database queries.
+
+**No build tooling** — No `package.json` or webpack config. Modifying library versions would require reconstructing the bundle from scratch.
+

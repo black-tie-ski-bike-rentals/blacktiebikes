@@ -1,0 +1,2360 @@
+.grecaptcha-badge{
+	display:none;
+}
+
+
+ul.accordion-list {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.page-id-33968 #how-it-works {
+  display: none;
+}
+	.page-id-34233 .tabcontent img, .page-id-34233 .img-circle {
+  display: none;
+}
+	align-content
+.page-id-33968 #how-it-works {
+  display: none;
+}
+.page-id-34224 .entry-title, .page-id-34224 h2 {
+  margin-top: 30px !important;
+}
+.page-id-33968 .local-box {
+  background-color: #fff;
+  padding: 52px 35px 45px;
+  margin: 0 -15px 74px;
+}
+ul.accordion-list li {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: #2073b9;
+    padding: 20px 50px 20px 30px;
+    margin: 0 auto 5px auto;
+    border: 0px;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+
+ul.accordion-list li.active h3:after {
+  transform: rotate(45deg);
+}
+.page-id-33999 .img-circle {
+  display: none;
+}
+ul.accordion-list li h3 {
+    font-weight: 400;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0 0 0 0;
+    margin: 0;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+}
+ul.accordion-list li h3:after {
+    content: "";
+    font-family: "material-design-iconic-font";
+    position: absolute;
+    right: -25px;
+    top: 0;
+    color: #282828;
+    transition: all 0.3s ease-in-out;
+    font-size: 30px;
+    line-height: 20px;
+}
+ul.accordion-list li div.answer {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 15px 0 0;
+  cursor: pointer;
+}
+
+ul.accordion-list li div.answer p {
+  position: relative;
+  display: block;
+  font-weight: 300;
+  padding: 10px 0 0 0;
+  cursor: pointer;
+  line-height: 150%;
+	color:#fff;
+  margin: 0 0 15px 0;
+}
+.page-id-33841 .mod-about .row, .page-id-34224 .mod-about .row, .page-id-34165 .mod-about .row, .page-id-34004 .mod-about .row, .page-id-34020 .mod-about .row, .page-id-34092 .mod-about .row,  .page-id-34039 .mod-about .row, .page-id-33882 .mod-about .row, .page-id-34064 .mod-about .row, .page-id-34079 .mod-about .row, .page-id-34153 .mod-about .row, .page-id-34165 .mod-about .row, .page-id-34049 .mod-about .row  {
+    min-height: 100%;
+}
+.local-box {
+    background-color: #f6f4f5;
+    padding: 100px 0 45px;
+    margin: 0 -15px 80px;
+}
+.four-box .col-md-3,.local-box .col-md-4{
+	padding-bottom:25px;
+}
+.four-box img {
+    height: 242px;
+}
+.four-box{
+	padding:0px 0 50px;
+}
+.page-id-33841 .bg-mountain-desktop, .page-id-34224 .bg-mountain-desktop, .page-id-34165 .bg-mountain-desktop, .page-id-34049 .bg-mountain-desktop, .page-id-34004 .bg-mountain-desktop-full, .page-id-34020 .bg-mountain-desktop-full, .page-id-340292 .bg-mountain-desktop-full, .page-id-34039 .bg-mountain-desktop-full, .page-id-33882 .bg-mountain-desktop-full,  .page-id-34064 .bg-mountain-desktop-full, .page-id-34079 .bg-mountain-desktop-full, .page-id-34092 .bg-mountain-desktop-full, .page-id-34153 .bg-mountain-desktop-full, .page-id-34165 .bg-mountain-desktop-full   {
+    display: none !important;
+}
+.page-id-33841 .bg-transparent-violet, .page-id-34224 .bg-transparent-violet, .page-id-34165 .bg-transparent-violet, .page-id-34049 .bg-transparent-violet, .page-id-34004 .bg-transparent-violet, .page-id-34020 .bg-transparent-violet , .page-id-34039 .bg-transparent-violet, .page-id-33882 .bg-transparent-violet, .page-id-34064 .bg-transparent-violet, .page-id-34092 .bg-transparent-violet, .page-id-34079 .bg-transparent-violet, .page-id-34153 .bg-transparent-violet, .page-id-34165 .bg-transparent-violet {
+	  display: none !important;
+}
+.btn-outline-white:focus, .btn-outline-white:hover {
+    color: #fff;
+    background: #568F3B;
+    border-color: #fff;
+}
+.page-id-33641 .entry-title, .page-id-33645 .entry-title {
+  margin-top: 10% !important;
+}
+.white-box {
+  background-color: white;
+  color: black;
+  text-align: center;
+  width: 33%;
+  margin-left: 33%;
+  margin-right: 33%; 
+	  margin-top: 3%;
+border-radius: 4px;
+padding: 10px;
+}
+.wpcf7-form {
+  display: none;
+}
+#gform_confirmation_message_1 {
+  text-align: center;
+}
+#gform_1 {
+  padding: 0 15%;
+}
+body div.gform_wrapper div.gform_body select {
+    -webkit-appearance: none;
+}
+.page-id-33645 .wpcf7-form.init {
+  margin: 0 20% !important;
+}
+.page-id-33645 .module.mod-about.container-fluid {
+  background: #eee;
+}
+
+.page-id-33645 .bg-mountain-desktop,.page-id-33645  .icomoon.icon-arrow-down {
+  display: none !important;
+}
+.page-id-33645 .h1, .page-id-33645 h1 {
+	margin-top: 5%; }
+.page-id-33645 .entry-title {
+  display: none;
+}
+.page-id-33645 .mod-hero-image, .page-id-34224 .mod-hero-image,  .page-id-34165 .mod-hero-image,  .page-id-33841 .mod-hero-image, .page-id-34049 .mod-hero-image, .page-id-34020 .mod-hero-image, .page-id-34004 .mod-hero-image, .page-id-34039 .mod-hero-image, .page-id-34043 .mod-hero-image, .page-id-34064 .mod-hero-image, .page-id-34079 .mod-hero-image, .page-id-34092 .mod-hero-image, .page-id-34153 .mod-hero-image, .page-id-34165 .mod-hero-image  {
+  height: 400px;
+}
+.page-id-33645 .bg-transparent-violet {
+  display: none;
+}
+.page-id-33738 .img-circle {
+  display: none;
+}
+.page-id-33738 .col-lg-6 {
+  text-align: left !important;
+}
+@media (min-width: 1501px){
+	.page-id-33645 .bg-mountain-desktop-full {
+  display: none;
+  top: 45% !important;
+  height: 100%;
+	} 
+.page-id-33645	.mod-hero-image + section {
+  margin-top: -15%;
+}
+.page-id-33645 .mod-hero-image {
+  height: 800px;
+}}
+@media (max-width: 992px){
+.page-id-33645 .bg-mountain.bg-mountain-mb {
+  height: 70%;
+  top: 30%;
+  display: none;
+	}
+	
+.page-id-33645 .h1, .page-id-33645 h1 {
+  font-size: 3rem;
+  margin-top: 25%;
+}
+
+}
+.newcl {
+  text-align: center;
+}
+.btn-outline-purple-dark {
+ color:#568F3B;
+ border-color:#568F3B;
+ background:#fff
+}
+.dropdown-select-c8 .dropdown-menu ul {
+  max-height: 350px;
+  overflow: hidden;
+    overflow-y: hidden;
+  overflow-y: scroll;
+  width: 100%;
+}
+.content-map-popup .title img {
+  max-width: 248px;
+  display: none;
+}
+.popup-form .form-control {
+  height: 55px;
+  background-color: #fff;
+  padding: 20px 20px 0;
+  text-align: left;
+  margin: 0 0 10px;
+}
+#Accessories {
+  padding: 29px 10px 0;
+}
+
+.page-id-30015 #how-it-works,
+.page-id-29899 #how-it-works, .page-id-29910 #how-it-works, .page-id-29914 #how-it-works {
+  display: none;
+}
+.btn-outline-purple-dark:focus,
+.btn-outline-purple-dark:hover {
+ color:#fff;
+ background:#568F3B;
+ border-color:#568F3B;
+}
+.btn-primary {
+    color: #212529;
+    background-color: #01b037;
+    border-color: #01b037;
+}
+.home-jumbotron.jumbotron h1 {
+  margin: -24px 0 40px;
+}
+
+.img-circle {
+  border-radius: 0 !important;
+  height: 250px !important;
+}
+.home-jumbotron::before, .home-jumbotron::after {
+  width: 50%;
+  margin-left: 25%;
+  content: "";
+  display: block;
+  height: 20px;
+  border-top: 0px solid #eee !important;
+}
+.main-menu-ul li a:hover {
+  color: #568F3B !important;
+  cursor: pointer;
+}
+#main-menu .btn {
+  font-size: .875rem;
+  /* padding: 4px 27px; */
+  letter-spacing: .0625rem;
+  background: #568F3B;
+  color: #fff;
+	border: 3px solid #568F3B;
+}
+.mod-about-content h2 {
+  color: #568F3B;
+}
+.bg-banner-home {
+  background-position: center center !important;
+}
+
+.mod-hero-image .content p {
+  color: #fff;
+	font-weight: bold;
+}
+.step-item-image-cont {
+  position: absolute;
+  top: 114px;
+  right: 0;
+  left: auto;
+}
+.btn.btn-outline-white:hover {
+  background: #000 !important;
+  border: 3px solid #000 !important;
+}
+#main-menu .btn:hover { background: #568F3B; }
+.page-id-20 .bg-banner-home {
+  top: -159px;
+  bottom: 0;
+  z-index: 0;
+  height: 100%;
+}
+.mod-hero-image .content h2 {
+  color: #fff !important;
+}
+
+.mod-hero-image .bg-transparent,
+.mod-hero-image .bg-mountain {
+  pointer-events: none;
+}
+
+.mod-hero-image .content-fix {
+  pointer-events: none;
+}
+
+.mod-hero-image .content h1 {
+  color: #fff;
+  font-size: 2.25rem;
+  margin: 0 auto 15px;
+}
+
+.tab button {
+float: center !important;
+
+}
+#header.pin-header .btn {
+    border-color: #01b037;
+    color: #01b037;
+    background-color: hsla(0,0%,100%,.9);
+}
+.location-left-filter .list-location-parent .active a {
+    background: #568F3B;
+}
+#how-it-works p {
+  padding: 0 40px;
+}
+.tab {
+  overflow: hidden;
+  border: 0px solid #ccc !important;
+  background-color: #568F3B !important;
+}
+.tab button {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-bottom: 5px solid #568F3B !important;
+	 border-left: 5px solid #568F3B !important;
+		 border-right: 5px solid #568F3B !important;
+	border-top: 2px solid #568F3B !important;
+	
+background: #fff;
+}
+.mod-about .triangle-blue {
+    border-right: 475px solid transparent;
+    border-top: 490px solid #568F3B;
+}
+#footer {
+    background-color: #FAFAFA;
+}
+
+.bg-transparent-white {
+    top: 45%;
+    left: 32%;
+    background-blend-mode: multiply;
+    background-image: -o-linear-gradient(135deg,hsla(0,0%,100%,.68) 0,hsla(0,0%,100%,0) 91%);
+    background-image: linear-gradient(-45deg,hsla(0,0%,100%,0),hsla(0,0%,100%,0) 91%);
+
+}
+.btn-outline-white {
+  color: #01b037;
+  border-color: #01b037;
+  background: transparent;
+}
+.bg-transparent-blue {
+    opacity: .01;
+    background-image: -o-linear-gradient(177deg,#0f6bb2,rgba(15,107,178,.6) 40%,rgba(15,107,178,.4));
+    background-image: linear-gradient(273deg,#000,rgba(0,0,0,.6) 40%,rgba(0,0,0,.4));
+}
+#site-description {
+  color: #fff;
+}
+/* .mod-hero-image .content h1 {
+    margin: 76px auto 15px;
+} */
+#header .navbar {
+  padding: 5px 15px;
+}
+.bg-transparent-violet {
+    background-image: -o-linear-gradient(top,rgba(236,167,255,.0) 0,#490000 60%);
+	width: 100%;
+	background-image: linear-gradient(180deg,rgba(236,167,255,.0) 0,#568F3B 60%); }
+.btn-outline-primary {
+  color: #01b037;
+  border-color: #01b037;
+}
+.box-step.ani3 {
+  margin: 73px 0 0 0;
+}
+.box-step.ani4 {
+  margin: 87px 0 0 0;
+}
+.step-number {
+    width: 100px;
+    height: 100px;
+	border: 5px solid #568F3B;}
+
+.mod-about .col-right {
+  background-color: #000;
+  padding: 0;
+}
+.step-number p {
+    font-family: Poppins,sans-serif;
+    font-size: 3rem;
+	color: #568F3B; }
+.main-menu-ul li a {
+    color: #000 !important;
+	padding: 5px;
+}
+	.btn.btn-primary.is-hover, .btn.btn-primary:focus, .btn.btn-primary:hover {
+    color: #fff;
+    background: #000;
+    border-color: #000;
+}
+.btn-primary1 {
+background-color: #156BB1 !important;
+  border-color: #156BB1 !important;
+color:#fff !important;
+margin: 0 3px 0;}
+	.btn-primary1.is-hover, .btn-primary1:focus, .btn-primary1:hover {
+    color: #fff !important;
+    background: #000 !important;
+    border-color: #000 !important;
+}
+
+
+@media (min-width: 992px){
+.line-svg3 {
+  position: absolute;
+  top: 558px;
+  right: 0;
+  left: -32px ;
+}
+	.location-left-filter {
+    top: 10%;
+    margin-top: 0;
+}
+	.line-svg2 {
+  position: absolute;
+  top: 270px 
+	}
+	.line-svg {
+  position: absolute;
+		top: 9px;
+		left: -6px;
+	}
+	.line-svg4 {
+  position: absolute;
+		top: 890px;
+	}
+	
+
+	
+}
+
+.line-svg path {
+  opacity: 1 !important;
+}
+
+
+.animation, .opacity {
+   opacity: 1 !important;
+}
+
+#menu-main-menu{
+	margin-top:10px !important;
+}
+
+
+#menu-item-44{
+	display:none;
+}
+#menu-item-29749{
+	display:none;
+}
+#menu-main-menu .menu-item-has-children .sub-menu {
+	visibility: hidden;
+	
+	opacity: 0;
+	background-color: #fff;
+	padding:12px;
+	box-shadow: 0 25px 98px 0 rgb(0 0 0 / 10%);
+	width: 270px;
+	
+	position: absolute;
+	text-align: left;
+	top: auto;
+z-index: 1;
+
+}
+
+#menu-main-menu .menu-item-has-children:hover .sub-menu {
+	opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+
+
+}
+
+@media (max-width:990px) {
+
+#menu-main-menu .menu-item-has-children:hover .sub-menu {
+	opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+text-align:center;
+	
+position:inherit;
+}
+	#menu-main-menu .menu-item-has-children .sub-menu {
+ background-color: #1ac1ff;
+  width: 100%;
+
+		padding:0px;
+}
+	
+#menu-main-menu .menu-item-has-children .sub-menu li {
+ background-color:#fff;
+  width:300px;
+	padding:10px;
+margin: auto;
+}
+
+}
+
+
+@media (max-width:414px) {
+ .navbar .btn-cta {
+left: unset !important;
+
+text-align: center !important;
+margin: auto;
+width: 100%;
+	
+}
+}
+
+.mod-hero-image .content-fix {
+  display: none !important;
+}
+.mod-hero-image .content {
+  padding: 140px 20px 80px;
+  -webkit-transform: none !important;
+  transform: none !important;
+}
+@media (min-width: 768px) {
+  .mod-hero-image .content {
+    padding: 160px 60px 80px;
+  }
+}
+@media (min-width: 992px) {
+  .mod-hero-image .content {
+    padding: 180px 100px 80px;
+  }
+}
+
+.mod-hero-image .icon-mouse {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 4% auto 0;
+  width: 20px;
+}
+.mod-reviews {
+  padding: 50px 0 !important;
+}
+
+.page-id-20 #products{
+	padding:70px;
+	height: 350px;
+}
+.book-ski-headline {
+  padding-top: 10px;
+  padding-bottom: 70px;
+}
+.book-ski-headline .btn {
+  min-width: 175px;
+  margin: 6px;
+}
+.mod-book-ski .btn:first-of-type {
+  margin: 0;
+}
+#boonowbutton {
+    color: #fff;
+    background-color: #568F3B;
+    padding: 12px 30px !important;
+    border-radius: 6px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1rem;
+    vertical-align: middle;
+    transition: all 0.3s ease !important;
+}
+html body #boonowbutton:hover,
+html body #boonowbutton.is-hover {
+	background-color: #256BB2 !important;
+	color: #fff !important;
+	text-decoration: none !important;
+	transition: all 0.3s ease !important;
+}
+.newcl a:hover {
+    background: #256BB2 !important;
+    border-color: #256BB2 !important;
+    text-decoration: none !important;
+}
+.popup-content{
+	text-align:center !important;
+}
+
+.over-loader {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #568F3B !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  -webkit-transform: none !important;
+  -ms-transform: none !important;
+}
+
+.loader-logo {
+  width: 150px;
+  height: auto;
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .loader-logo {
+    width: 300px;
+  }
+}
+
+.popup-careers {
+  max-width: 800px !important;
+	max-height: 785px;
+}
+@media only screen and (max-width: 575px) {
+  .page-id-20 #products {
+    padding: 70px;
+    height: 550px;
+  }
+  .mod-about .triangle-black {
+    border-left: 400px solid transparent;
+    border-top: 299px solid #000;
+  }
+  .mod-about .triangle-blue {
+    border-right: 353px solid transparent;
+    border-top: 420px solid #568F3B;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .page-id-20 .mod-hero-image .content {
+    margin: 0 auto -150px;
+  }
+  .tab button {
+    padding: 15px 13px !important;
+    border-left: 1px solid #fff !important;
+  }
+  .popup-inner {
+    display: block !important;
+  }
+  .select-cnew {
+    padding: 15px 21px;
+    background: #568F3B;
+    border: 0px solid #DFE8E0;
+    text-transform: uppercase;
+    margin-top: 26px;
+    margin-left: 10px;
+  }
+}
+@media (min-width: 1200px) {
+  .main-menu-ul > li {
+    margin: 0px 11px !important;
+  }
+}
+
+
+
+
+
+.hamburger-menu.is-open-menu .icon-bar:first-child {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+  top: 5px;
+  left: 2px;
+}
+
+.hamburger-menu.is-open-menu .icon-bar:nth-child(3) {
+  -webkit-transform: rotate(-46deg);
+  -ms-transform: rotate(-46deg);
+  transform: rotate(-46deg);
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  top: 9px;
+}
+
+/* Dropdown Button */ 
+.dropdown-button { 
+    background-color: #0000b3; 
+    color: white; 
+    padding: 16px; 
+    font-size: 16px; 
+    border: none; 
+} 
+.dropdown { 
+    position: relative; 
+    display: inline-block; 
+} 
+/* Dropdown Content (Hidden by Default) */ 
+.dropdown-list { 
+    display: none; 
+    position: absolute; 
+    background-color: #f1f1f1; 
+    min-width: 160px; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+    z-index: 1; 
+} 
+/* Links inside the dropdown */ 
+.dropdown-list a { 
+    color: black; 
+    padding: 12px 16px; 
+    text-decoration: none; 
+    display: block; 
+    font-family: verdana; 
+} 
+/* Change color of dropdown links on hover */ 
+.dropdown-list a:hover { 
+    background-color: #ddd; 
+} 
+/* Show the dropdown list on hover */ 
+.dropdown:hover .dropdown-list { 
+    display: block; 
+} 
+/* Change the background color of the dropdown button when the dropdown list is shown */ 
+.dropdown:hover .dropdown-button { 
+    background-color: #6666ff; 
+} 
+
+.select-cnew {
+  padding: 15px 21px;
+  background: #568F3B;
+  border: 0px solid #DFE8E0;
+  text-transform: uppercase;
+	
+	 margin-top: -6px;
+  margin-left: 10px;
+}
+html.popup-animation .popup-inner {
+ 
+  padding-top: 2% !important;
+}
+
+.mod-popup1{
+ display:none !important;
+}
+
+
+.mod-popup.popup-show.popup-show-default.popup-flex-center .mask-pop-overlay {
+    opacity: 0.65;
+}
+
+@media (max-width: 991px) {
+  .mod-steps .step-item {
+    margin: 0 0 0px;
+  }
+  .box-step.ani3 {
+    margin: 7px 0 0 0;
+  }
+  .box-step.ani4 {
+    margin: 7px 0 0 0;
+  }
+  .page-id-20 .mod-hero-image .content {
+    margin: 0 auto -218px;
+  }
+  .animation5 .step-item-image-cont {
+    position: absolute;
+    top: 114px;
+    right: 0;
+    left: 0;
+  }
+}
+
+
+
+@media (max-width: 767px) {
+    .popup-header-content {
+        display: flex;
+    }
+	.desktop{
+		display:none;
+	}
+	
+}
+
+
+@media (max-width: 475px){ 
+.page-id-33645 .mod-hero-image {
+  height: 200px;
+}
+	.page-id-33645 .h1, .page-id-33645 h1 {
+  font-size: 3rem;
+  margin-top: 22%;
+}
+}
+@media (max-width: 375px){
+	.displaynone{
+		display:none;
+	}
+	h1 .secondclss{
+		
+		color: #fff;
+font-size: 30px;
+	}
+	
+	.mod-hero-image .content h1 {
+  color: #fff;
+  line-height: 52px;
+}
+	
+}
+
+
+
+@media only screen and (max-width: 470px)  {
+.newclright{ margin-top:20px; }
+
+}
+
+
+@media only screen and (min-width: 470px)  {
+.buttonclumn{
+	
+	width:100%;
+} 
+.newclleft{
+	float:left;
+	width:49%;
+	margin-right:1%;
+	text-align: right;
+}
+.newclright{
+	float:left;
+	margin-left:1%;
+	width:49%;
+	text-align: left;
+}
+	}
+
+.page-id-33841 .mod-hero-image + section, .page-id-34224 .mod-hero-image + section, .page-id-34165 .mod-hero-image + section, .page-id-34153 .mod-hero-image + section, .page-id-34020 .mod-hero-image + section, .page-id-34004 .mod-hero-image + section, .page-id-34039 .mod-hero-image + section, .page-id-34043 .mod-hero-image + section, .page-id-34064 .mod-hero-image + section, .page-id-34092 .mod-hero-image + section, .page-id-34079 .mod-hero-image + section, .page-id-34049 .mod-hero-image + section {
+  margin-top: 0% !important;
+} 
+.page-id-33841 .bg-mountain, .page-id-34224 .bg-mountain, .page-id-34165 .bg-mountain, .page-id-34049 .bg-mountain, .page-id-34004 .bg-mountain, .page-id-34020 .bg-mountain, .page-id-34092 .bg-mountain,  .page-id-34039 .bg-mountain, .page-id-34043 .bg-mountain, .page-id-34064 .bg-mountain, .page-id-34079 .bg-mountain, .page-id-34153 .bg-mountain, .page-id-34165 .bg-mountain {
+	display: none !important;
+}
+
+.page-id-33882 .mod-hero-image, .page-id-34092 .mod-hero-image, .page-id-34079 .mod-hero-image, .page-id-34020 .mod-hero-image {
+  height: 400px;
+}
+
+.page-id-33882 .mod-hero-image + section, .page-id-34020 .mod-hero-image + section, .page-id-34079 .mod-hero-image + section, .page-id-34092 .mod-hero-image + section {
+  margin-top: 0% !important;
+} 
+.page-id-33882 .bg-mountain, .page-id-34092 .bg-mountain, .page-id-34079 .bg-mountain, .page-id-34020 .bg-mountain {
+	display:none !important;
+}	
+
+.page-id-33882 .bg-mountain-desktop, .page-id-34224 .bg-mountain-desktop, .page-id-34165 .bg-mountain-desktop, .page-id-33841 .bg-mountain-desktop-full, .page-id-34049 .bg-mountain-desktop-full .page-id-34004 .bg-mountain-desktop-full, .page-id-34020 .bg-mountain-desktop-full, .page-id-34039 .bg-mountain-desktop-full, .page-id-34043 .bg-mountain-desktop-full, .page-id-34064 .bg-mountain-desktop-full, .page-id-34079 .bg-mountain-desktop-full, .page-id-34092 .bg-mountain-desktop-full, .page-id-34153 .bg-mountain-desktop-full,.page-id-34165 .bg-mountain-desktop-full {
+    display: none !important;
+}
+.page-id-33882 .bg-transparent-violet, .page-id-34224 .bg-transparent-violet, .page-id-34165 .bg-transparent-violet, .page-id-33841 .bg-transparent-violet, .page-id-34049 .bg-transparent-violet, .page-id-34004 .bg-transparent-violet, .page-id-34020 .bg-transparent-violet, .page-id-34039 .bg-transparent-violet,  .page-id-34043 .bg-transparent-violet, .page-id-34064 .bg-transparent-violet, .page-id-34079 .bg-transparent-violet, .page-id-34092 .bg-transparent-violet, .page-id-34153 .bg-transparent-violet, .page-id-34165 .bg-transparent-violet      {
+	  display: none !important;
+}
+
+/* ============================================
+   MENU REDESIGN — Desktop Header & Navigation
+   ============================================ */
+
+/* Prevent overscroll bounce from separating header from browser chrome */
+html {
+  overscroll-behavior-y: none;
+}
+
+/* Menu background: always white */
+#header {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Push main content below the fixed header.
+   Two values match the two header heights (full logo vs shrunk). */
+#main-content {
+  padding-top: 160px !important;
+}
+@media (min-width: 992px) {
+  #main-content {
+    padding-top: 170px !important;
+    transition: padding-top 0.3s ease;
+  }
+  #header.logo-shrunk ~ #main-content {
+    padding-top: 145px !important;
+  }
+}
+
+/* Navigation text: uppercase — all levels including dropdowns */
+.main-menu-ul li a {
+  text-transform: uppercase !important;
+}
+
+/* Hover: green text — keyed off li:hover so it stays green while mouse is on dropdown */
+.main-menu-ul li:hover > a,
+.main-menu-ul li.active > a,
+.main-menu-ul li a:focus {
+  color: #568f3b !important;
+}
+
+/* Nav link hover transition */
+.main-menu-ul li a {
+  transition: color 0.3s ease !important;
+}
+
+/* Underline: define base state so transition has somewhere to animate from */
+@media (min-width: 992px) {
+  .main-menu-ul li:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: transparent;
+    transition: background 0.3s ease;
+  }
+  .main-menu-ul li.active:after,
+  .main-menu-ul li:hover:after {
+    background: #568f3b !important;
+  }
+  #header.pin-header .main-menu-ul li.active:after,
+  #header.pin-header .main-menu-ul li:hover:after {
+    background: #568f3b !important;
+  }
+}
+
+/* Dropdown: border radius + shadow + nudge below underline */
+#menu-main-menu .menu-item-has-children .sub-menu,
+.main-menu-dropdown {
+  border-radius: 6px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px !important;
+  margin-top: 4px !important;
+}
+
+/* Transparent bridge above dropdown — fills the margin-top gap so the mouse
+   doesn't lose li:hover while moving from the nav link down to the dropdown */
+@media (min-width: 992px) {
+  #menu-main-menu .menu-item-has-children .sub-menu::before,
+  .main-menu-dropdown::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 0;
+    right: 0;
+    height: 8px;
+  }
+}
+
+/* Dropdown hover: green text */
+#menu-main-menu .menu-item-has-children .sub-menu li a:hover,
+.main-menu-dropdown ul a:hover {
+  color: #568f3b !important;
+}
+
+/* Location page nav: current location name green + underline */
+#menu-main-menu li.btb-current-location > a {
+  color: #568f3b !important;
+  font-size: 1.05em !important;
+}
+@media (min-width: 992px) {
+  #menu-main-menu li.btb-current-location:after {
+    background: #568f3b !important;
+  }
+}
+
+/* ============================================
+   MOBILE MENU
+   ============================================ */
+
+@media (max-width: 991px) {
+
+  /* Header stays fixed height — no full-screen takeover */
+  html.is-open-menu #header {
+    bottom: auto !important;
+    height: auto !important;
+    overflow-y: visible !important;
+  }
+  #header.is-open-menu {
+    background-color: #fff !important;
+    height: auto !important;
+  }
+
+  /* Nav dropdown: white background */
+  #main-menu.navbar-collapse.show,
+  #main-menu.collapsing {
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    padding: 10px 0;
+  }
+
+  /* Compact menu items so locations list fits without scrolling */
+  html.is-open-menu .main-menu-ul > li > a {
+    font-size: 1.2rem !important;
+    letter-spacing: 0 !important;
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Underline on open dropdown parent link — fit-content so border spans text only */
+  .main-menu-ul li.is-open-child > a {
+    width: fit-content !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-bottom: 2px solid #568f3b !important;
+    padding-bottom: 6px !important;
+  }
+
+  /* Sub-menu items: tighter spacing than top-level */
+  html.is-open-menu #menu-main-menu .menu-item-has-children .sub-menu li {
+    padding: 0 10px !important;
+    margin: 0 auto !important;
+  }
+
+  /* Sub-menu link: smaller font, no vertical padding */
+  html.is-open-menu .main-menu-ul .sub-menu li a {
+    font-size: 1rem !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    line-height: 1.4 !important;
+  }
+
+
+
+  /* CTA Book Now: always visible in the header */
+  #header nav > .btn-cta {
+    display: flex !important;
+    align-items: center;
+  }
+  .is-open-menu #header nav > .btn-cta {
+    display: flex !important;
+  }
+
+  /* Vertical alignment in mobile header */
+  #header .navbar {
+    align-items: center;
+    padding: 8px 15px;
+  }
+}
+
+/* Fix btn-cta positioning and margin on mobile */
+@media (max-width: 580px) {
+  nav > .btn-cta a {
+    margin-left: 0 !important;
+  }
+}
+@media (max-width: 414px) {
+  nav > .btn-cta {
+    position: static !important;
+    left: auto !important;
+    transform: none !important;
+  }
+}
+
+/* Suppress background/shadow transitions to prevent color flash on scroll;
+   leave max-width free so the logo can animate */
+#header,
+#header.pin-header {
+  -webkit-transition: background-color 0s, box-shadow 0s !important;
+  transition: background-color 0s, box-shadow 0s !important;
+}
+
+/* Match pin-header background to our always-white base (no color flash on scroll) */
+#header.pin-header {
+  background-color: #fff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Logo: always 100px on mobile */
+html body #header #header-logo,
+html body #header.pin-header #header-logo {
+  max-width: 100px !important;
+  padding: 13px 0 !important;
+}
+html body #header #header-logo img,
+html body #header.pin-header #header-logo img {
+  min-width: 0 !important;
+  width: 100% !important;
+  max-width: 100px !important;
+}
+
+/* Logo: animate 160px → 100px on desktop via CSS transition.
+   Both selectors needed: pin-header (added by app.js at scrollTop>0) has the
+   same specificity as our override so we must match it to win source-order. */
+@media (min-width: 992px) {
+  html body #header #header-logo,
+  html body #header.pin-header #header-logo {
+    width: 160px;
+    max-width: none !important;
+    padding: 3px 0 !important;
+    transition: width 0.3s ease;
+  }
+  html body #header #header-logo img,
+  html body #header.pin-header #header-logo img {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+  html body #header.logo-shrunk #header-logo {
+    width: 100px;
+  }
+}
+
+/* Remove flex constraint from main-menu so nav centers naturally */
+@media (min-width: 992px) {
+  #header #main-menu {
+    flex: unset;
+  }
+}
+
+/* Hide duplicate btn-cta inside the main menu */
+#main-menu .btn-cta {
+  display: none !important;
+}
+
+/* Grid layout: logo left | nav center | btn-cta right */
+@media (min-width: 992px) {
+  #header nav.navbar {
+    display: grid !important;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+  }
+  #header .navbar-brand {
+    grid-column: 1;
+    grid-row: 1;
+    order: unset;
+    flex: unset;
+  }
+  #header #main-menu {
+    grid-column: 2;
+    grid-row: 1;
+    order: unset;
+    flex: unset;
+    margin: 0 !important;
+  }
+  #header nav > .btn-cta {
+    grid-column: 3;
+    grid-row: 1;
+    order: unset;
+    flex: unset;
+    display: flex !important;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  #header .hamburger-menu {
+    display: none !important;
+  }
+  #header #main-menu .main-menu-ul {
+    margin: 0 auto !important;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 992px) {
+  #header #main-menu {
+    align-self: center !important;
+  }
+}
+
+
+
+/* ============================================
+   MOBILE MENU FIXES — phase 2
+   ============================================ */
+
+/* Drop #main-menu below the fixed header bar (not push it taller) */
+@media (max-width: 991px) {
+  #main-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 9998;
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    padding: 10px 0;
+  }
+  /* 3-column grid: logo sizes to content | gap fills remaining space | hamburger sizes to content
+     This ensures Book Now centers in the actual visual gap, not the full navbar width */
+  #header nav.navbar {
+    display: grid !important;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    flex-wrap: unset;
+  }
+  #header .navbar-brand {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  #header nav > .btn-cta {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0 !important;
+    display: flex !important;
+    justify-content: center;
+    justify-self: center;
+  }
+  #header .hamburger-menu {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+    display: flex !important;
+  }
+}
+
+/* X close icon — translateY brings each bar to the icon center before rotating,
+   so the X appears in the same position as the hamburger (bars are 3px tall, 7px gap,
+   center = 10px from bar 1 / -10px from bar 3) */
+.hamburger-menu.is-open-menu .icon-bar:first-child {
+  -webkit-transform: translateY(10px) rotate(45deg) !important;
+  transform: translateY(10px) rotate(45deg) !important;
+  -webkit-transform-origin: center !important;
+  transform-origin: center !important;
+  top: 0;
+  left: 0;
+}
+.hamburger-menu.is-open-menu .icon-bar:nth-child(2) {
+  opacity: 0 !important;
+}
+.hamburger-menu.is-open-menu .icon-bar:nth-child(3) {
+  -webkit-transform: translateY(-10px) rotate(-45deg) !important;
+  transform: translateY(-10px) rotate(-45deg) !important;
+  -webkit-transform-origin: center !important;
+  transform-origin: center !important;
+  top: 0;
+}
+
+
+/* Fix: hide .main-menu-dropdown by default so removing is-open-child actually closes it */
+@media (max-width: 991px) {
+  #main-menu .main-menu-dropdown {
+    display: none !important;
+  }
+  #main-menu .is-open-child .main-menu-dropdown {
+    display: block !important;
+  }
+}
+
+/* Mobile sub-menu: white background, no shadows */
+@media (max-width: 991px) {
+  #menu-main-menu .menu-item-has-children .sub-menu,
+  #main-menu .menu-item-has-children .sub-menu {
+    background-color: #fff !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+  }
+}
+
+
+/* Fix: hamburger bars — black, centered */
+@media (max-width: 991px) {
+  .hamburger-menu .icon-bar {
+    background: #111 !important;
+    margin-left: 0 !important;
+  }
+  .hamburger-menu {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+
+/* Click-only dropdown — disable hover trigger (mobile only; desktop keeps hover-open) */
+@media (max-width: 991px) {
+  #menu-main-menu .menu-item-has-children:hover > .sub-menu {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    text-align: left !important;
+  }
+
+  /* Show sub-menu when JS adds .is-open-child on click */
+  #menu-main-menu .menu-item-has-children.is-open-child > .sub-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    display: block !important;
+  }
+}
+
+/* On mobile, lock position/text-align so hover state can't cause a layout jump */
+@media (max-width: 990px) {
+  #menu-main-menu .menu-item-has-children.is-open-child > .sub-menu {
+    position: inherit !important;
+    text-align: center !important;
+  }
+}
+
+/* Explicitly hide sub-menus on mobile so toggle actually works */
+@media (max-width: 991px) {
+  #main-menu .menu-item-has-children > .main-menu-dropdown,
+  #main-menu .menu-item-has-children > .sub-menu {
+    display: none !important;
+  }
+  #main-menu .is-open-child > .main-menu-dropdown,
+  #main-menu .is-open-child > .sub-menu {
+    display: block !important;
+  }
+}
+
+/* ============================================
+   TOP BAR — popup-header
+   ============================================ */
+
+/* Vertically center all items (globe, call link, summer/winter toggle) */
+.popup-header-content {
+  align-items: center;
+  padding-right: 25px !important;
+}
+
+/* Right side: globe + call link — flex row, vertically centered */
+.popup-header-content__p2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0;
+}
+
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+  text-transform: uppercase !important;
+}
+
+/* ============================================
+   Global design tokens
+   ============================================ */
+
+:root {
+  --color-text: #1a1a18;
+  --color-green: #568f3b;
+  --color-green-dark: #4a7c32;
+  --radius: 6px;
+  --shadow-card: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  --border-subtle: #ececec;
+}
+
+/* ============================================
+   WW-3: Garnett font
+   ============================================ */
+
+@font-face {
+  font-family: "Garnett";
+  src: url("../fonts/Garnett-Light.woff") format("woff"),
+       url("../fonts/Garnett-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garnett";
+  src: url("../fonts/Garnett-LightItalic.woff") format("woff"),
+       url("../fonts/Garnett-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garnett";
+  src: url("../fonts/Garnett-Regular.woff") format("woff"),
+       url("../fonts/Garnett-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garnett";
+  src: url("../fonts/Garnett-RegularItalic.woff") format("woff"),
+       url("../fonts/Garnett-RegularItalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garnett";
+  src: url("../fonts/Garnett-Medium.woff") format("woff"),
+       url("../fonts/Garnett-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garnett";
+  src: url("../fonts/Garnett-MediumItalic.woff") format("woff"),
+       url("../fonts/Garnett-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garnett";
+  src: url("../fonts/Garnett-Semibold.woff") format("woff"),
+       url("../fonts/Garnett-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garnett";
+  src: url("../fonts/Garnett-SemiboldItalic.woff") format("woff"),
+       url("../fonts/Garnett-SemiboldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garnett";
+  src: url("../fonts/Garnett-Bold.woff") format("woff"),
+       url("../fonts/Garnett-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garnett";
+  src: url("../fonts/Garnett-BoldItalic.woff") format("woff"),
+       url("../fonts/Garnett-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garnett";
+  src: url("../fonts/Garnett-Black.woff") format("woff"),
+       url("../fonts/Garnett-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garnett";
+  src: url("../fonts/Garnett-BlackItalic.woff") format("woff"),
+       url("../fonts/Garnett-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Override Poppins/Open Sans site-wide; icomoon wins via higher specificity */
+* {
+  font-family: "Garnett", sans-serif !important;
+}
+
+/* Restore Font Awesome icon font — overridden by wildcard Garnett rule above */
+.fa, .fas, .far, .fal, .fat, .fab,
+.fa-solid, .fa-regular, .fa-light, .fa-thin, .fa-duotone {
+  font-family: "Font Awesome 6 Free" !important;
+}
+.fa-brands, .fab {
+  font-family: "Font Awesome 6 Brands" !important;
+}
+
+/* ============================================
+   WW-4: Button Styling
+   ============================================ */
+
+.btn {
+  text-transform: uppercase !important;
+  border-radius: 6px !important;
+  border: none !important;
+  background-color: #568F3B !important;
+  color: #fff !important;
+  padding: 12px 30px !important;
+  text-decoration: none !important;
+  font-size: 1rem !important;
+  vertical-align: middle !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn:hover,
+.btn:focus,
+.btn.is-hover {
+  background-color: #256BB2 !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+}
+
+/* WW-49: Book Now locations popup */
+html.html-popup-content .cont-background-opacity {
+  background: #fff !important;
+  border-radius: 6px;
+}
+
+
+html.html-popup-content .popup-inner > h3 {
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin: 1rem;
+  text-transform: uppercase;
+}
+
+html.html-popup-content .popup-inner {
+  max-width: 550px !important;
+  padding: 20px 10px !important;
+}
+
+html.html-popup-content .popup-inner > p br {
+  display: none;
+}
+
+html.html-popup-content .popup-inner p {
+  margin-bottom: 30px;
+}
+
+html.html-popup-content .popup-inner > p a {
+  color: #568F3B;
+  text-decoration: underline;
+  font-size: 1.05rem;
+  display: block;
+  margin-bottom: 10px;
+  line-height: 1.5 !important;
+  font-weight: bold;
+}
+
+html.html-popup-content .popup-inner > p a:hover {
+  color: #256BB2;
+}
+
+@media (max-width: 991px) {
+  html.html-popup-content .popup-inner > p:first-child {
+    padding-top: 30px;
+  }
+  html.html-popup-content .popup-inner {
+    font-size: 1rem;
+  }
+  html.html-popup-content .popup-inner > h3,
+  html.html-popup-content .popup-inner > p a {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-height: 768px) {
+  html.html-popup-content .popup-inner {
+    max-height: none !important;
+  }
+}
+
+/* ============================================
+   WW-21: Homepage Hero Banner
+   ============================================ */
+
+/* Kill GSAP parallax on non-home pages — JS targets these two selectors */
+.mod-hero-image .content,
+.mod-hero-image .bg-banner-home {
+  -webkit-transform: none !important;
+  transform: none !important;
+}
+
+/* --- btb-hero: clean home hero rebuild --- */
+
+.btb-hero {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  min-height: 500px;
+  max-height: 900px;
+}
+
+/* Background photo */
+.btb-hero__photo {
+  position: absolute;
+  top: -300px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('../images/black-tie-bike-rentals.jpg');
+  background-size: cover;
+  background-position: center top;
+  z-index: 0;
+}
+@media (min-width: 992px) {
+  .btb-hero__photo {
+    top: calc(-40px - 20vw);
+  }
+}
+
+/* Gradient overlay */
+.btb-hero__gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgb(86 143 59 / 0%) 0%, #00000000 45%), linear-gradient(rgb(5 33 62 / 34%), rgb(0 0 0 / 0%));
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Mountain transition — single div, CSS swaps the PNG at desktop */
+.btb-hero__mountain {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 50%;
+  top: 50%;
+  background-image: url('../images/mountain-mobile-home.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 2;
+  pointer-events: none;
+}
+@media (min-width: 992px) {
+  .btb-hero__mountain {
+    background-image: url('../images/bg-mountain.png');
+    background-position: center center;
+    top: calc(62% + 35vw - 380px);
+    height: 60%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .btb-hero__mountain {
+    display: none;
+  }
+}
+@media (min-width: 1500px) {
+  .btb-hero__mountain {
+    top: 72%;
+    height: 100%;
+  }
+}
+
+/* Content */
+.btb-hero__content {
+  position: relative;
+  z-index: 3;
+  padding-top: 140px;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .btb-hero__content {
+    padding-top: calc(31px + 11vw);
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+/* H1 */
+.btb-hero__content h1 {
+  color: #fff;
+  font-size: clamp(1rem, calc(4px + 3vw), 3rem);
+  line-height: 1.15;
+  margin: 0 auto 15px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* H2 — override global uppercase + italic from <em> */
+.btb-hero__content h2,
+.btb-hero__content h2 em {
+  color: #fff;
+  font-size: clamp(0.55rem, calc(6px + 0.69vw), 1rem);
+  font-weight: 400;
+  line-height: 1.4;
+  font-style: normal !important;
+  text-transform: none !important;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Scroll arrow */
+.btb-hero__scroll {
+  margin-top: 8%;
+}
+.btb-hero__scroll .icomoon {
+  color: #fff;
+  font-size: 1.125rem;
+}
+
+/* Book Now button */
+#boonowbutton {
+  font-size: 0.8rem;
+  padding: 8px 18px !important;
+}
+@media (min-width: 992px) {
+  #boonowbutton {
+    font-size: 1rem;
+    padding: 12px 30px !important;
+  }
+}
+
+/* Section below: sits on top of mountain overlap, solid white so hero doesn't bleed through */
+.btb-hero + section {
+  position: relative;
+  z-index: 3;
+  background: #fff;
+  margin-top: -12%;
+}
+
+.mod-steps {
+  margin-top: 0 !important;
+  padding-top: clamp(0px, calc(16.2vw - 160px), 150px);
+}
+
+/* ============================================
+   WW-10: Location Page Hero Banner
+   ============================================ */
+
+/* Hide JS-generated slider clone */
+.page-template-page-location .mod-hero-image .content-fix {
+  display: none !important;
+}
+
+/* Black base + clip so photo fills the hero cleanly with no overflow */
+.page-template-page-location .mod-hero-image {
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+}
+/* Mobile: grow hero via padding so the photo stretches into the gap area */
+@media (max-width: 991px) {
+  .page-template-page-location .mod-hero-image {
+    padding-bottom: 180px;
+  }
+}
+/* Desktop: extend fixed height to absorb the 180px gap (990px base + 180px) */
+@media (min-width: 992px) {
+  .page-template-page-location .mod-hero-image {
+    height: 1170px !important;
+  }
+}
+.page-template-page-location .mod-reviews {
+  position: relative;
+  z-index: 1;
+}
+
+/* Image opacity for text readability */
+.page-template-page-location .bg-banner-home-fulldesk,
+.page-template-page-location .bg-banner-home-mobile {
+  opacity: 0.8;
+}
+
+/* Clear fixed header; stop slider transform from clipping text */
+.page-template-page-location .mod-hero-image .content {
+  padding: 180px 100px 0 !important;
+  -webkit-transform: none !important;
+  transform: none !important;
+}
+
+/* H1 */
+.page-template-page-location .mod-hero-image .content h1 {
+  color: #fff;
+  font-size: 3rem;
+  line-height: 1.15 !important;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* H2 */
+.page-template-page-location .mod-hero-image .content h2 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal !important;
+  line-height: 1.4 !important;
+  text-transform: none !important;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Kill blue overlay at all breakpoints */
+.page-template-page-location .bg-transparent-blue {
+  display: none !important;
+}
+
+/* Ensure banner images cover the full hero */
+.page-template-page-location .bg-banner-home-fulldesk,
+.page-template-page-location .bg-banner-home-mobile {
+  background-size: cover !important;
+  background-position: center center !important;
+}
+
+/* Mountain graphics — keep within overflow:hidden hero boundary */
+@media (min-width: 992px) {
+  .page-template-page-location .bg-mountain-desktop-full {
+    bottom: 0 !important;
+  }
+  .page-template-page-location .bg-mountain-desktop {
+    top: 55% !important;
+    bottom: 0 !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+  .page-template-page-location .mod-hero-image .content {
+    padding: 140px 35px 0 !important;
+  }
+  .page-template-page-location .mod-hero-image .content h1 {
+    font-size: 1.75rem;
+  }
+  /* Lock background position so it doesn't shift at small breakpoints */
+  .page-template-page-location .bg-banner-home-mobile {
+    background-position: top center !important;
+  }
+}
+
+.page-template-page-location .mod-reviews {
+  margin-top: 0 !important;
+}
+
+/* ============================================
+   WW-10: Location Subpage Hero Banner
+   (default template child pages: bike rentals, 4x4, paddle, etc.)
+   ============================================ */
+
+.page-template-default.page-child .mod-hero-image .content-fix {
+  display: none !important;
+}
+
+/* Black base + clip */
+.page-template-default.page-child .mod-hero-image {
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Image opacity for text readability */
+.page-template-default.page-child .bg-banner-home-fulldesk,
+.page-template-default.page-child .bg-banner-home-mobile {
+  opacity: 0.8;
+  background-size: cover !important;
+  background-position: center center !important;
+}
+
+/* Kill blue overlay */
+.page-template-default.page-child .bg-transparent-blue {
+  display: none !important;
+}
+
+/* Clear fixed header; stop slider transform from clipping text */
+.page-template-default.page-child .mod-hero-image .content {
+  padding: 180px 100px 0 !important;
+  -webkit-transform: none !important;
+  transform: none !important;
+}
+
+.page-template-default.page-child .mod-hero-image .content h1 {
+  color: #fff;
+  font-size: 3rem;
+  line-height: 1.15 !important;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.page-template-default.page-child .mod-hero-image .content h2 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal !important;
+  line-height: 1.4 !important;
+  text-transform: none !important;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 991px) {
+  .page-template-default.page-child .mod-hero-image .content {
+    padding: 140px 35px 0 !important;
+  }
+  .page-template-default.page-child .mod-hero-image .content h1 {
+    font-size: 1.75rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================
+   WW-7: Explore [Location] Your Way
+   ============================================ */
+
+/* Global link style for location page text content */
+.location-page-link,
+.location-page-link:hover,
+.location-page-link:focus {
+  color: var(--color-green) !important;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+.mod-explore-section {
+  padding: 3rem 0;
+}
+
+.mod-explore-section .container {
+  max-width: 1200px;
+  padding-left: clamp(20px, 10%, 120px);
+  padding-right: clamp(20px, 10%, 120px);
+}
+
+.explore-section__heading {
+  font-family: "Garnett", Georgia, serif !important;
+  font-size: 1.875rem;
+  color: var(--color-text);
+  margin-bottom: 0.375rem;
+  line-height: 1.2;
+}
+
+.explore-section__sub {
+  font-size: 0.875rem;
+  color: var(--color-text);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.explore-cat-block {
+  margin-bottom: 2.75rem;
+}
+
+.explore-cat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.explore-cat-label {
+  font-family: "Garnett", Georgia, serif !important;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.explore-cat-cta {
+  font-family: "Garnett", Georgia, serif !important;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-green) !important;
+  border-bottom: 1px solid var(--color-green);
+  padding-bottom: 1px;
+  text-decoration: none !important;
+}
+
+.explore-cat-cta:hover {
+  color: var(--color-green) !important;
+  opacity: 0.75;
+}
+
+/* Cards (shared) */
+.explore-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.explore-card__img {
+  width: 100%;
+  border-bottom: 0.5px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.explore-card__img img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+.explore-card__body {
+  padding: 12px 14px 16px;
+}
+
+.explore-card__title {
+  font-family: "Garnett", Georgia, serif !important;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: 3px;
+  line-height: 1.3;
+}
+
+.explore-card__desc {
+  font-size: 0.75rem;
+  color: var(--color-text);
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+/* 2-package grid — 3 columns so the right stays empty (matches slider visual) */
+.explore-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Slider (3+ cards) */
+.explore-slider-wrap {
+  position: relative;
+}
+
+.explore-slider-viewport {
+  overflow: hidden;
+  padding: 12px;
+  margin: -12px;
+}
+
+.explore-slider-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease;
+}
+
+.explore-slider-track .explore-card {
+  flex: 0 0 calc((100% - 40px) / 3);
+}
+
+.explore-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--color-green);
+  border: 1px solid var(--color-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0;
+}
+
+.explore-arrow:hover {
+  background: var(--color-green-dark);
+  border-color: var(--color-green-dark);
+}
+
+.explore-arrow--left {
+  left: -17px;
+}
+
+.explore-arrow--right {
+  right: -17px;
+}
+
+.explore-arrow--hidden {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.explore-chevron {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #fff;
+  border-top: 2px solid #fff;
+}
+
+.explore-chevron--left {
+  transform: rotate(-135deg);
+  margin-left: 3px;
+}
+
+.explore-chevron--right {
+  transform: rotate(45deg);
+  margin-right: 3px;
+}
+
+/* Featured card (1 package) */
+.explore-featured {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  display: grid;
+  grid-template-columns: 33% 1fr;
+}
+
+.explore-featured__img {
+  overflow: hidden;
+  align-self: start;
+}
+
+.explore-featured__img img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+.explore-featured__body {
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.explore-featured__badge {
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  background: #f1efe8;
+  border-radius: 4px;
+  padding: 3px 8px;
+  display: inline-block;
+  width: fit-content;
+}
+
+.explore-featured__title {
+  font-family: "Garnett", Georgia, serif !important;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.explore-featured__desc {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  line-height: 1.6;
+  max-width: 50%;
+  margin-bottom: 1%;
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+  .mod-explore-section {
+    padding: 1.5rem 0;
+  }
+
+  .explore-section__heading {
+    font-size: 1.375rem;
+  }
+
+  .explore-section__sub {
+    margin-bottom: 1.5rem;
+  }
+
+  .explore-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  /* Standard cards — horizontal mini-card layout on mobile */
+  .explore-grid-2 .explore-card,
+  .explore-slider-track .explore-card,
+  .explore-featured {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    min-height: 150px;
+  }
+
+  .explore-grid-2 .explore-card__img,
+  .explore-slider-track .explore-card__img,
+  .explore-featured__img {
+    border-bottom: none;
+    border-right: 0.5px solid var(--border-subtle);
+    align-self: start;
+    height: 150px;
+  }
+
+  .explore-grid-2 .explore-card__img img,
+  .explore-slider-track .explore-card__img img,
+  .explore-featured__img img {
+    height: 100%;
+    aspect-ratio: unset;
+  }
+
+  .explore-grid-2 .explore-card__body,
+  .explore-slider-track .explore-card__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Slider becomes a plain vertical stack on mobile */
+  .explore-slider-viewport {
+    overflow: visible;
+  }
+
+  .explore-slider-track {
+    flex-direction: column;
+    transform: none !important;
+  }
+
+  .explore-slider-track .explore-card {
+    flex: none;
+    width: 100%;
+  }
+
+  .explore-arrow {
+    display: none;
+  }
+
+  /* Featured body resets for horizontal layout */
+  .explore-featured__body {
+    padding: 12px 14px 16px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .explore-featured__title {
+    font-size: 1.3rem;
+  }
+
+  .explore-featured__desc {
+    font-size: 0.75rem;
+    max-width: none;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .explore-grid-2 .explore-card,
+  .explore-slider-track .explore-card,
+  .explore-featured {
+    grid-template-columns: 90px 1fr;
+    min-height: 90px;
+  }
+
+  .explore-grid-2 .explore-card__img,
+  .explore-slider-track .explore-card__img,
+  .explore-featured__img {
+    height: 90px;
+  }
+
+  .explore-card__title,
+  .explore-featured__title {
+    font-size: 1rem;
+  }
+
+  .explore-card__desc,
+  .explore-featured__desc {
+    font-size: 0.7rem;
+  }
+
+  .explore-featured__badge {
+    font-size: 0.55rem;
+  }
+}
+
+/* ============================================
+   TOP BAR — popup-header
+   ============================================ */
+
+.popup-header {
+  background: #568F3B !important;
+  font-size: 15px;
+  font-weight: 500;
+  max-height: 56px;
+}
+
+.popup-header-content {
+  padding: 13px 25px;
+  align-items: center;
+}
+
+.popup-header-content__p {
+  margin-right: auto;
+  margin-bottom: 0;
+}
+
+.popup-header-content p img {
+  max-width: 100%;
+  margin: 0;
+}
+
+.toggle-sun-img {
+  width: 60px !important;
+  height: 30px !important;
+  max-width: none !important;
+  vertical-align: middle;
+}
+
+.popup-header-content__p2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0;
+}
+
+.popup-header-content a {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+@media (min-width: 768px) {
+  .topbar-mobile-only { display: none !important; }
+}
+@media (max-width: 767px) {
+  .topbar-desktop-only { display: none !important; }
+  .popup-header-content { display: flex; }
+  .desktop { display: none; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
