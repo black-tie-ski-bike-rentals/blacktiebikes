@@ -2081,6 +2081,13 @@ html.html-popup-content .popup-inner > p a:hover {
   }
 }
 
+/* Uniform product image height in col-md-4 grids */
+.page-template-default.page-child .col-md-4 p img.aligncenter {
+  height: 280px;
+  width: 100%;
+  object-fit: contain;
+}
+
 /* ============================================
    WW-7: Explore [Location] Your Way
    ============================================ */
