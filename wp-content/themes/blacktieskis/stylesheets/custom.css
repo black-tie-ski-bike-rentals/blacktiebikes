@@ -2012,14 +2012,35 @@ html.html-popup-content .popup-inner > p a:hover {
   background-color: #000;
   position: relative;
   overflow: hidden;
+  max-height: none !important;
+}
+@media (max-width: 991px) {
+  .page-template-default.page-child .mod-hero-image {
+    padding-bottom: 180px;
+  }
+}
+@media (min-width: 992px) {
+  .page-template-default.page-child .mod-hero-image {
+    height: 800px !important;
+  }
+}
+
+/* Force bg wrapper and image divs to fill the full hero height */
+.page-template-default.page-child .mod-hero-image .bg-transparent {
+  height: 100% !important;
+  max-height: none !important;
 }
 
 /* Image opacity for text readability */
 .page-template-default.page-child .bg-banner-home-fulldesk,
 .page-template-default.page-child .bg-banner-home-mobile {
   opacity: 0.8;
+  height: 100% !important;
+  max-height: none !important;
+  top: 0 !important;
+  bottom: 0 !important;
   background-size: cover !important;
-  background-position: center center !important;
+  background-position: top center !important;
 }
 
 /* Kill blue overlay */
@@ -2029,7 +2050,7 @@ html.html-popup-content .popup-inner > p a:hover {
 
 /* Clear fixed header; stop slider transform from clipping text */
 .page-template-default.page-child .mod-hero-image .content {
-  padding: 180px 100px 0 !important;
+  padding: 130px 100px 0 !important;
   -webkit-transform: none !important;
   transform: none !important;
 }
