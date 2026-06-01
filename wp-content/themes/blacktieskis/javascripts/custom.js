@@ -77,6 +77,14 @@
 
 }(jQuery));
 
+// WW-10: Destroy Slick on location/subpage hero — single static image, duplicate clone not needed
+(function ($) {
+  var $hero = $('.page-template-page-location .mod-hero-image, .page-template-default.page-child .mod-hero-image');
+  if ($hero.length && $hero.hasClass('slick-initialized')) {
+    $hero.slick('unslick');
+  }
+}(jQuery));
+
 // WW-7: Explore section slider
 // custom.js loads async in the footer — DOM is already ready, no DOMContentLoaded needed
 (function () {

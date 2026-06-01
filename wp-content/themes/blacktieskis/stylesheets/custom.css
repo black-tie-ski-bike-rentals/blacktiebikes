@@ -1821,11 +1821,6 @@ html.html-popup-content .popup-inner > p a:hover {
   }
 }
 
-@media (min-width: 1600px) {
-  .btb-hero__mountain {
-    display: none;
-  }
-}
 
 /* Content */
 .btb-hero__content {
@@ -1902,6 +1897,7 @@ html.html-popup-content .popup-inner > p a:hover {
   background-color: #000;
   position: relative;
   overflow: hidden;
+  max-height: none !important;
 }
 /* Mobile: grow hero via padding so the photo stretches into the gap area */
 @media (max-width: 991px) {
@@ -1912,7 +1908,7 @@ html.html-popup-content .popup-inner > p a:hover {
 /* Desktop: extend fixed height to absorb the 180px gap (990px base + 180px) */
 @media (min-width: 992px) {
   .page-template-page-location .mod-hero-image {
-    height: 1170px !important;
+    height: 800px !important;
   }
 }
 .page-template-page-location .mod-reviews {
@@ -1928,7 +1924,7 @@ html.html-popup-content .popup-inner > p a:hover {
 
 /* Clear fixed header; stop slider transform from clipping text */
 .page-template-page-location .mod-hero-image .content {
-  padding: 180px 100px 0 !important;
+  padding: 130px 100px 0 !important;
   -webkit-transform: none !important;
   transform: none !important;
 }
@@ -1946,7 +1942,7 @@ html.html-popup-content .popup-inner > p a:hover {
   color: #fff;
   font-size: clamp(0.8rem, calc(6px + 0.69vw), 1rem) !important;
   font-weight: 400;
-  font-style: normal !important;
+  font-style: italic !important;
   line-height: 1.4 !important;
   text-transform: none !important;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -1957,11 +1953,20 @@ html.html-popup-content .popup-inner > p a:hover {
   display: none !important;
 }
 
-/* Ensure banner images cover the full hero */
+/* Force bg wrapper and image divs to fill the full hero height */
+.page-template-page-location .mod-hero-image .bg-transparent {
+  height: 100% !important;
+  max-height: none !important;
+}
+
 .page-template-page-location .bg-banner-home-fulldesk,
 .page-template-page-location .bg-banner-home-mobile {
+  height: 100% !important;
+  max-height: none !important;
+  top: 0 !important;
+  bottom: 0 !important;
   background-size: cover !important;
-  background-position: center center !important;
+  background-position: top center !important;
 }
 
 /* Mountain graphics — keep within overflow:hidden hero boundary */
@@ -2040,7 +2045,7 @@ html.html-popup-content .popup-inner > p a:hover {
   color: #fff;
   font-size: clamp(0.8rem, calc(6px + 0.69vw), 1rem) !important;
   font-weight: 400;
-  font-style: normal !important;
+  font-style: italic !important;
   line-height: 1.4 !important;
   text-transform: none !important;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
