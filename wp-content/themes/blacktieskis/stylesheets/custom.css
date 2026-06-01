@@ -2255,7 +2255,7 @@ html.html-popup-content .popup-inner > p a:hover {
   overflow: hidden;
   box-shadow: var(--shadow-card);
   display: grid;
-  grid-template-columns: 33% 1fr;
+  grid-template-columns: 42% 1fr;
 }
 
 .explore-featured__img {
@@ -2295,7 +2295,7 @@ html.html-popup-content .popup-inner > p a:hover {
 
 .explore-featured__title {
   font-family: 'Garnett', Georgia, serif !important;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: 500;
   color: var(--color-text);
   line-height: 1.2;
@@ -2306,7 +2306,7 @@ html.html-popup-content .popup-inner > p a:hover {
   font-size: 0.95rem;
   color: var(--color-text);
   line-height: 1.6;
-  max-width: 50%;
+  max-width: 70%;
   margin-bottom: 1%;
 }
 
@@ -2342,18 +2342,18 @@ html.html-popup-content .popup-inner > p a:hover {
   .explore-slider-track .explore-card__img,
   .explore-featured__img {
     border-bottom: none;
-    border-right: 0.5px solid var(--border-subtle);
+    box-shadow: inset -0.5px 0 0 var(--border-subtle);
     align-self: stretch;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: stretch;
   }
 
   .explore-grid-2 .explore-card__img img,
   .explore-slider-track .explore-card__img img,
   .explore-featured__img img {
     width: 100%;
-    aspect-ratio: 1;
+    height: 100%;
+    aspect-ratio: auto;
     object-fit: cover;
   }
 
@@ -2383,15 +2383,20 @@ html.html-popup-content .popup-inner > p a:hover {
     display: none;
   }
 
+  /* Truncate description to 3 lines on mobile (2 lines at 480px and below) */
+  .explore-card__desc,
+  .explore-featured__desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
   /* Featured body resets for horizontal layout */
   .explore-featured__body {
     padding: 12px 14px 16px;
     align-items: flex-start;
     text-align: left;
-  }
-
-  .explore-featured__title {
-    font-size: 1.3rem;
   }
 
   .explore-featured__desc {
@@ -2409,12 +2414,6 @@ html.html-popup-content .popup-inner > p a:hover {
     min-height: 90px;
   }
 
-  .explore-grid-2 .explore-card__img,
-  .explore-slider-track .explore-card__img,
-  .explore-featured__img {
-    height: 90px;
-  }
-
   .explore-card__title,
   .explore-featured__title {
     font-size: 1rem;
@@ -2423,11 +2422,27 @@ html.html-popup-content .popup-inner > p a:hover {
   .explore-card__desc,
   .explore-featured__desc {
     font-size: 0.7rem;
+    -webkit-line-clamp: 2;
   }
 
   .explore-featured__badge {
     font-size: 0.55rem;
   }
+}
+
+/* ============================================
+   GLOBAL — Location page text content links
+   Wrap text content in .location-content to apply
+   ============================================ */
+
+.location-content a {
+  color: var(--color-green);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.location-content a:hover {
+  color: var(--color-green-dark);
 }
 
 /* ============================================
