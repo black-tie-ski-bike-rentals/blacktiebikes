@@ -335,6 +335,10 @@ body div.gform_wrapper div.gform_body select {
 .mod-about-content h2 {
   color: #568f3b;
 }
+.mod-about-content h4 {
+  text-transform: none !important;
+  font-family: 'Reenie Beanie', sans-serif !important;
+}
 .bg-banner-home {
   background-position: center center !important;
 }
@@ -1899,16 +1903,14 @@ html.html-popup-content .popup-inner > p a:hover {
   overflow: hidden;
   max-height: none !important;
 }
-/* Mobile: grow hero via padding so the photo stretches into the gap area */
 @media (max-width: 991px) {
   .page-template-page-location .mod-hero-image {
-    padding-bottom: 180px;
+    min-height: 400px;
   }
 }
-/* Desktop: extend fixed height to absorb the 180px gap (990px base + 180px) */
 @media (min-width: 992px) {
   .page-template-page-location .mod-hero-image {
-    height: 800px !important;
+    height: 400px !important;
   }
 }
 .page-template-page-location .mod-reviews {
@@ -1966,7 +1968,6 @@ html.html-popup-content .popup-inner > p a:hover {
   top: 0 !important;
   bottom: 0 !important;
   background-size: cover !important;
-  background-position: top center !important;
 }
 
 /* Mountain graphics — keep within overflow:hidden hero boundary */
@@ -1988,10 +1989,7 @@ html.html-popup-content .popup-inner > p a:hover {
   .page-template-page-location .mod-hero-image .content h1 {
     font-size: 1.8rem !important;
   }
-  /* Lock background position so it doesn't shift at small breakpoints */
-  .page-template-page-location .bg-banner-home-mobile {
-    background-position: top center !important;
-  }
+  /* background-position is set via inline style (ACF hero_bg_position field) */
 }
 
 .page-template-page-location .mod-reviews {
@@ -2016,12 +2014,12 @@ html.html-popup-content .popup-inner > p a:hover {
 }
 @media (max-width: 991px) {
   .page-template-default.page-child .mod-hero-image {
-    padding-bottom: 180px;
+    min-height: 400px;
   }
 }
 @media (min-width: 992px) {
   .page-template-default.page-child .mod-hero-image {
-    height: 800px !important;
+    height: 400px !important;
   }
 }
 
@@ -2040,7 +2038,6 @@ html.html-popup-content .popup-inner > p a:hover {
   top: 0 !important;
   bottom: 0 !important;
   background-size: cover !important;
-  background-position: top center !important;
 }
 
 /* Kill blue overlay */
@@ -2150,14 +2147,15 @@ html.html-popup-content .popup-inner > p a:hover {
   font-size: 0.8125rem;
   font-weight: 600;
   color: var(--color-green) !important;
-  border-bottom: 1px solid var(--color-green);
-  padding-bottom: 1px;
-  text-decoration: none !important;
+  text-decoration: underline !important;
+  text-decoration-color: var(--color-green) !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: 3px !important;
 }
 
 .explore-cat-cta:hover {
-  color: var(--color-green) !important;
-  opacity: 0.75;
+  color: #156bb1 !important;
+  text-decoration-color: #156bb1 !important;
 }
 
 /* Cards (shared) */
@@ -2201,11 +2199,17 @@ html.html-popup-content .popup-inner > p a:hover {
   margin-bottom: 0;
 }
 
-/* 2-package grid — 3 columns so the right stays empty (matches slider visual) */
+.explore-grid-2 .explore-card__img img {
+  aspect-ratio: 4/3;
+}
+
+/* 2-package grid */
 .explore-grid-2 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  padding: 20px;
+  margin: -20px;
 }
 
 /* Slider (3+ cards) */
@@ -2215,18 +2219,18 @@ html.html-popup-content .popup-inner > p a:hover {
 
 .explore-slider-viewport {
   overflow: hidden;
-  padding: 12px;
-  margin: -12px;
+  padding: 20px;
+  margin: -20px;
 }
 
 .explore-slider-track {
   display: flex;
-  gap: 20px;
+  gap: 36px;
   transition: transform 0.3s ease;
 }
 
 .explore-slider-track .explore-card {
-  flex: 0 0 calc((100% - 40px) / 3);
+  flex: 0 0 calc((100% - 72px) / 3);
 }
 
 .explore-arrow {
@@ -2252,11 +2256,11 @@ html.html-popup-content .popup-inner > p a:hover {
 }
 
 .explore-arrow--left {
-  left: -17px;
+  left: -28px;
 }
 
 .explore-arrow--right {
-  right: -17px;
+  right: -28px;
 }
 
 .explore-arrow--hidden {
@@ -2375,7 +2379,7 @@ html.html-popup-content .popup-inner > p a:hover {
   .explore-slider-track .explore-card__img,
   .explore-featured__img {
     border-bottom: none;
-    box-shadow: inset -0.5px 0 0 var(--border-subtle);
+    border-right: 1px solid var(--border-subtle);
     align-self: stretch;
     display: flex;
     align-items: stretch;
@@ -2400,10 +2404,13 @@ html.html-popup-content .popup-inner > p a:hover {
   /* Slider becomes a plain vertical stack on mobile */
   .explore-slider-viewport {
     overflow: visible;
+    padding: 0;
+    margin: 0;
   }
 
   .explore-slider-track {
     flex-direction: column;
+    gap: 20px;
     transform: none !important;
   }
 
