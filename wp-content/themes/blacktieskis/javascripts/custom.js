@@ -4,6 +4,8 @@
   document.addEventListener('click', function (e) {
     var link = e.target.closest('#menu-main-menu .menu-item-has-children > a');
     if (!link) return;
+    // Desktop: sub-menus open on hover; let the link navigate normally.
+    if (window.innerWidth >= 992) return;
     e.preventDefault();
     e.stopPropagation();
     var $li = $(link).closest('.menu-item-has-children');
@@ -98,7 +100,7 @@
     var next    = document.getElementById(trackId + '-next');
 
     function update() {
-      var cardW = track.children[0].offsetWidth + 12;
+      var cardW = track.children[0].offsetWidth + 36;
       track.style.transform = 'translateX(-' + (index * cardW) + 'px)';
       prev.classList.toggle('explore-arrow--hidden', index === 0);
       next.classList.toggle('explore-arrow--hidden', index >= total - visible);
