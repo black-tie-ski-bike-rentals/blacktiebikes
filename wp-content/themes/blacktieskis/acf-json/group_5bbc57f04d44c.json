@@ -82,6 +82,33 @@
                             "maxlength": ""
                         },
                         {
+                            "key": "field_hero_bg_position",
+                            "label": "Background Position",
+                            "name": "hero_bg_position",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "top center": "Top",
+                                "center center": "Center",
+                                "bottom center": "Bottom"
+                            },
+                            "default_value": "top center",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
                             "key": "field_5bbed5c82710f",
                             "label": "Video Embed",
                             "name": "video_embed",
