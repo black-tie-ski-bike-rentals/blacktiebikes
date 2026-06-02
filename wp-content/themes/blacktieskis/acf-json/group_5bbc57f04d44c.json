@@ -275,6 +275,33 @@
                             "mime_types": ""
                         },
                         {
+                            "key": "field_banner_bg_position",
+                            "label": "Background Position",
+                            "name": "bg_position",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "top center": "Top",
+                                "center center": "Center",
+                                "bottom center": "Bottom"
+                            },
+                            "default_value": "top center",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
                             "key": "field_623f34d9edb88",
                             "label": "Heading",
                             "name": "heading",
@@ -1524,5 +1551,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1779406542
+    "modified": 1780428536
 }

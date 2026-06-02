@@ -1,22 +1,20 @@
 <?php
 /**
  * Displays content for Banner Image Section
- */ 
+ */
+$bg_position = get_sub_field('bg_position') ?: 'top center';
+$banner_image = get_sub_field('banner_image');
 ?>
-<?php 
-$hero_img_video_embed = get_sub_field('video_embed');
-?>
-<section class="module mod-hero-image" style="max-height:550px;">
-  <div class="container content opacity" style="padding:50px;">
-    <?php blacktieskis_sub_field('description'); ?>
-    </div>
-  <div class="container content content-fix" style="padding:50px;">
+<section class="module mod-hero-image">
+  <div class="container content opacity">
     <?php blacktieskis_sub_field('description'); ?>
   </div>
-  <div class="bg-transparent" style="height:550px;">
-    <div class="bg-banner-home bg-banner-home-fulldesk d-none d-lg-block" style="background-image:url('<?php blacktieskis_sub_field('banner_image'); ?>'); background-position: top center;"></div>
-    <div class="bg-banner-home bg-banner-home-mobile d-block d-lg-none" style="background-image:url('<?php blacktieskis_sub_field('banner_image'); ?>');"></div>
-   
+  <div class="container content content-fix">
+    <?php blacktieskis_sub_field('description'); ?>
+  </div>
+  <div class="bg-transparent">
+    <div class="bg-banner-home bg-banner-home-fulldesk d-none d-lg-block" style="background-image:url('<?php echo esc_url( $banner_image ); ?>'); background-position: <?php echo esc_attr( $bg_position ); ?>;"></div>
+    <div class="bg-banner-home bg-banner-home-mobile d-block d-lg-none" style="background-image:url('<?php echo esc_url( $banner_image ); ?>'); background-position: <?php echo esc_attr( $bg_position ); ?>;"></div>
   </div>
  
 </section>
