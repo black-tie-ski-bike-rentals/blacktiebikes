@@ -2146,7 +2146,7 @@ html.html-popup-content .popup-inner > p a:hover {
 .explore-cat-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 20px;
   margin-bottom: 1rem;
 }
 
@@ -2382,7 +2382,7 @@ html.html-popup-content .popup-inner > p a:hover {
 
   .explore-grid-2 {
     flex-direction: column;
-    gap: 8px;
+    gap: 20px;
   }
 
   /* Standard cards — horizontal mini-card layout on mobile */
