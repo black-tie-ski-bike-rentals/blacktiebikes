@@ -2184,21 +2184,12 @@ html.html-popup-content .popup-inner > p a:hover {
   flex-direction: column;
   text-decoration: none;
   color: inherit;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.4s ease;
 }
 
 .explore-card:hover {
   transform: scale(1.02);
-  box-shadow: var(--shadow-card-hover, 0 8px 24px rgba(0,0,0,0.15));
   text-decoration: none;
-}
-
-.explore-card:hover .explore-card__title {
-  color: var(--color-green);
-  text-decoration: underline;
-  text-decoration-color: var(--color-green);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 3px;
 }
 
 .explore-card__img {
@@ -2255,8 +2246,8 @@ html.html-popup-content .popup-inner > p a:hover {
 
 .explore-slider-viewport {
   overflow: hidden;
-  padding: 20px;
-  margin: -20px;
+  padding: 20px 20px 28px;
+  margin: -20px -20px -28px;
 }
 
 .explore-slider-track {
@@ -2331,21 +2322,12 @@ html.html-popup-content .popup-inner > p a:hover {
   grid-template-columns: 300px 1fr;
   text-decoration: none;
   color: inherit;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.4s ease;
 }
 
 .explore-featured:hover {
   transform: scale(1.02);
-  box-shadow: var(--shadow-card-hover, 0 8px 24px rgba(0,0,0,0.15));
   text-decoration: none;
-}
-
-.explore-featured:hover .explore-featured__title {
-  color: var(--color-green);
-  text-decoration: underline;
-  text-decoration-color: var(--color-green);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 3px;
 }
 
 .explore-featured__img {
