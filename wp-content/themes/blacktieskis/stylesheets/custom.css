@@ -2179,17 +2179,21 @@ html.html-popup-content .popup-inner > p a:hover {
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow-card);
+  height: 425px;
+  display: flex;
+  flex-direction: column;
 }
 
 .explore-card__img {
   width: 100%;
   border-bottom: 0.5px solid var(--border-subtle);
   overflow: hidden;
+  flex: 1;
 }
 
 .explore-card__img img {
   width: 100%;
-  aspect-ratio: 1;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
@@ -2215,17 +2219,16 @@ html.html-popup-content .popup-inner > p a:hover {
   margin-bottom: 0;
 }
 
-.explore-grid-2 .explore-card__img img {
-  aspect-ratio: 4/3;
-}
-
-/* 2-package grid */
+/* 2-package grid — same card width/layout as the 3-card slider, left-aligned */
 .explore-grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  display: flex;
+  gap: 36px;
   padding: 20px;
   margin: -20px;
+}
+
+.explore-grid-2 .explore-card {
+  flex: 0 0 calc((100% - 72px) / 3);
 }
 
 /* Slider (3+ cards) */
@@ -2308,7 +2311,7 @@ html.html-popup-content .popup-inner > p a:hover {
   overflow: hidden;
   box-shadow: var(--shadow-card);
   display: grid;
-  grid-template-columns: 42% 1fr;
+  grid-template-columns: 300px 1fr;
 }
 
 .explore-featured__img {
@@ -2318,7 +2321,7 @@ html.html-popup-content .popup-inner > p a:hover {
 
 .explore-featured__img img {
   width: 100%;
-  aspect-ratio: 1;
+  height: 300px;
   object-fit: cover;
   display: block;
 }
@@ -2378,7 +2381,7 @@ html.html-popup-content .popup-inner > p a:hover {
   }
 
   .explore-grid-2 {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: 8px;
   }
 
@@ -2388,6 +2391,7 @@ html.html-popup-content .popup-inner > p a:hover {
   .explore-featured {
     display: grid;
     grid-template-columns: 150px 1fr;
+    height: auto;
     min-height: 150px;
   }
 
