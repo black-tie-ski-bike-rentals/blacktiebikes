@@ -55,8 +55,10 @@ $location_name = get_the_title();
                     $img_id  = ! empty( $pkg['pkg_image'] ) ? $pkg['pkg_image'] : 0;
                     $img_src = $img_id ? wp_get_attachment_image_src( $img_id, 'medium' ) : false;
                     $img_alt = $img_id ? get_post_meta( $img_id, '_wp_attachment_image_alt', true ) : '';
+                    $card_tag  = $cat_cta_url ? 'a' : 'div';
+                    $card_href = $cat_cta_url ? ' href="' . esc_url( $cat_cta_url ) . '"' : '';
                   ?>
-                    <div class="explore-card">
+                    <<?php echo $card_tag . $card_href; ?> class="explore-card">
                       <div class="explore-card__img">
                         <?php if ( $img_src ) : ?>
                           <img src="<?php echo esc_url( $img_src[0] ); ?>" alt="<?php echo esc_attr( $img_alt ); ?>">
@@ -66,7 +68,7 @@ $location_name = get_the_title();
                         <h3 class="explore-card__title"><?php echo esc_html( $pkg['pkg_title'] ); ?></h3>
                         <p class="explore-card__desc"><?php echo esc_html( $pkg['pkg_description'] ); ?></p>
                       </div>
-                    </div>
+                    </<?php echo $card_tag; ?>>
                   <?php endforeach; ?>
                 </div>
               </div>
@@ -79,11 +81,13 @@ $location_name = get_the_title();
 
             <div class="explore-grid-2">
               <?php foreach ( $packages as $pkg ) :
-                $img_id  = ! empty( $pkg['pkg_image'] ) ? $pkg['pkg_image'] : 0;
-                $img_src = $img_id ? wp_get_attachment_image_src( $img_id, 'medium' ) : false;
-                $img_alt = $img_id ? get_post_meta( $img_id, '_wp_attachment_image_alt', true ) : '';
+                $img_id    = ! empty( $pkg['pkg_image'] ) ? $pkg['pkg_image'] : 0;
+                $img_src   = $img_id ? wp_get_attachment_image_src( $img_id, 'medium' ) : false;
+                $img_alt   = $img_id ? get_post_meta( $img_id, '_wp_attachment_image_alt', true ) : '';
+                $card_tag  = $cat_cta_url ? 'a' : 'div';
+                $card_href = $cat_cta_url ? ' href="' . esc_url( $cat_cta_url ) . '"' : '';
               ?>
-                <div class="explore-card">
+                <<?php echo $card_tag . $card_href; ?> class="explore-card">
                   <div class="explore-card__img">
                     <?php if ( $img_src ) : ?>
                       <img src="<?php echo esc_url( $img_src[0] ); ?>" alt="<?php echo esc_attr( $img_alt ); ?>">
@@ -93,7 +97,7 @@ $location_name = get_the_title();
                     <h3 class="explore-card__title"><?php echo esc_html( $pkg['pkg_title'] ); ?></h3>
                     <p class="explore-card__desc"><?php echo esc_html( $pkg['pkg_description'] ); ?></p>
                   </div>
-                </div>
+                </<?php echo $card_tag; ?>>
               <?php endforeach; ?>
             </div>
 
@@ -106,7 +110,11 @@ $location_name = get_the_title();
             $img_alt = $img_id ? get_post_meta( $img_id, '_wp_attachment_image_alt', true ) : '';
             $badge   = ! empty( $pkg['pkg_badge'] ) ? $pkg['pkg_badge'] : '';
             ?>
-            <div class="explore-featured">
+            <?php
+            $feat_tag  = $cat_cta_url ? 'a' : 'div';
+            $feat_href = $cat_cta_url ? ' href="' . esc_url( $cat_cta_url ) . '"' : '';
+            ?>
+            <<?php echo $feat_tag . $feat_href; ?> class="explore-featured">
               <div class="explore-featured__img">
                 <?php if ( $img_src ) : ?>
                   <img src="<?php echo esc_url( $img_src[0] ); ?>" alt="<?php echo esc_attr( $img_alt ); ?>">
@@ -119,7 +127,7 @@ $location_name = get_the_title();
                 <h3 class="explore-featured__title"><?php echo esc_html( $pkg['pkg_title'] ); ?></h3>
                 <p class="explore-featured__desc"><?php echo esc_html( $pkg['pkg_description'] ); ?></p>
               </div>
-            </div>
+            </<?php echo $feat_tag; ?>>
 
           <?php endif; ?>
         </div>
