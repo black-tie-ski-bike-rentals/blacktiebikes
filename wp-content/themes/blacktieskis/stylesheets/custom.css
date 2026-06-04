@@ -1874,6 +1874,22 @@ html.html-popup-content .popup-inner > p a:hover {
   }
 }
 
+/* Center multi-button rows in hero rich text */
+.buttonclumn {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.newclleft,
+.newclright {
+  float: none !important;
+  width: auto !important;
+  margin: 0 !important;
+  text-align: center !important;
+}
+
 /* Section below: sits on top of mountain overlap, solid white so hero doesn't bleed through */
 .btb-hero + section {
   position: relative;
