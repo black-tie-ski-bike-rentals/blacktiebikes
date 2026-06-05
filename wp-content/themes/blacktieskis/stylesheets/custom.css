@@ -674,6 +674,8 @@ body div.gform_wrapper div.gform_body select {
 .book-ski-headline .btn {
   min-width: 175px;
   margin: 6px;
+  padding: 12px 30px;
+  font-size: 1rem;
 }
 .mod-book-ski .btn:first-of-type {
   margin: 0;
@@ -1862,17 +1864,6 @@ html.html-popup-content .popup-inner > p a:hover {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Book Now button */
-#boonowbutton {
-  font-size: 0.8rem;
-  padding: 8px 18px !important;
-}
-@media (min-width: 992px) {
-  #boonowbutton {
-    font-size: 1rem;
-    padding: 12px 30px !important;
-  }
-}
 
 /* Center multi-button rows in hero rich text */
 .buttonclumn {
