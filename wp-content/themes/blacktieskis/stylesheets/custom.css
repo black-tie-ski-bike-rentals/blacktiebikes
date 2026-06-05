@@ -2573,3 +2573,41 @@ html.html-popup-content .popup-inner > p a:hover {
     display: none;
   }
 }
+
+/* WW-23: Locations map headline — solid green CTA */
+.location-map-headline {
+  background-image: none !important;
+  background-color: #568f3b;
+  padding: 60px 15px;
+}
+.location-map-headline h2 {
+  font-size: 2rem;
+  padding: 0;
+  margin-bottom: 12px;
+  text-transform: none !important;
+  letter-spacing: normal;
+}
+.location-map-headline h3 {
+  font-size: 1.125rem;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 28px;
+  text-transform: none !important;
+  letter-spacing: normal;
+}
+.location-map-headline .btn {
+  background-color: transparent !important;
+  color: #fff !important;
+  border: 3px solid #fff !important;
+  padding: 10px 30px !important;
+}
+.location-map-headline .btn:hover,
+.location-map-headline .btn:focus {
+  background-color: #fff !important;
+  color: #568f3b !important;
+}
+@media (max-width: 767px) {
+  .location-map-headline {
+    padding: 40px 15px;
+  }
+}

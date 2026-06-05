@@ -14,21 +14,11 @@ $location_datas = blacktiekis_get_location_datas($state_categories);
 $location_headline = get_sub_field('headline');	
 ?>
 <section id="locations" class="module mod-location-map animation">
-  <?php if( !empty($location_headline) ) : ?>
-	<div class="location-map-headline text-center d-none d-lg-none d-xl-block" style="background-image:url('<?php echo get_stylesheet_directory_uri();?>/images/location-header-full.png'); background-position: center center;">
-		<h2 class="m-0 text-white ani-bottom"><?php echo $location_headline;?></h2>
-	</div>
-	<div class="location-map-headline text-center d-lg-block d-xl-none" style="background-image:url('<?php echo get_stylesheet_directory_uri();?>/images/location-header.jpg'); background-position: center center;">
-		<h2 class="m-0 text-white ani-bottom"><?php echo $location_headline;?></h2>
-	</div>
-  <?php else : ?>
-	<div class="location-map-headline text-center d-none d-lg-none d-xl-block" style="background-image:url('<?php echo get_stylesheet_directory_uri();?>/images/location-header-full.png'); background-position: center center;">
-		<h2 class="m-0 text-white ani-bottom">Black Tie Ski Rentals, <?php blacktiekis_count_parent_location($state_categories);?> locations servicing <?php echo count($resports);?> resorts.</h2>
-	</div>
-	<div class="location-map-headline text-center d-lg-block d-xl-none" style="background-image:url('<?php echo get_stylesheet_directory_uri();?>/images/location-header.jpg'); background-position: center center;">
-		<h2 class="m-0 text-white ani-bottom">Black Tie Ski Rentals, <?php blacktiekis_count_parent_location($state_categories);?> locations servicing <?php echo count($resports);?> resorts.</h2>
-	</div>
-  <?php endif; ?>
+  <div class="location-map-headline text-center">
+    <h2 class="text-white ani-bottom"><?php echo !empty($location_headline) ? $location_headline : 'Ready to get started?'; ?></h2>
+    <h3 class="text-white">Book your gear in minutes and get set for your trip:</h3>
+    <a href="javascript:void(0);" data-id="#booknow" data-htmlclass="html-popup-content" class="popup-is-open btn text-uppercase">Book Now</a>
+  </div>
   <div class="map position-relative">	  
       <div class="location-left-filter position-absolute bg-white ani-bottom" data-module="filter-location">
 	    <div class="location-header"><p>Servicing the following resorts</p></div>
