@@ -1917,6 +1917,11 @@ html.html-popup-content .popup-inner > p a:hover {
   margin-top: 0 !important;
   padding-top: clamp(0px, calc(16.2vw - 160px), 150px);
 }
+@media (max-width: 991px) {
+  .mod-steps {
+    margin-top: -80px !important;
+  }
+}
 
 /* ============================================
    WW-10: Location Page Hero Banner
