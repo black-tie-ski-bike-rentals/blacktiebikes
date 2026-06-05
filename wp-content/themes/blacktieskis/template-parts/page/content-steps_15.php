@@ -33,12 +33,12 @@
 							  <img data-src="<?php echo $photo['url']; ?>" class="rounded-circle" alt="<?php echo $photo['alt']; ?>">
 							  <?php
 							  if( $enumerate == $num_items ) :
-							  ?><div class="step-item-image-cont text-center">
+							  ?><div class="step-item-image-cont">
 									<?php the_sub_field('content'); ?>
 								  </div><?php
 							  endif;?>
 							</div><?php
-						endif;						
+						endif;
 						if( $enumerate != $num_items ) :
 							?><div class="step-item-content col-lg-offset-4">
 							  <?php	the_sub_field('content'); ?>

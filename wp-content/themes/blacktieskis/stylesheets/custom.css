@@ -2733,3 +2733,22 @@ html.html-popup-content .popup-inner > p a:hover {
     margin-right: auto;
   }
 }
+
+/* WW-22: step 3/4/5 vertical positioning */
+@media (min-width: 992px) {
+  .step-item.animation3 {
+    margin-top: -150px;
+  }
+  .step-item.animation4 {
+    margin-top: 100px;
+  }
+  .step-item.animation5 {
+    margin-top: -115px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .step-item.animation4 {
+    margin-top: 70px;
+  }
+}
