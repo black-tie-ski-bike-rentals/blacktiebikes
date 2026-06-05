@@ -226,7 +226,7 @@
                 "layout_623e8b3d250ed": {
                     "key": "layout_623e8b3d250ed",
                     "name": "banner_image_section",
-                    "label": "Banner Image Section",
+                    "label": "Basic Hero",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -1551,5 +1551,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1780428536
+    "modified": 1780441121
 }
