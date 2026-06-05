@@ -17,6 +17,23 @@ wp_reset_query(); //important to destroy the previous query and setup a new quer
 </div>
 <!-- END LOADDING -->
 
+<section class="newsletter-callout">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-lg-6 newsletter-heading">
+        <h3>GET THE LATEST NEWS DELIVERED TO YOUR INBOX!</h3>
+        <p>We won't send you any garbage. Just the good stuff!</p>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="newsletter-form">
+          <input type="email" placeholder="Enter email address">
+          <button type="submit">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer id="footer" class="module">
     <?php blacktieskis_footer_info(); ?>
 </footer>

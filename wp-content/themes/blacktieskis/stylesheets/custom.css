@@ -671,8 +671,19 @@ body div.gform_wrapper div.gform_body select {
   height: 350px;
 }
 .book-ski-headline {
-  padding-top: 10px;
-  padding-bottom: 70px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+@media (min-width: 992px) {
+  .book-ski-headline {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media (max-width: 991px) {
+  .book-ski-headline h2 {
+    line-height: normal;
+  }
 }
 .book-ski-headline .btn {
   min-width: 175px;
@@ -702,6 +713,13 @@ html body #boonowbutton.is-hover {
   color: #fff !important;
   text-decoration: none !important;
   transition: all 0.3s ease !important;
+}
+.mod-book-ski #boonowbutton {
+  background-color: #256bb2;
+}
+html body .mod-book-ski #boonowbutton:hover,
+html body .mod-book-ski #boonowbutton.is-hover {
+  background-color: #568f3b !important;
 }
 .newcl a:hover {
   background: #256bb2 !important;
@@ -2635,4 +2653,78 @@ html.html-popup-content .popup-inner > p a:hover {
 }
 .animation5 .step-item-image-cont h2 {
   color: inherit;
+}
+
+/* WW-20: newsletter callout */
+.newsletter-callout {
+  background-color: #000;
+  padding: 60px 0;
+}
+.newsletter-callout .row {
+  padding: 20px;
+}
+.newsletter-callout h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
+  text-transform: uppercase !important;
+  letter-spacing: 0.03em;
+}
+.newsletter-callout p {
+  font-size: 1rem;
+  margin-bottom: 0;
+  color: #ccc;
+}
+.newsletter-form {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 5px;
+  max-width: 460px;
+  margin-left: auto;
+  margin-right: 0;
+}
+.newsletter-form input[type="email"] {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #333;
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  min-width: 0;
+}
+.newsletter-form input[type="email"]::placeholder {
+  color: #999;
+}
+.newsletter-form button {
+  background-color: #256bb2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: 400;
+  font-size: 0.875rem;
+  text-transform: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0;
+}
+.newsletter-form button:hover {
+  background-color: #1a538a;
+}
+@media (max-width: 991px) {
+  .newsletter-callout {
+    padding: 40px 0;
+  }
+  .newsletter-heading {
+    margin-bottom: 24px;
+  }
+  .newsletter-form {
+    margin-left: 0;
+    margin-right: auto;
+  }
 }
