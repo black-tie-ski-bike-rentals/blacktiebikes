@@ -2608,7 +2608,7 @@ html.html-popup-content .popup-inner > p a:hover {
   font-size: 2rem;
   padding: 0;
   margin-bottom: 12px;
-  text-transform: none !important;
+  text-transform: uppercase !important;
   letter-spacing: normal;
 }
 .location-map-headline h3 {
