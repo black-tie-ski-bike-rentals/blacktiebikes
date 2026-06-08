@@ -2825,11 +2825,11 @@ html body .mod-book-ski .btn-outline-primary:focus {
   }
 }
 /* Fluid height so the image scales smoothly with the viewport instead of
-   jumping at breakpoints. Floors at 190px (<=575px) and scales up to 590px
-   (~1200px+), matching the desktop value. The linear term (64vw - 178px)
-   passes through 190px at 575px and 590px at 1200px. */
+   jumping at breakpoints. Floors at 190px (up to ~637px wide) and scales up,
+   capping at 470px (~1075px+) so laptop/desktop widths stay shorter. The
+   linear term (64vw - 218px) is ~304px at 815px wide. */
 .bg-book-ski-desk {
-  min-height: clamp(190px, calc(64vw - 178px), 590px);
+  min-height: clamp(190px, calc(64vw - 218px), 470px);
 }
 
 /* WW-22: step 3/4/5 vertical positioning */

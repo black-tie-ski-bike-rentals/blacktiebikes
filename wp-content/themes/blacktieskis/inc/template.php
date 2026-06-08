@@ -525,6 +525,8 @@ function blacktieskis_footer_info()
 						<p class="max-size" max-size="<?php echo $career_max_size; ?>"></p> 
 					<?php endif; ?>
 				<?php endif; ?>
+				<?php // WW-20: link out to the Black Tie Skis (winter) site ?>
+				<a href="https://www.blacktieskis.com/">Winter</a>
 				<?php if(!empty($bt_other_links)) echo strip_tags($bt_other_links,'<a>') ; ?>
 			</div>	  
 
