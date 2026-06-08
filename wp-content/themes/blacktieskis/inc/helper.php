@@ -268,7 +268,10 @@ function blacktieskis_get_social_media()
 						if ( $sm_icon == 'Facebook' ) {					
 							$sm_icon_type = '<i class="icomoon icon-facebook" aria-hidden="true"></i>';
 						} elseif ( $sm_icon == 'Twitter' ) {
-							$sm_icon_type = '<i class="icomoon icon-x" aria-hidden="true"></i>';
+							// X (formerly Twitter) — exact glyph from the icomoon set, used inline as SVG
+							// so it doesn't require regenerating the icon font. Font units (1024 em, Y-up),
+							// flipped to the SVG coordinate space via the transform.
+							$sm_icon_type = '<svg class="social-x-icon" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false"><path transform="translate(0,960) scale(1,-1)" d="M778.411 864h141.141l-308.352-352.427 362.752-479.573h-284.032l-222.464 290.859-254.549-290.859h-141.227l329.813 376.96-347.989 455.040h291.243l201.088-265.856zM728.875 116.48h78.208l-504.832 667.477h-83.925z"/></svg>';
 						} elseif ( $sm_icon == 'Instagram' ) {						
 							$sm_icon_type = '<i class="icomoon icon-instagram" aria-hidden="true"></i>';
 						} elseif ( $sm_icon == 'Youtube' ) {						
