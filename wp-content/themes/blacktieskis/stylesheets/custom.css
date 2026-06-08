@@ -1774,6 +1774,21 @@ html.html-popup-content .popup-inner > p a:hover {
   }
 }
 
+/* Book Now popup: pull the close (X) in from the edge so it sits comfortably
+   in the corner instead of hugging the box/screen edge on all screen sizes.
+   The popup is cloned into a generic shell on open; data-content="booknow-popup"
+   on #booknow tags the generated .popup-content so we can target it here. */
+.popup-content.booknow-popup .popup-is-close {
+  top: 20px;
+  right: 28px;
+}
+@media (max-width: 767px) {
+  .popup-content.booknow-popup .popup-is-close {
+    top: 14px;
+    right: 18px;
+  }
+}
+
 /* ============================================
    WW-21: Homepage Hero Banner
    ============================================ */
@@ -2747,12 +2762,23 @@ html body .mod-book-ski .btn-outline-primary:focus {
 .footer-social {
   align-items: center;
 }
-/* WW-20: new X (formerly Twitter) glyph from regenerated icomoon font */
-.icon-x:before {
-  content: "\e900";
+/* WW-20: X (formerly Twitter) social icon as inline SVG.
+   Inherits the black/green hover from .footer-social via fill: currentColor. */
+.footer-social .social-x-icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  vertical-align: middle;
 }
 .logo-footer img {
+  /* brightness(0) = black at rest; on hover the filter chain recolors the
+     POW logo to brand green (#568f3b). Transition both states for a smooth
+     fade in and out. */
   filter: brightness(0);
+  transition: filter 0.3s ease;
+}
+#footer .logo-footer a:hover img {
+  filter: brightness(0) saturate(100%) invert(22%) sepia(67%) saturate(1037%) hue-rotate(64deg) brightness(184%) contrast(54%);
 }
 .footer-social ul {
   display: flex;
@@ -2768,17 +2794,27 @@ html body .mod-book-ski .btn-outline-primary:focus {
   padding: 0;
   display: flex;
 }
+/* #footer scope so the transition wins over app.css's `.social li a:hover
+   { transition: all .25s }`, which otherwise overrides the hovered state only
+   and makes the color snap back to black on hover-out. Declaring the same
+   transition on both states keeps the fade symmetric in and out. */
+#footer .footer-social ul li a,
+#footer .footer-social ul li a:hover {
+  transition: color 0.3s ease;
+}
 .footer-social ul li a {
   color: #000;
-  transition: color 0.3s ease;
 }
 .footer-social ul li a:hover {
   color: #568f3b;
 }
+#footer .footer-info > a,
+#footer .footer-info > a:hover {
+  transition: color 0.3s ease;
+}
 .footer-info > a {
   color: #000 !important;
   font-weight: 500;
-  transition: color 0.3s ease;
 }
 .footer-info > a:hover {
   color: #568f3b !important;
@@ -2790,12 +2826,12 @@ html body .mod-book-ski .btn-outline-primary:focus {
 }
 @media (max-width: 767px) {
   .bg-book-ski-desk {
-    min-height: 500px;
+    min-height: 350px;
   }
 }
 @media (max-width: 575px) {
   .bg-book-ski-desk {
-    min-height: 450px;
+    min-height: 190px;
   }
 }
 
