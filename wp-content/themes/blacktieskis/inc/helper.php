@@ -267,8 +267,8 @@ function blacktieskis_get_social_media()
 						
 						if ( $sm_icon == 'Facebook' ) {					
 							$sm_icon_type = '<i class="icomoon icon-facebook" aria-hidden="true"></i>';
-						} elseif ( $sm_icon == 'Twitter' ) {						
-							$sm_icon_type = '<i class="icomoon icon-twitter" aria-hidden="true"></i>';
+						} elseif ( $sm_icon == 'Twitter' ) {
+							$sm_icon_type = '<i class="icomoon icon-x" aria-hidden="true"></i>';
 						} elseif ( $sm_icon == 'Instagram' ) {						
 							$sm_icon_type = '<i class="icomoon icon-instagram" aria-hidden="true"></i>';
 						} elseif ( $sm_icon == 'Youtube' ) {						

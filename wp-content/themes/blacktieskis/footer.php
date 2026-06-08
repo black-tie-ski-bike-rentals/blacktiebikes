@@ -17,6 +17,7 @@ wp_reset_query(); //important to destroy the previous query and setup a new quer
 </div>
 <!-- END LOADDING -->
 
+<?php /* Newsletter callout hidden until Klaviyo integration is ready (WW-20)
 <section class="newsletter-callout">
   <div class="container">
     <div class="row align-items-center">
@@ -33,6 +34,7 @@ wp_reset_query(); //important to destroy the previous query and setup a new quer
     </div>
   </div>
 </section>
+*/ ?>
 
 <footer id="footer" class="module">
     <?php blacktieskis_footer_info(); ?>

@@ -30,6 +30,6 @@ if($pageid==20){ ?>
 		endif;
 		?>       
     </div>
-	  <div class="bg-book-ski-fulldesk ani-bottom" data-src="<?php echo get_stylesheet_directory_uri(); ?>/images/footer-image.jpg" style="background-position: top center;"></div>
-    <div class="bg-book-ski-desk ani-bottom" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/images/footer-image.jpg'); background-position: center center;"></div>	    
+	  <div class="bg-book-ski-fulldesk ani-bottom" data-src="<?php echo get_stylesheet_directory_uri(); ?>/images/footer-image.webp" style="background-position: top center;"></div>
+    <div class="bg-book-ski-desk ani-bottom" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/images/footer-image.webp'); background-position: center center;"></div>	    
 </section>
