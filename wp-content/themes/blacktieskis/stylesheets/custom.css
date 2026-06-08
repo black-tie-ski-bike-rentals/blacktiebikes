@@ -2824,15 +2824,12 @@ html body .mod-book-ski .btn-outline-primary:focus {
     margin-bottom: 0;
   }
 }
-@media (max-width: 767px) {
-  .bg-book-ski-desk {
-    min-height: 350px;
-  }
-}
-@media (max-width: 575px) {
-  .bg-book-ski-desk {
-    min-height: 190px;
-  }
+/* Fluid height so the image scales smoothly with the viewport instead of
+   jumping at breakpoints. Floors at 190px (<=575px) and scales up to 590px
+   (~1200px+), matching the desktop value. The linear term (64vw - 178px)
+   passes through 190px at 575px and 590px at 1200px. */
+.bg-book-ski-desk {
+  min-height: clamp(190px, calc(64vw - 178px), 590px);
 }
 
 /* WW-22: step 3/4/5 vertical positioning */
