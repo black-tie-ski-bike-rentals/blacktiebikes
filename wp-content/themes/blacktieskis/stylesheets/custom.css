@@ -2829,7 +2829,9 @@ html body .mod-book-ski .btn-outline-primary:focus {
    capping at 470px (~1075px+) so laptop/desktop widths stay shorter. The
    linear term (64vw - 218px) is ~304px at 815px wide. */
 .bg-book-ski-desk {
-  min-height: clamp(190px, calc(64vw - 218px), 470px);
+  /* !important so the fluid height wins over app.css's base
+     `.bg-book-ski-desk { min-height: 590px }` regardless of source order. */
+  min-height: clamp(190px, calc(64vw - 218px), 470px) !important;
 }
 
 /* WW-22: step 3/4/5 vertical positioning */
