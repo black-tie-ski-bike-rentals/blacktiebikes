@@ -2790,12 +2790,12 @@ html body .mod-book-ski .btn-outline-primary:focus {
 }
 @media (max-width: 767px) {
   .bg-book-ski-desk {
-    min-height: 350px;
+    min-height: 500px;
   }
 }
 @media (max-width: 575px) {
   .bg-book-ski-desk {
-    min-height: 260px;
+    min-height: 450px;
   }
 }
 
