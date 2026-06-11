@@ -601,7 +601,7 @@ body div.gform_wrapper div.gform_body select {
   pointer-events: initial;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 991px) {
   #menu-main-menu .menu-item-has-children:hover .sub-menu {
     opacity: 1;
     visibility: visible;
@@ -1223,7 +1223,8 @@ html {
    ============================================ */
 
 @media (max-width: 991px) {
-  /* Header stays fixed height — no full-screen takeover */
+  /* Header bar stays its natural height — the menu is an absolutely-positioned
+     panel below it (see #main-menu rule), so the header must NOT clip or grow. */
   html.is-open-menu #header {
     bottom: auto !important;
     height: auto !important;
@@ -1234,12 +1235,15 @@ html {
     height: auto !important;
   }
 
-  /* Nav dropdown: white background */
+  /* Nav panel: white, with bottom padding so the last item clears the screen
+     edge when scrolled to the bottom. Full-screen white + scrolling is handled
+     by #header.is-open-menu above; this panel just sizes to its content.
+     The panel opens via the is-open-menu class (custom JS), not Bootstrap .show. */
+  html.is-open-menu #main-menu,
   #main-menu.navbar-collapse.show,
   #main-menu.collapsing {
     background-color: #fff;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    padding: 10px 0;
+    padding: 10px 0 40px;
   }
 
   /* Compact menu items so locations list fits without scrolling */
@@ -1268,11 +1272,13 @@ html {
     margin: 0 auto !important;
   }
 
-  /* Sub-menu link: smaller font, no vertical padding */
+  /* Sub-menu link: match main menu item size, lighter weight (500),
+     generous vertical padding for spacing + larger tap targets */
   html.is-open-menu .main-menu-ul .sub-menu li a {
-    font-size: 1rem !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+    font-size: 1.2rem !important;
+    font-weight: 500 !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
     margin-top: 0 !important;
     margin-bottom: 0 !important;
     line-height: 1.4 !important;
@@ -1304,20 +1310,25 @@ html {
     padding-left: 22px !important;
     padding-right: 22px !important;
   }
-  /* open-dropdown parent underline: sit left instead of centered */
+  /* open-dropdown parent underline: sit left, and use margin (not padding) for
+     the 22px indent so the border-bottom sits directly under the text/icon
+     instead of extending across the padding. */
   html.is-open-menu .main-menu-ul li.is-open-child > a {
-    margin-left: 0 !important;
+    margin-left: 22px !important;
     margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
-  /* sub-menu items: full width, left, with their own light divider */
+  /* sub-menu items: full width, left, no divider lines between them */
   html.is-open-menu #menu-main-menu .menu-item-has-children .sub-menu li {
     width: 100% !important;
     margin: 0 !important;
     text-align: left !important;
-    border-bottom: 1px solid #eee;
+    border-bottom: none !important;
   }
-  html.is-open-menu #menu-main-menu .menu-item-has-children .sub-menu li:last-child {
-    border-bottom: none;
+  /* extra breathing room below the last submenu item before the next section */
+  html.is-open-menu #menu-main-menu .menu-item-has-children .sub-menu {
+    margin-bottom: 8px !important;
   }
   /* divider between top-level items */
   html.is-open-menu .main-menu-ul > li {
@@ -1468,6 +1479,22 @@ html body #header.pin-header #header-logo img {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     clip-path: inset(0px -30px -30px -30px); /* Removes the top shadow */
     padding: 10px 0;
+    /* Panel sizes to its content (not full-length). It only caps at the space
+       below the header bar (~160px, matching #main-content's header offset) and
+       scrolls internally when the list is taller than that space. */
+    max-height: calc(100vh - 160px) !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  /* No open/close animation — neutralize Bootstrap's .collapsing height
+     animation and position flip so the menu appears/disappears instantly (no
+     jank). */
+  #main-menu.collapsing {
+    transition: none !important;
+    height: auto !important;
+    max-height: calc(100vh - 160px) !important;
+    position: absolute !important;
+    overflow-y: auto !important;
   }
   /* 3-column grid: logo sizes to content | gap fills remaining space | hamburger sizes to content
      This ensures Book Now centers in the actual visual gap, not the full navbar width */
@@ -1573,7 +1600,7 @@ html body #header.pin-header #header-logo img {
 }
 
 /* On mobile, lock position/text-align so hover state can't cause a layout jump */
-@media (max-width: 990px) {
+@media (max-width: 991px) {
   #menu-main-menu .menu-item-has-children.is-open-child > .sub-menu {
     position: inherit !important;
     text-align: center !important;
