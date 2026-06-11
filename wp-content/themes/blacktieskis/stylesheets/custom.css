@@ -1122,6 +1122,11 @@ html {
   text-transform: uppercase !important;
 }
 
+/* Header nav links (global + per-location nav) at 600 weight */
+.main-menu-ul li a {
+  font-weight: 600 !important;
+}
+
 /* Hover: green text — keyed off li:hover so it stays green while mouse is on dropdown */
 .main-menu-ul li:hover > a,
 .main-menu-ul li.active > a,
@@ -1157,6 +1162,22 @@ html {
   }
 }
 
+/* Dropdown caret: CSS-drawn chevron on menu items that have a sub-menu.
+   Borders use currentColor = the link color, so it's black at rest and turns
+   green on li:hover (desktop + mobile). */
+.main-menu-ul .menu-item-has-children > a::after {
+  content: '';
+  display: inline-block;
+  width: 0.42em;
+  height: 0.42em;
+  margin-left: 0.5em;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-0.18em) rotate(45deg);
+  vertical-align: middle;
+  transition: border-color 0.3s ease;
+}
+
 /* Dropdown: border radius + shadow + nudge below underline */
 #menu-main-menu .menu-item-has-children .sub-menu,
 .main-menu-dropdown {
@@ -1190,7 +1211,6 @@ html {
 /* Location page nav: current location name green + underline */
 #menu-main-menu li.btb-current-location > a {
   color: #568f3b !important;
-  font-size: 1.05em !important;
 }
 @media (min-width: 992px) {
   #menu-main-menu li.btb-current-location:after {
@@ -1271,6 +1291,40 @@ html {
   #header .navbar {
     align-items: center;
     padding: 8px 15px;
+  }
+
+  /* Mobile dropdown: left-align items + slight divider between them */
+  html.is-open-menu .main-menu-ul,
+  html.is-open-menu #menu-main-menu .menu-item-has-children .sub-menu {
+    text-align: left !important;
+  }
+  html.is-open-menu .main-menu-ul > li > a,
+  html.is-open-menu .main-menu-ul .sub-menu li a {
+    text-align: left !important;
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+  /* open-dropdown parent underline: sit left instead of centered */
+  html.is-open-menu .main-menu-ul li.is-open-child > a {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  /* sub-menu items: full width, left, with their own light divider */
+  html.is-open-menu #menu-main-menu .menu-item-has-children .sub-menu li {
+    width: 100% !important;
+    margin: 0 !important;
+    text-align: left !important;
+    border-bottom: 1px solid #eee;
+  }
+  html.is-open-menu #menu-main-menu .menu-item-has-children .sub-menu li:last-child {
+    border-bottom: none;
+  }
+  /* divider between top-level items */
+  html.is-open-menu .main-menu-ul > li {
+    border-bottom: 1px solid #e5e5e5;
+  }
+  html.is-open-menu .main-menu-ul > li:last-child {
+    border-bottom: none;
   }
 }
 
