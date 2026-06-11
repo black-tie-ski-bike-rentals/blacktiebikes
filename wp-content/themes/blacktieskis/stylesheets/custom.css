@@ -445,20 +445,17 @@ body div.gform_wrapper div.gform_body select {
   border-color: #01b037;
   background: transparent;
 }
+/* Legacy blue hero overlay — kill it everywhere, hard. This element only ever
+   appears (decoratively, already invisible) on 404.php; on real pages it must
+   NEVER render. display:none removes it entirely; the rest is belt-and-suspenders
+   so no other rule, breakpoint, or stale markup can bring the blue back. */
 .bg-transparent-blue {
-  opacity: 0.01;
-  background-image: -o-linear-gradient(
-    177deg,
-    #0f6bb2,
-    rgba(15, 107, 178, 0.6) 40%,
-    rgba(15, 107, 178, 0.4)
-  );
-  background-image: linear-gradient(
-    273deg,
-    #000,
-    rgba(0, 0, 0, 0.6) 40%,
-    rgba(0, 0, 0, 0.4)
-  );
+  display: none !important;
+  opacity: 0 !important;
+  background: none !important;
+  background-image: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 #site-description {
   color: #fff;
