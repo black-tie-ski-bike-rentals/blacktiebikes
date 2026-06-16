@@ -1,0 +1,198 @@
+{
+    "key": "group_service_page",
+    "title": "Service Page",
+    "fields": [
+        {
+            "key": "field_svc_hero_image",
+            "label": "Hero Image",
+            "name": "svc_hero_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        },
+        {
+            "key": "field_svc_hero_heading",
+            "label": "Hero Heading",
+            "name": "svc_hero_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_svc_hero_sub",
+            "label": "Hero Subheading",
+            "name": "svc_hero_subheading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_svc_intro",
+            "label": "Intro Paragraph",
+            "name": "svc_intro",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Centered, 70% width, above the product grid.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "tabs": "visual",
+            "media_upload": 0,
+            "toolbar": "full",
+            "default_value": "",
+            "delay": 0
+        },
+        {
+            "key": "field_svc_products",
+            "label": "Products",
+            "name": "svc_products",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "button_label": "Add Product Section",
+            "min": 0,
+            "max": 0,
+            "rows_per_page": 20,
+            "collapsed": "",
+            "sub_fields": [
+                {
+                    "key": "field_svc_product_heading",
+                    "label": "Heading",
+                    "name": "product_heading",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_svc_products"
+                },
+                {
+                    "key": "field_svc_product_body",
+                    "label": "Content",
+                    "name": "product_body",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "tabs": "all",
+                    "media_upload": 1,
+                    "toolbar": "full",
+                    "default_value": "",
+                    "delay": 0,
+                    "parent_repeater": "field_svc_products"
+                }
+            ]
+        },
+        {
+            "key": "field_svc_faqs",
+            "label": "FAQs",
+            "name": "svc_faqs",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Use the same accordion markup as the existing FAQ blocks: &lt;ul class=\"accordion-list\"&gt;&lt;li&gt;&lt;h3&gt;Question&lt;\/h3&gt;&lt;div class=\"answer\"&gt;Answer&lt;\/div&gt;&lt;\/li&gt;&lt;\/ul&gt;",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "tabs": "all",
+            "media_upload": 0,
+            "toolbar": "full",
+            "default_value": "",
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-service.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [],
+    "active": true,
+    "description": "WW-52 standardized service page sections (Hero, Intro, Products, FAQs).",
+    "show_in_rest": false,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1781650046
+}

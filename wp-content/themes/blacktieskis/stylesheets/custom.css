@@ -3153,3 +3153,69 @@ html body .mod-book-ski .btn-outline-primary:focus {
     border-bottom: 3px solid #000;
   }
 }
+
+/* WW-52: Standardized Service page template */
+.mod-service-hero {
+  position: relative;
+  padding: 120px 0;
+  background-color: #1a1a18;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+.service-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+.service-hero__inner {
+  position: relative;
+  z-index: 1;
+}
+.service-hero__heading {
+  color: #fff;
+  font-size: clamp(1.8rem, calc(4px + 3vw), 3rem);
+  margin-bottom: 12px;
+}
+.service-hero__sub {
+  color: #fff;
+  font-size: 1.125rem;
+  margin-bottom: 24px;
+}
+.mod-service-intro {
+  padding: 60px 0;
+}
+.service-intro {
+  max-width: 70%;
+  margin: 0 auto;
+}
+.service-intro > *:last-child {
+  margin-bottom: 0;
+}
+.mod-service-products {
+  padding: 40px 0 60px;
+}
+.service-product {
+  margin-bottom: 40px;
+}
+.service-product:last-child {
+  margin-bottom: 0;
+}
+.service-product__heading {
+  margin-bottom: 16px;
+}
+.mod-service-faqs {
+  padding: 60px 0;
+}
+.service-faqs__heading {
+  margin-bottom: 32px;
+}
+/* FAQ accordion itself uses the existing .accordion-list styles */
+@media (max-width: 767px) {
+  .mod-service-hero {
+    padding: 80px 0;
+  }
+  .service-intro {
+    max-width: 100%;
+  }
+}
