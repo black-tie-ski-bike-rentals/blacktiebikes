@@ -3003,6 +3003,12 @@ html body .mod-book-ski .btn-outline-primary:focus {
 .mod-getting-your-gear {
   padding: 80px 0;
 }
+/* Match the Explore section's contained width */
+.mod-getting-your-gear .container {
+  max-width: 1200px;
+  padding-left: clamp(20px, 10%, 120px);
+  padding-right: clamp(20px, 10%, 120px);
+}
 .gear-heading {
   margin-bottom: 50px;
 }
@@ -3013,9 +3019,10 @@ html body .mod-book-ski .btn-outline-primary:focus {
   display: flex;
   flex-direction: column;
   height: 100%;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  border-radius: var(--radius);
   overflow: hidden;
+  /* Match the Explore section card shadow */
+  box-shadow: var(--shadow-card);
 }
 .gear-card__img {
   aspect-ratio: 1 / 1;
@@ -3045,6 +3052,7 @@ html body .mod-book-ski .btn-outline-primary:focus {
   margin-bottom: 8px;
 }
 .gear-card__cta {
+  /* Full-width across the card */
   display: block;
   width: 100%;
   text-align: center;
@@ -3057,6 +3065,20 @@ html body .mod-book-ski .btn-outline-primary:focus {
 }
 .gear-location-info__heading {
   margin-bottom: 16px;
+}
+
+/* Desktop: smaller square images (~2/3) with clear space between the two cards.
+   Two col-md-6 already fill 100% and can't take a column-gap, so pin the cards
+   to a fixed width and let the row (justify-content-center) center the pair. */
+@media (min-width: 768px) {
+  .gear-cards {
+    flex-wrap: nowrap;
+    column-gap: 48px;
+  }
+  .gear-cards > [class*="col-"] {
+    flex: 0 1 400px;
+    max-width: 400px;
+  }
 }
 
 @media (max-width: 767px) {
