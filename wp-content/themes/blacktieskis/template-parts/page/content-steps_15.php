@@ -4,6 +4,10 @@
  */ 
 ?>
 <section id="how-it-works" class="module mod-steps container">
+  <div class="steps-headline text-center">
+    <h2>How It Works</h2>
+    <h3>Bike rentals made simple</h3>
+  </div>
   <div class="mod-steps-items">
 	<?php		
 	$num_items = count( get_sub_field('items') );

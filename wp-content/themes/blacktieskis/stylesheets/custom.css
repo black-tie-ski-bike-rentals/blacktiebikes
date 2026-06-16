@@ -2773,6 +2773,36 @@ html.html-popup-content .popup-inner > p a:hover {
   }
 }
 
+/* How It Works headline — match font styling of the locations-map (adventure) banner */
+.steps-headline {
+  /* In normal flow at the top of the section so the steps always sit below it.
+     The section's content-top already lands in the white valley under the mountain. */
+  position: relative;
+  z-index: 1;
+  margin-bottom: 80px;
+}
+.steps-headline h2 {
+  /* Scale with viewport like the hero H1 */
+  font-size: clamp(1.8rem, calc(4px + 3vw), 3rem);
+  padding: 0;
+  margin-bottom: 12px;
+  text-transform: uppercase !important;
+  color: #568f3b;
+}
+.steps-headline h3 {
+  /* Match the hero subtitle size */
+  font-size: clamp(0.8rem, calc(6px + 0.69vw), 1rem);
+  color: #333;
+  font-weight: 400;
+  margin-bottom: 0;
+  text-transform: none !important;
+}
+@media (max-width: 767px) {
+  .steps-headline {
+    margin-bottom: 60px;
+  }
+}
+
 /* WW-22: step 5 — remove absolute overlay, match layout of steps 1–4 */
 @media (min-width: 992px) {
   #how-it-works p {
