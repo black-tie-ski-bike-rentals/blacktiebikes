@@ -3092,3 +3092,64 @@ html body .mod-book-ski .btn-outline-primary:focus {
     margin-bottom: 24px;
   }
 }
+
+/* WW-11: Quick Value Props — "The Black Tie Experience" */
+.mod-value-props {
+  padding: 80px 0;
+}
+.mod-value-props .container {
+  max-width: 1200px;
+  padding-left: clamp(20px, 10%, 120px);
+  padding-right: clamp(20px, 10%, 120px);
+}
+.value-props__heading {
+  margin-bottom: 40px;
+}
+.value-props__grid {
+  display: flex;
+  border: 3px solid #000;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.value-prop {
+  flex: 1;
+  text-align: center;
+  padding: 44px 30px;
+}
+.value-prop:not(:last-child) {
+  border-right: 3px solid #000;
+}
+.value-prop__icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 20px;
+  color: var(--color-green);
+}
+.value-prop__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.value-prop__title {
+  margin-bottom: 12px;
+}
+.value-prop__desc {
+  margin-bottom: 0;
+  color: var(--color-text);
+}
+.value-props__cta {
+  margin-top: 40px;
+}
+
+@media (max-width: 767px) {
+  .mod-value-props {
+    padding: 50px 0;
+  }
+  .value-props__grid {
+    flex-direction: column;
+  }
+  .value-prop:not(:last-child) {
+    border-right: none;
+    border-bottom: 3px solid #000;
+  }
+}

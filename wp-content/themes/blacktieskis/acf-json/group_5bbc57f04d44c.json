@@ -1681,6 +1681,33 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_quick_value_props": {
+                    "key": "layout_quick_value_props",
+                    "name": "quick_value_props",
+                    "label": "Quick Value Props",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_qvp_cta_url",
+                            "label": "Book Now CTA URL",
+                            "name": "cta_url",
+                            "aria-label": "",
+                            "type": "url",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add More Layout",
@@ -1709,5 +1736,6 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1780692431
+    "modified": 1781593011,
+    "local_file": "\/Users\/lauralong\/Local Sites\/blacktiebikes-sent\/app\/public\/wp-content\/themes\/blacktieskis\/acf-json\/group_5bbc57f04d44c.json"
 }
