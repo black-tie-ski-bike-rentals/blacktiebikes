@@ -27,9 +27,10 @@ $location_name    = get_the_title();
 <section class="module mod-getting-your-gear">
   <div class="container">
 
-    <h2 class="gear-heading text-center">Getting Your Gear</h2>
+    <h2 class="gear-heading">Getting Your Gear</h2>
+    <p class="gear-subheading">Delivered to your stay or ready for pickup at our shop.</p>
 
-    <div class="row gear-cards justify-content-center">
+    <div class="row gear-cards">
 
       <?php if ( $delivery_enabled ) : ?>
       <div class="col-12 col-md-6">
@@ -55,8 +56,10 @@ $location_name    = get_the_title();
       </div>
       <?php endif; ?>
 
-      <div class="col-12 <?php echo $delivery_enabled ? 'col-md-6' : 'col-md-8'; ?>">
-        <div class="gear-card">
+      <?php // Pickup-only (no delivery): one full-width card, photo beside the content. ?>
+      <?php $gear_wide = ! $delivery_enabled; ?>
+      <div class="col-12 <?php echo $delivery_enabled ? 'col-md-6' : ''; ?>">
+        <div class="gear-card<?php echo $gear_wide ? ' gear-card--wide' : ''; ?>">
           <?php if ( $pickup_image ) : ?>
           <div class="gear-card__img">
             <img src="<?php echo esc_url( $pickup_image['url'] ); ?>" alt="<?php echo esc_attr( $pickup_image['alt'] ); ?>">
@@ -79,7 +82,7 @@ $location_name    = get_the_title();
     </div>
 
     <?php if ( $location_heading || $location_text ) : ?>
-    <div class="gear-location-info text-center">
+    <div class="gear-location-info">
       <?php if ( $location_heading ) : ?>
       <h3 class="gear-location-info__heading"><?php echo esc_html( $location_heading ); ?></h3>
       <?php endif; ?>

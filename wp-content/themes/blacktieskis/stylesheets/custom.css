@@ -3010,7 +3010,13 @@ html body .mod-book-ski .btn-outline-primary:focus {
   padding-right: clamp(20px, 10%, 120px);
 }
 .gear-heading {
-  margin-bottom: 50px;
+  margin-bottom: 6px;
+}
+.gear-subheading {
+  font-size: 0.875rem;
+  color: var(--color-text);
+  line-height: 1.6;
+  margin-bottom: 32px;
 }
 .gear-cards {
   gap: 30px 0;
@@ -3060,24 +3066,40 @@ html body .mod-book-ski .btn-outline-primary:focus {
 .gear-location-info {
   margin-top: 60px;
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .gear-location-info__heading {
   margin-bottom: 16px;
 }
 
-/* Desktop: smaller square images (~2/3) with clear space between the two cards.
-   Two col-md-6 already fill 100% and can't take a column-gap, so pin the cards
-   to a fixed width and let the row (justify-content-center) center the pair. */
+/* Desktop: full-width two-up cards, left-aligned, edge-to-edge with the page
+   content, with the inter-card gap matched to the Explore cards (36px). */
 @media (min-width: 768px) {
   .gear-cards {
     flex-wrap: nowrap;
-    column-gap: 48px;
+    column-gap: 36px;
+    margin-left: 0;
+    margin-right: 0;
   }
   .gear-cards > [class*="col-"] {
-    flex: 0 1 400px;
-    max-width: 400px;
+    flex: 1 1 0;
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Pickup-only: photo beside the content, Book Now spanning the full width below */
+  /* Pickup-only: photo full-height on the left; content column on the right with
+     heading + bullets at the top and Book Now pushed to the bottom (inset like the
+     other cards). The list flex:1 creates the whitespace above the button. */
+  .gear-card--wide {
+    flex-direction: row;
+    min-height: 480px;
+  }
+  .gear-card--wide .gear-card__img {
+    flex: 0 0 42%;
+    aspect-ratio: auto;
+  }
+  .gear-card--wide .gear-card__body {
+    flex: 1;
   }
 }
 
@@ -3085,8 +3107,8 @@ html body .mod-book-ski .btn-outline-primary:focus {
   .mod-getting-your-gear {
     padding: 50px 0;
   }
-  .gear-heading {
-    margin-bottom: 30px;
+  .gear-subheading {
+    margin-bottom: 24px;
   }
   .gear-cards .col-12:not(:last-child) {
     margin-bottom: 24px;
