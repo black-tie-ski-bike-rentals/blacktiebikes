@@ -73,7 +73,7 @@
             "name": "svc_intro",
             "aria-label": "",
             "type": "wysiwyg",
-            "instructions": "Centered, 70% width, above the product grid.",
+            "instructions": "",
             "required": false,
             "conditional_logic": false,
             "wrapper": {
@@ -93,7 +93,7 @@
             "name": "svc_products",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "Dev reminder: the product sections and the FAQ section currently hold raw HTML pasted into these rich-text editors. Refactor the product grid and FAQs into proper structured ACF fields eventually, so editors are not hand-editing HTML on every service page.",
             "required": false,
             "conditional_logic": false,
             "wrapper": {
@@ -158,7 +158,7 @@
             "name": "svc_faqs",
             "aria-label": "",
             "type": "wysiwyg",
-            "instructions": "Use the same accordion markup as the existing FAQ blocks: &lt;ul class=\"accordion-list\"&gt;&lt;li&gt;&lt;h3&gt;Question&lt;\/h3&gt;&lt;div class=\"answer\"&gt;Answer&lt;\/div&gt;&lt;\/li&gt;&lt;\/ul&gt;",
+            "instructions": "",
             "required": false,
             "conditional_logic": false,
             "wrapper": {
@@ -194,5 +194,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1781650046
+    "modified": 1781653836
 }
