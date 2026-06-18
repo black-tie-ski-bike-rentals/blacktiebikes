@@ -56,6 +56,14 @@ table {
   padding: 70px 0;
 }
 </style>
+<?php
+$hiw_fields = array( 'heading', 'sub_heading', 'image1', 'heading1', 'description1', 'image2', 'heading2', 'description2' );
+$hiw_has_content = false;
+foreach ( $hiw_fields as $hiw_f ) {
+	if ( blacktieskis_sub_field( $hiw_f, true ) ) { $hiw_has_content = true; break; }
+}
+if ( $hiw_has_content ) :
+?>
 <section class="module mod-reviews container" id="how-it-works">
 	
 <div class="home-jumbotron jumbotron" id="schedule">
@@ -64,13 +72,17 @@ table {
 
             <div class="row">
               <div class="col-lg-6" style="text-align:center;">
+                <?php if ( blacktieskis_sub_field('image1', true) ) : ?>
                 <img style="width: 500px; height: 500px;" alt="Premium Packages" src="<?php blacktieskis_sub_field('image1'); ?>" class="img-circle">
+                <?php endif; ?>
                 <h2 style="text-align:center;padding-top:20px;"><?php blacktieskis_sub_field('heading1'); ?></h2>
                 <p><?php blacktieskis_sub_field('description1'); ?></p>
                 <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
               </div><!-- /.col-lg-4 -->
               <div class="col-lg-6" style="text-align:center;">
+                <?php if ( blacktieskis_sub_field('image2', true) ) : ?>
                 <img style="width: 500px; height: 500px;" alt="Performance Packages" src="<?php blacktieskis_sub_field('image2'); ?>" class="img-circle">
+                <?php endif; ?>
                 <h2 style="text-align:center;padding-top:20px;"><?php blacktieskis_sub_field('heading2'); ?></h2>
                 <p><?php blacktieskis_sub_field('description2'); ?></p>
                 <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
@@ -92,6 +104,7 @@ table {
 
          
 		  </section>
+<?php endif; ?>
 		  
 		  <?php
 		  $pageid = get_the_ID();
