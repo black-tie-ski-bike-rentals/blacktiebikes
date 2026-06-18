@@ -119,3 +119,22 @@
     update();
   });
 }());
+
+/* Lock the home hero height so the mobile address bar hiding on scroll can't
+   resize it (that resize rescaled the cover photo and clipped the mountain).
+   Re-lock only when the width changes (rotation/resize), never on the
+   height-only change the address bar causes. */
+(function () {
+  var hero = document.querySelector('.btb-hero');
+  if (!hero) { return; }
+  var lockedWidth;
+  function lockHeroHeight() {
+    hero.style.height = window.innerHeight + 'px';
+    lockedWidth = window.innerWidth;
+  }
+  lockHeroHeight();
+  window.addEventListener('resize', function () {
+    if (window.innerWidth !== lockedWidth) { lockHeroHeight(); }
+  });
+  window.addEventListener('orientationchange', lockHeroHeight);
+}());
