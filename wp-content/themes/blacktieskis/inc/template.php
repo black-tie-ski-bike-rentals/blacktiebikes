@@ -511,9 +511,13 @@ function blacktieskis_footer_info()
 													<?php the_field('bt_career_thanks', 'option'); ?>
 												</div>
 					
-												<div class="popup-form">
+<?php // WW-5: legacy Contact Form 7 jobs form removed — real applications now
+													// come through the Gravity Form embedded in the description above.
+													// The CF7 form was a spam magnet (thousands of junk Flamingo "Career"
+													// entries) and created dead space below the live form. ?>
+												<?php /* <div class="popup-form">
 													<?php echo str_replace('<br>','',$career_form ) ; ?>
-												</div>
+												</div> */ ?>
 											</div>
 											<div class="loading-ajax" style="display:none;"><img src="<?php echo get_stylesheet_directory_uri();?>/images/ajax-loader.svg" alt="LOADING"></div> 
 											<a href="javascript:;" class="popup-is-close-v2"><span class="icomoon icon-close1"></span></a>

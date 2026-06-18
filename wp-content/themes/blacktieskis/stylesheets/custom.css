@@ -761,6 +761,71 @@ html body .mod-book-ski #boonowbutton.is-hover {
   max-width: 800px !important;
   max-height: 785px;
 }
+
+/* WW-5: Jobs ("careers") popup — rounded box matching --radius, left-aligned
+   content, roomier field spacing, and a gap under the title. */
+.popup-careers {
+  border-radius: var(--radius);
+}
+/* Give the title clear space above it so it sits below the close (X) at
+   top:25px. Two-class selector so it beats the .popup-inner padding rules
+   (incl. the max-height:820px rule that drops padding to 40px on laptops). */
+@media (min-width: 768px) {
+  .popup-careers.popup-inner {
+    padding-top: 120px !important;
+    padding-bottom: 40px !important;
+  }
+}
+/* Left-align the title, intro paragraph, fields and submit button
+   (overrides the .text-center utility on the heading block). */
+.popup-careers .career-content,
+.popup-careers .career-content.text-center,
+.popup-careers .popup-form,
+.popup-careers .btn-submit {
+  text-align: left !important;
+}
+/* Space between the intro block and the fields below it. */
+.popup-careers .career-content {
+  margin-bottom: 40px;
+}
+/* Gap between the "Jobs" title and the paragraph beneath it
+   (covers both a heading tag and stacked paragraphs). */
+.popup-careers .career-content :where(h1, h2, h3, h4, h5) {
+  margin-bottom: 22px;
+}
+.popup-careers .career-content p {
+  margin-bottom: 22px;
+}
+.popup-careers .career-content p:last-child {
+  margin-bottom: 0;
+}
+/* Breathing room between the input fields. */
+.popup-careers .form-control,
+.popup-careers .dropdown-select-c8 {
+  margin-bottom: 20px;
+}
+/* The form is Gravity Forms, so its submit button is .gform_button (no .btn
+   class) and never picked up the site button styling. Mirror the site .btn
+   base so it matches every other button on the site. */
+.popup-careers .gform_button {
+  text-transform: uppercase !important;
+  border-radius: 6px !important;
+  border: none !important;
+  background-color: #568f3b !important;
+  color: #fff !important;
+  padding: 12px 30px !important;
+  font-family: Poppins, sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.125rem !important;
+  vertical-align: middle !important;
+  width: auto !important;
+  transition: all 0.3s ease !important;
+}
+.popup-careers .gform_button:hover,
+.popup-careers .gform_button:focus {
+  background-color: #256bb2 !important;
+  color: #fff !important;
+}
 @media only screen and (max-width: 575px) {
   .page-id-20 #products {
     padding: 70px;
