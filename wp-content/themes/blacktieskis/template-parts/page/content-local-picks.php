@@ -3,6 +3,9 @@
  * WW-53: Local Picks page body.
  *
  * ACF fields:
+ *   lp_hero_image      (image, optional)
+ *   lp_hero_heading    (text)
+ *   lp_hero_subheading (text, optional)
  *   lp_categories (repeater)
  *     category_heading (text)               -> H2
  *     recommendations (repeater)
@@ -10,10 +13,27 @@
  *       rec_description (wysiwyg)
  *       rec_image       (image, optional)
  *
+ * Hero mirrors the Service template hero (same markup/classes + Book Now button).
  * Recommendations alternate image left/right; a recommendation with no image
  * runs full width. On mobile everything stacks with the image below the text.
  */
+
+$hero_image = get_field( 'lp_hero_image' );
+$hero_head  = get_field( 'lp_hero_heading' );
+$hero_sub   = get_field( 'lp_hero_subheading' );
+$book_url   = 'https://booknow.blacktiebikes.com/reservations/step1';
 ?>
+
+<?php if ( $hero_head || $hero_image ) : ?>
+<section class="module mod-service-hero"<?php if ( $hero_image ) : ?> style="background-image:url('<?php echo esc_url( is_array( $hero_image ) ? $hero_image['url'] : $hero_image ); ?>')"<?php endif; ?>>
+  <div class="service-hero__overlay"></div>
+  <div class="container service-hero__inner text-center">
+    <?php if ( $hero_head ) : ?><h1 class="service-hero__heading"><?php echo esc_html( $hero_head ); ?></h1><?php endif; ?>
+    <?php if ( $hero_sub ) : ?><p class="service-hero__sub"><?php echo esc_html( $hero_sub ); ?></p><?php endif; ?>
+    <a href="<?php echo esc_url( $book_url ); ?>" class="btn">Book Now</a>
+  </div>
+</section>
+<?php endif; ?>
 
 <section class="module mod-local-picks">
   <div class="container">

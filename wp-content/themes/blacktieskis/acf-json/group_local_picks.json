@@ -3,6 +3,71 @@
     "title": "Local Picks",
     "fields": [
         {
+            "key": "field_lp_hero_image",
+            "label": "Hero Image",
+            "name": "lp_hero_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Background image for the hero.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        },
+        {
+            "key": "field_lp_hero_heading",
+            "label": "Hero Heading",
+            "name": "lp_hero_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_lp_hero_sub",
+            "label": "Hero Subheading",
+            "name": "lp_hero_subheading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_lp_categories",
             "label": "Categories",
             "name": "lp_categories",
@@ -160,5 +225,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1781654504
+    "modified": 1781759452
 }
