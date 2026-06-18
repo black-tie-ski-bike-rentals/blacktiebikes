@@ -1982,6 +1982,7 @@ html.html-popup-content .popup-inner > p a:hover {
   position: relative;
   overflow: visible;
   height: 100vh;
+  height: 100svh;
   min-height: 500px;
   max-height: 900px;
 }
@@ -2048,7 +2049,7 @@ html.html-popup-content .popup-inner > p a:hover {
   position: relative;
   z-index: 3;
   padding-top: 140px;
-  text-align: center;
+  text-align: left;
 }
 @media (min-width: 992px) {
   .btb-hero__content {
@@ -2066,10 +2067,9 @@ html.html-popup-content .popup-inner > p a:hover {
 /* H1 */
 .btb-hero__content h1 {
   color: #fff;
-  font-size: clamp(1.8rem, calc(4px + 3vw), 3rem);
+  font-size: clamp(1.8rem, calc(4px + 4.2vw), 4rem);
   line-height: 1.15;
-  margin: 0 auto 15px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin: 0 0 15px;
 }
 
 /* H2 — override global uppercase + italic from <em> */
@@ -2081,7 +2081,6 @@ html.html-popup-content .popup-inner > p a:hover {
   line-height: 1.4;
   font-style: normal !important;
   text-transform: none !important;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -2099,6 +2098,14 @@ html.html-popup-content .popup-inner > p a:hover {
   width: auto !important;
   margin: 0 !important;
   text-align: center !important;
+}
+.btb-hero .buttonclumn {
+  justify-content: flex-start;
+}
+.btb-hero .newcl,
+.btb-hero .newclleft,
+.btb-hero .newclright {
+  text-align: left !important;
 }
 
 /* Section below: sits on top of mountain overlap, solid white so hero doesn't bleed through */
