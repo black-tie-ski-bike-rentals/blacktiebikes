@@ -3092,11 +3092,12 @@ html body .mod-book-ski .btn-outline-primary:focus {
      other cards). The list flex:1 creates the whitespace above the button. */
   .gear-card--wide {
     flex-direction: row;
-    min-height: 480px;
   }
   .gear-card--wide .gear-card__img {
     flex: 0 0 42%;
-    aspect-ratio: auto;
+    /* Square like the two-up cards. The square sets the card height; the
+       body column stretches to match it — no cropping, no extra whitespace. */
+    aspect-ratio: 1 / 1;
   }
   .gear-card--wide .gear-card__body {
     flex: 1;
