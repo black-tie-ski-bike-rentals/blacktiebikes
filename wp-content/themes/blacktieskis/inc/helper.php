@@ -422,6 +422,52 @@ function wpcf7_change_mail_recipient($wpcf7){
 }
 //End  Send to mail addition before call wpcf7
 
+/**
+ * Render a "Getting Your Gear" bullet, auto-linking it to Google Maps when the
+ * text looks like a street address. Keeps the admin clean — editors just type a
+ * normal bullet, no per-bullet URL field required.
+ *
+ * Detection is deliberately strict to avoid false positives (e.g. "2 day
+ * minimum"): the text must start with a street number AND contain either a
+ * common street-type suffix or a 5-digit ZIP.
+ *
+ * @param string $text Raw bullet text.
+ * @return string Escaped bullet HTML (an anchor when an address is detected).
+ */
+function blacktieskis_gear_bullet_html( $text ) {
+	$text = trim( (string) $text );
+
+	if ( '' === $text ) {
+		return '';
+	}
+
+	$looks_like_address = false;
+
+	// Must start with a street number ("123 Main St ...").
+	if ( preg_match( '/^\d{1,6}\s+\S/', $text ) ) {
+		$suffixes = 'st|street|ave|avenue|rd|road|blvd|boulevard|dr|drive|ln|lane|way|ct|court|hwy|highway|pkwy|parkway|pl|place|ter|terrace|cir|circle|trl|trail|sq|square|loop|row|run|pass|pt|point|spur';
+
+		if (
+			preg_match( '/\b(?:' . $suffixes . ')\b\.?/i', $text )   // a street-type word, or
+			|| preg_match( '/\b\d{5}(?:-\d{4})?\b/', $text )         // a US ZIP code
+		) {
+			$looks_like_address = true;
+		}
+	}
+
+	if ( $looks_like_address ) {
+		$url = 'https://www.google.com/maps/search/?api=1&query=' . rawurlencode( $text );
+
+		return sprintf(
+			'<a class="gear-card__address" href="%s" target="_blank" rel="noopener">%s</a>',
+			esc_url( $url ),
+			esc_html( $text )
+		);
+	}
+
+	return esc_html( $text );
+}
+
 // disable user json
 add_filter( 'rest_endpoints', function( $endpoints ){
 	if ( isset( $endpoints['/wp/v2/users'] ) ) {

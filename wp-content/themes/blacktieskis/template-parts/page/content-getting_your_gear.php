@@ -52,7 +52,7 @@ $location_name    = get_the_title();
             <h3 class="gear-card__title">Delivery</h3>
             <ul class="gear-card__list">
               <?php while ( have_rows( 'delivery_bullets' ) ) : the_row(); ?>
-              <li><?php echo esc_html( get_sub_field( 'bullet' ) ); ?></li>
+              <li><?php echo blacktieskis_gear_bullet_html( get_sub_field( 'bullet' ) ); ?></li>
               <?php endwhile; ?>
             </ul>
             <?php if ( $delivery_cta_url ) : ?>
@@ -75,10 +75,14 @@ $location_name    = get_the_title();
           <div class="gear-card__body">
             <h3 class="gear-card__title">Shop Pickup</h3>
             <ul class="gear-card__list">
+              <?php if ( have_rows( 'pickup_bullets' ) ) : ?>
+                <?php while ( have_rows( 'pickup_bullets' ) ) : the_row(); ?>
+              <li><?php echo blacktieskis_gear_bullet_html( get_sub_field( 'bullet' ) ); ?></li>
+                <?php endwhile; ?>
+              <?php else : ?>
+              <?php // Fallback default when no bullets have been entered yet. ?>
               <li>Visit our local shop in <?php echo esc_html( $location_name ); ?></li>
-              <?php while ( have_rows( 'pickup_bullets' ) ) : the_row(); ?>
-              <li><?php echo esc_html( get_sub_field( 'bullet' ) ); ?></li>
-              <?php endwhile; ?>
+              <?php endif; ?>
             </ul>
             <?php if ( $pickup_cta_url ) : ?>
             <a href="<?php echo esc_url( $pickup_cta_url ); ?>" class="btn btn-primary gear-card__cta">Book Now</a>

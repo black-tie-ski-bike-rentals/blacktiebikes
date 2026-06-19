@@ -3129,6 +3129,13 @@ html body .mod-book-ski .btn-outline-primary:focus {
 .gear-card__list li {
   margin-bottom: 8px;
 }
+.gear-card__address {
+  color: inherit;
+  text-decoration: underline;
+}
+.gear-card__address:hover {
+  text-decoration: none;
+}
 .gear-card__cta {
   /* Full-width across the card */
   display: block;
