@@ -2573,8 +2573,8 @@ html.html-popup-content .popup-inner > p a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
   gap: 10px;
 }
 
@@ -2604,7 +2604,7 @@ html.html-popup-content .popup-inner > p a:hover {
   font-size: 0.95rem;
   color: var(--color-text);
   line-height: 1.6;
-  max-width: 70%;
+  max-width: 100%;
   margin-bottom: 1%;
 }
 
@@ -3324,7 +3324,7 @@ html body .mod-book-ski .btn-outline-primary:focus {
   box-shadow: var(--shadow-card);
 }
 .service-product__heading {
-  margin-bottom: 16px;
+  margin: 12px 0 16px;
   text-align: left;
   font-size: 1.3rem;
 }

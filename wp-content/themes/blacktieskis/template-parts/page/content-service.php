@@ -42,10 +42,26 @@ $book_url   = 'https://booknow.blacktiebikes.com/reservations/step1';
     <?php while ( have_rows( 'svc_products' ) ) : the_row();
       $p_head = get_sub_field( 'product_heading' );
       $p_body = get_sub_field( 'product_body' );
+
+      // The product image lives inside the wysiwyg body. Inject the heading
+      // directly after that first image so it sits between the image and the
+      // description (not below the whole card). Handles the common wysiwyg
+      // forms: <figure>…</figure>, <p>…<img>…</p>, or a bare <img>.
+      $heading_html    = $p_head ? '<h2 class="service-product__heading">' . esc_html( $p_head ) . '</h2>' : '';
+      $heading_in_body = false;
+      if ( $heading_html && $p_body ) {
+        $img_pattern = '/<figure\b[^>]*>.*?<\/figure>|<p\b[^>]*>(?:(?!<\/p>).)*?<img\b[^>]*>.*?<\/p>|<img\b[^>]*\/?>/is';
+        if ( preg_match( $img_pattern, $p_body, $m, PREG_OFFSET_CAPTURE ) ) {
+          $pos             = $m[0][1] + strlen( $m[0][0] );
+          $p_body          = substr( $p_body, 0, $pos ) . $heading_html . substr( $p_body, $pos );
+          $heading_in_body = true;
+        }
+      }
       ?>
       <div class="service-product">
-        <?php if ( $p_head ) : ?><h2 class="service-product__heading"><?php echo esc_html( $p_head ); ?></h2><?php endif; ?>
         <?php if ( $p_body ) : ?><div class="service-product__body"><?php echo $p_body; ?></div><?php endif; ?>
+        <?php /* Fallback: no image found in body, so render the heading on its own. */ ?>
+        <?php if ( $heading_html && ! $heading_in_body ) : ?><?php echo $heading_html; ?><?php endif; ?>
       </div>
     <?php endwhile; ?>
   </div>
