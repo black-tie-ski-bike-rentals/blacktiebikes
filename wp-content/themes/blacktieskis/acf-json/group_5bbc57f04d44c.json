@@ -1720,7 +1720,7 @@
                             "name": "delivery_bullets",
                             "aria-label": "",
                             "type": "repeater",
-                            "instructions": "Optional. Leave empty to use the default delivery bullets.",
+                            "instructions": "Bullets for the Delivery card. A full street address auto-links to Google Maps.",
                             "required": false,
                             "conditional_logic": [
                                 [
@@ -1772,7 +1772,7 @@
                             "name": "pickup_bullets",
                             "aria-label": "",
                             "type": "repeater",
-                            "instructions": "Optional. These appear after the automatic \"Visit our local shop in {location}\" line. Leave empty to use the default pickup bullets.",
+                            "instructions": "Bullets for the Shop Pickup card. Leave empty to show one default line: \"Visit our local shop in {location}\". Adding your own bullets replaces that default. A full street address auto-links to Google Maps.",
                             "required": false,
                             "conditional_logic": false,
                             "wrapper": {
