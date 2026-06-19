@@ -190,7 +190,7 @@ body div.gform_wrapper div.gform_body select {
   margin: 0 20% !important;
 }
 .page-id-33645 .module.mod-about.container-fluid {
-  background: #eee;
+  background: #fff;
 }
 
 .page-id-33645 .bg-mountain-desktop,
@@ -236,10 +236,10 @@ body div.gform_wrapper div.gform_body select {
     height: 100%;
   }
   .page-id-33645 .mod-hero-image + section {
-    margin-top: -15%;
+    margin-top: 0;
   }
   .page-id-33645 .mod-hero-image {
-    height: 800px;
+    height: 400px;
   }
 }
 @media (max-width: 992px) {
@@ -985,7 +985,7 @@ html.popup-animation .popup-inner {
 
 @media (max-width: 475px) {
   .page-id-33645 .mod-hero-image {
-    height: 200px;
+    height: 400px;
   }
   .page-id-33645 .h1,
   .page-id-33645 h1 {
@@ -3431,4 +3431,91 @@ html body .mod-book-ski .btn-outline-primary:focus {
     order: 2;
     width: 100%;
   }
+}
+
+/* ==========================================================================
+   WW-28 Contact Us
+   - Page header: solid blue, no background imagery, vertically/horizontally
+     centred title. Height stays 400px (set in the rules above) so it matches
+     the rest of the site's internal page heroes.
+   - Form: white background, submit button restyled to global WW-4 styling
+     and centred.
+   ========================================================================== */
+
+/* Header — drop all background images/mountains, fill with the brand blue.
+   !important defeats the legacy Customizer "Additional CSS" still in the DB,
+   which sets `.page-id-33645 .mod-hero-image { background-color:#000 }` inline
+   after this stylesheet (left over from the old background-photo header). */
+.page-id-33645 .mod-hero-image {
+  background-color: #256bb2 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-id-33645 .mod-hero-image .bg-transparent,
+.page-id-33645 .mod-hero-image .bg-mountain {
+  display: none !important;
+}
+/* Centre the "Contact Us" title and reset the legacy margin/padding nudges
+   that were positioning it over the old background photo. */
+.page-id-33645 .mod-hero-image .content {
+  padding: 20px !important;
+  margin: 0 !important;
+  /* Let the flex item shrink so a long title wraps instead of overflowing
+     the viewport on small screens. */
+  min-width: 0;
+  max-width: 100%;
+}
+.page-id-33645 .mod-hero-image .content,
+.page-id-33645 .mod-hero-image .content .h1,
+.page-id-33645 .mod-hero-image .content h1,
+.page-id-33645 .mod-hero-image .content h2 {
+  color: #fff;
+  margin: 0 !important;
+  /* Kill the drop shadow left over from the old photo header (also set by the
+     legacy Customizer "Additional CSS"). */
+  text-shadow: none !important;
+}
+
+/* Submit button — global button styling (WW-4), left-aligned to line up with
+   the form fields. The Gravity "gravity-theme" footer is a flex container, so
+   set justify-content as well as text-align to cover both layout modes. */
+.page-id-33645 .mod-about .gform_footer,
+.page-id-33645 .mod-about .gform-footer {
+  text-align: left !important;
+  justify-content: flex-start !important;
+}
+.page-id-33645 .mod-about .gform_button {
+  display: inline-block;
+  background-color: #568f3b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.page-id-33645 .mod-about .gform_button:hover,
+.page-id-33645 .mod-about .gform_button:focus {
+  background-color: #256bb2;
+  color: #fff;
+}
+
+/* Breathing room between the blue header and the intro copy. */
+.page-id-33645 .mod-about {
+  padding-top: 60px;
+}
+
+/* Intro copy above the form (the two paragraphs before the Gravity form):
+   left-aligned and width-matched to the form fields — the form sits inside
+   `#gform_1 { padding: 0 15% }`, so the same 0 15% padding lines the text up
+   with the inputs. Roomier line spacing so the lines aren't cramped. */
+.page-id-33645 .mod-about .home-jumbotron .col-sm-12 > p:nth-child(1),
+.page-id-33645 .mod-about .home-jumbotron .col-sm-12 > p:nth-child(2) {
+  padding: 0 15%;
+  text-align: left !important;
+  line-height: 2;
+  margin-bottom: 1.25rem;
 }

@@ -9,6 +9,16 @@ $heading = get_sub_field('heading');
 
 $description = get_sub_field('description');
 
+// WW-28: on the Contact page, bold the lead question and put it on its own
+// line. The text lives inside the ACF/Gravity Forms description blob, so we
+// reformat it here rather than editing the field content. No-op everywhere
+// else (the phrase only exists on the Contact page).
+$description = str_replace(
+	'Have questions about renting with us? Fill in the form below or contact us at',
+	'<strong>Have questions about renting with us?</strong><br>Fill in the form below or contact us at',
+	$description
+);
+
 $pageid = get_the_ID();
 
 if($pageid==20){ ?>
