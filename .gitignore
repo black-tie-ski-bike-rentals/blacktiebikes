@@ -67,9 +67,10 @@ wp-content/themes/index.php
 # GitHub Actions (not used in this workflow)
 .github/
 
-# Dev docs — local reference only, not deployed
+# Dev docs & DB scripts — local reference only, never deployed.
+# DB scripts are run directly on each environment via WP Engine SSH, so the
+# whole _dev-docs/ tree (including scripts/) stays out of version control.
 wp-content/themes/blacktieskis/_dev-docs/
-!wp-content/themes/blacktieskis/_dev-docs/scripts/
 
 # Orphaned build artifacts
 wp-content/themes/blacktieskis/ddapp.js
