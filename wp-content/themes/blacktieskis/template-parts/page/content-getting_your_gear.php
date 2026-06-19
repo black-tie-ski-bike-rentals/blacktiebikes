@@ -34,7 +34,9 @@ $location_name    = get_the_title();
   <div class="container">
 
     <h2 class="gear-heading">Getting Your Gear</h2>
-    <p class="gear-subheading"><?php echo esc_html( $gear_subheading ?: 'Delivered to your stay or ready for pickup at our shop.' ); ?></p>
+    <?php if ( $gear_subheading ) : ?>
+    <p class="gear-subheading"><?php echo esc_html( $gear_subheading ); ?></p>
+    <?php endif; ?>
 
     <div class="row gear-cards">
 
@@ -49,16 +51,9 @@ $location_name    = get_the_title();
           <div class="gear-card__body">
             <h3 class="gear-card__title">Delivery</h3>
             <ul class="gear-card__list">
-              <?php if ( have_rows( 'delivery_bullets' ) ) : ?>
-                <?php while ( have_rows( 'delivery_bullets' ) ) : the_row(); ?>
-                <li><?php echo esc_html( get_sub_field( 'bullet' ) ); ?></li>
-                <?php endwhile; ?>
-              <?php else : ?>
-                <li>Delivered to your hotel or rental</li>
-                <li>Personalized fitting included</li>
-                <li>We pick it up when you're done</li>
-                <li>2-day minimum may apply</li>
-              <?php endif; ?>
+              <?php while ( have_rows( 'delivery_bullets' ) ) : the_row(); ?>
+              <li><?php echo esc_html( get_sub_field( 'bullet' ) ); ?></li>
+              <?php endwhile; ?>
             </ul>
             <?php if ( $delivery_cta_url ) : ?>
             <a href="<?php echo esc_url( $delivery_cta_url ); ?>" class="btn btn-primary gear-card__cta">Book Now</a>
@@ -81,14 +76,9 @@ $location_name    = get_the_title();
             <h3 class="gear-card__title">Shop Pickup</h3>
             <ul class="gear-card__list">
               <li>Visit our local shop in <?php echo esc_html( $location_name ); ?></li>
-              <?php if ( have_rows( 'pickup_bullets' ) ) : ?>
-                <?php while ( have_rows( 'pickup_bullets' ) ) : the_row(); ?>
-                <li><?php echo esc_html( get_sub_field( 'bullet' ) ); ?></li>
-                <?php endwhile; ?>
-              <?php else : ?>
-                <li>Walk-in or scheduled fittings</li>
-                <li>Access to retail gear &amp; accessories</li>
-              <?php endif; ?>
+              <?php while ( have_rows( 'pickup_bullets' ) ) : the_row(); ?>
+              <li><?php echo esc_html( get_sub_field( 'bullet' ) ); ?></li>
+              <?php endwhile; ?>
             </ul>
             <?php if ( $pickup_cta_url ) : ?>
             <a href="<?php echo esc_url( $pickup_cta_url ); ?>" class="btn btn-primary gear-card__cta">Book Now</a>

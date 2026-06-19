@@ -1562,7 +1562,7 @@
                             "type": "image",
                             "instructions": "",
                             "required": false,
-                            "conditional_logic": false,
+                            "conditional_logic": [[{"field":"field_gear_delivery_enabled","operator":"==","value":"1"}]],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -1587,7 +1587,7 @@
                             "type": "url",
                             "instructions": "",
                             "required": false,
-                            "conditional_logic": false,
+                            "conditional_logic": [[{"field":"field_gear_delivery_enabled","operator":"==","value":"1"}]],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -1706,7 +1706,7 @@
                             "type": "repeater",
                             "instructions": "Optional. Leave empty to use the default delivery bullets.",
                             "required": false,
-                            "conditional_logic": false,
+                            "conditional_logic": [[{"field":"field_gear_delivery_enabled","operator":"==","value":"1"}]],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -1844,6 +1844,6 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1781888923,
+    "modified": 1781889999,
     "local_file": "\/Users\/lauralong\/Local Sites\/blacktiebikes-sent\/app\/public\/wp-content\/themes\/blacktieskis\/acf-json\/group_5bbc57f04d44c.json"
 }
