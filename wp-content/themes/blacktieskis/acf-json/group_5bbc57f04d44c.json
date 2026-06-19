@@ -1677,6 +1677,114 @@
                             "new_lines": "",
                             "maxlength": "",
                             "placeholder": ""
+                        },
+                        {
+                            "key": "field_gear_subheading",
+                            "label": "Subheading",
+                            "name": "gear_subheading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional. Defaults to the standard subheading if left blank.",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_gear_delivery_bullets",
+                            "label": "Delivery Bullets",
+                            "name": "delivery_bullets",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Optional. Leave empty to use the default delivery bullets.",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "button_label": "Add bullet",
+                            "min": 0,
+                            "max": 0,
+                            "rows_per_page": 20,
+                            "collapsed": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_gear_delivery_bullet",
+                                    "label": "Bullet",
+                                    "name": "bullet",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_gear_delivery_bullets"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_gear_pickup_bullets",
+                            "label": "Shop Pickup Bullets",
+                            "name": "pickup_bullets",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Optional. These appear after the automatic \"Visit our local shop in {location}\" line. Leave empty to use the default pickup bullets.",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "button_label": "Add bullet",
+                            "min": 0,
+                            "max": 0,
+                            "rows_per_page": 20,
+                            "collapsed": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_gear_pickup_bullet",
+                                    "label": "Bullet",
+                                    "name": "bullet",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_gear_pickup_bullets"
+                                }
+                            ]
                         }
                     ],
                     "min": "",
@@ -1736,6 +1844,6 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1781593011,
+    "modified": 1781888923,
     "local_file": "\/Users\/lauralong\/Local Sites\/blacktiebikes-sent\/app\/public\/wp-content\/themes\/blacktieskis\/acf-json\/group_5bbc57f04d44c.json"
 }
