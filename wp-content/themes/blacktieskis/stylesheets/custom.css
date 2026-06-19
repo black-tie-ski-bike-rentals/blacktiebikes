@@ -3055,19 +3055,19 @@ html body .mod-book-ski .btn-outline-primary:focus {
 /* WW-22: step 3/4/5 vertical positioning */
 @media (min-width: 992px) {
   .step-item.animation3 {
-    margin-top: -150px;
+    margin-top: -190px;
   }
   .step-item.animation4 {
-    margin-top: 100px;
+    margin-top: 50px;
   }
   .step-item.animation5 {
-    margin-top: -115px;
+    margin-top: -150px;
   }
 }
 
 @media (max-width: 1199px) {
   .step-item.animation4 {
-    margin-top: 70px;
+    margin-top: 30px;
   }
 }
 
