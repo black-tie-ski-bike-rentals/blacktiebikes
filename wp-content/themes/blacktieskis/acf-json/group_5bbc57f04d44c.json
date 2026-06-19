@@ -627,7 +627,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "message": "Pull items from <a href=\"https:\/\/btshomepage.wpengine.com\/wp-admin\/edit.php\" target=\"_blank\">Posts<\/a> page.",
+                            "message": "Pull items from <a href=\"https://btshomepage.wpengine.com/wp-admin/edit.php\" target=\"_blank\">Posts</a> page.",
                             "new_lines": "wpautop",
                             "esc_html": 0
                         }
@@ -1821,6 +1821,166 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_vp_heading",
+                            "label": "Heading",
+                            "name": "vp_heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_vp_subheading",
+                            "label": "Subheading",
+                            "name": "vp_subheading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_vp_prop1_title",
+                            "label": "Prop 1 Title",
+                            "name": "vp_prop1_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Icon is fixed in the theme (not editable).",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_vp_prop1_desc",
+                            "label": "Prop 1 Description",
+                            "name": "vp_prop1_desc",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 2,
+                            "default_value": "",
+                            "new_lines": "",
+                            "maxlength": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_vp_prop2_title",
+                            "label": "Prop 2 Title",
+                            "name": "vp_prop2_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_vp_prop2_desc",
+                            "label": "Prop 2 Description",
+                            "name": "vp_prop2_desc",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 2,
+                            "default_value": "",
+                            "new_lines": "",
+                            "maxlength": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_vp_prop3_title",
+                            "label": "Prop 3 Title",
+                            "name": "vp_prop3_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_vp_prop3_desc",
+                            "label": "Prop 3 Description",
+                            "name": "vp_prop3_desc",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 2,
+                            "default_value": "",
+                            "new_lines": "",
+                            "maxlength": "",
+                            "placeholder": ""
+                        },
+                        {
                             "key": "field_qvp_cta_url",
                             "label": "Book Now CTA URL",
                             "name": "cta_url",
@@ -1868,6 +2028,6 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1781890320,
-    "local_file": "\/Users\/lauralong\/Local Sites\/blacktiebikes-sent\/app\/public\/wp-content\/themes\/blacktieskis\/acf-json\/group_5bbc57f04d44c.json"
+    "modified": 1781893333,
+    "local_file": "/Users/lauralong/Local Sites/blacktiebikes-sent/app/public/wp-content/themes/blacktieskis/acf-json/group_5bbc57f04d44c.json"
 }

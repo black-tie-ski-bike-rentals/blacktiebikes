@@ -3,65 +3,58 @@
  * WW-11: Quick Value Props — "The Black Tie Experience"
  *
  * Shared section placed directly below the hero on every location page.
- * Replaces the old "How do I get my gear?" section.
  *
  * ACF layout key: quick_value_props
- * Sub-fields:
+ * Sub-fields (editable per location):
+ *   vp_heading, vp_subheading (text)
+ *   vp_prop1_title/desc, vp_prop2_title/desc, vp_prop3_title/desc
  *   cta_url (url) — Book Now destination
  *
- * Icons are inline SVG (svgrepo: truck / bike-sport-travel / mountain-climb),
- * cleaned to use currentColor so they theme via CSS. Files in images/value-props/.
+ * Icons are NOT editable — inline SVG from images/value-props/ (pin / bike /
+ * mountain), cleaned to currentColor so they theme via CSS. One fixed icon per slot.
  */
 
+$heading       = get_sub_field( 'vp_heading' );
+$subheading    = get_sub_field( 'vp_subheading' );
 $cta_url       = get_sub_field( 'cta_url' );
 $location_name = get_the_title();
 
 $icon_dir = get_template_directory() . '/images/value-props/';
 $icons    = array(
-	'truck' => file_get_contents( $icon_dir . 'truck.svg' ),
-	'bike'  => file_get_contents( $icon_dir . 'bike.svg' ),
-	'peak'  => file_get_contents( $icon_dir . 'mountain.svg' ),
+	'pin'  => file_get_contents( $icon_dir . 'pin.svg' ),
+	'bike' => file_get_contents( $icon_dir . 'bike.svg' ),
+	'peak' => file_get_contents( $icon_dir . 'mountain.svg' ),
 );
 
 $props = array(
-	array(
-		'icon'  => 'truck',
-		'title' => 'Delivery or Store Pickup',
-		'desc'  => 'Gear fitted and ready — delivered to your stay or picked up in-store.',
-	),
-	array(
-		'icon'  => 'bike',
-		'title' => 'Premium Equipment',
-		'desc'  => 'High-quality bikes and gear for every skill level.',
-	),
-	array(
-		'icon'  => 'peak',
-		'title' => 'Local Experts',
-		'desc'  => 'Get personalized recommendations from our ' . $location_name . ' team.',
-	),
+	array( 'icon' => 'pin',  'title' => get_sub_field( 'vp_prop1_title' ), 'desc' => get_sub_field( 'vp_prop1_desc' ) ),
+	array( 'icon' => 'bike', 'title' => get_sub_field( 'vp_prop2_title' ), 'desc' => get_sub_field( 'vp_prop2_desc' ) ),
+	array( 'icon' => 'peak', 'title' => get_sub_field( 'vp_prop3_title' ), 'desc' => get_sub_field( 'vp_prop3_desc' ) ),
 );
 ?>
 
 <section class="module mod-value-props">
   <div class="container">
 
-    <h2 class="value-props__heading text-center">The Black Tie Experience</h2>
+    <div class="value-props__header">
+      <div class="value-props__heading-block">
+        <?php if ( $heading ) : ?><h2 class="value-props__heading"><?php echo esc_html( $heading ); ?></h2><?php endif; ?>
+        <?php if ( $subheading ) : ?><p class="value-props__sub"><?php echo esc_html( $subheading ); ?></p><?php endif; ?>
+      </div>
+      <?php if ( $cta_url ) : ?>
+      <a href="<?php echo esc_url( $cta_url ); ?>" class="btn value-props__cta">Book Now</a>
+      <?php endif; ?>
+    </div>
 
     <div class="value-props__grid">
       <?php foreach ( $props as $p ) : ?>
       <div class="value-prop">
         <div class="value-prop__icon"><?php echo $icons[ $p['icon'] ]; ?></div>
-        <h3 class="value-prop__title"><?php echo esc_html( $p['title'] ); ?></h3>
-        <p class="value-prop__desc"><?php echo esc_html( $p['desc'] ); ?></p>
+        <?php if ( $p['title'] ) : ?><h3 class="value-prop__title"><?php echo esc_html( $p['title'] ); ?></h3><?php endif; ?>
+        <?php if ( $p['desc'] ) : ?><p class="value-prop__desc"><?php echo esc_html( $p['desc'] ); ?></p><?php endif; ?>
       </div>
       <?php endforeach; ?>
     </div>
-
-    <?php if ( $cta_url ) : ?>
-    <div class="value-props__cta text-center">
-      <a href="<?php echo esc_url( $cta_url ); ?>" class="btn">Book Now</a>
-    </div>
-    <?php endif; ?>
 
   </div>
 </section>

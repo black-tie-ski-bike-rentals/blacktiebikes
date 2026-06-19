@@ -3197,8 +3197,19 @@ html body .mod-book-ski .btn-outline-primary:focus {
   padding-left: clamp(20px, 10%, 120px);
   padding-right: clamp(20px, 10%, 120px);
 }
-.value-props__heading {
+.value-props__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
   margin-bottom: 40px;
+}
+.value-props__heading {
+  margin-bottom: 0;
+}
+.value-props__sub {
+  margin: 8px 0 0;
+  color: var(--color-text);
 }
 .value-props__grid {
   display: flex;
@@ -3215,8 +3226,8 @@ html body .mod-book-ski .btn-outline-primary:focus {
   border-right: 3px solid #000;
 }
 .value-prop__icon {
-  width: 56px;
-  height: 56px;
+  width: 80px;
+  height: 80px;
   margin: 0 auto 20px;
   color: var(--color-green);
 }
@@ -3230,15 +3241,20 @@ html body .mod-book-ski .btn-outline-primary:focus {
 }
 .value-prop__desc {
   margin-bottom: 0;
-  color: var(--color-text);
+  color: #8b8b8b;
 }
 .value-props__cta {
-  margin-top: 40px;
+  flex-shrink: 0;
 }
 
 @media (max-width: 767px) {
   .mod-value-props {
     padding: 50px 0;
+  }
+  .value-props__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
   }
   .value-props__grid {
     flex-direction: column;
