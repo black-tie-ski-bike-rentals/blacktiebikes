@@ -40,7 +40,10 @@
     var targetId = $(this).data('id');
     if ( !targetId || !$(targetId).hasClass('popup-v2') ) return;
     e.preventDefault();
-    window.location.hash = targetId;
+    // Use replaceState (not location.hash) so the browser doesn't scroll the
+    // page down to the #careers element in the footer — that jump is what made
+    // the page appear scrolled to the bottom when the popup closed.
+    history.replaceState(null, '', targetId);
     $('html').addClass('popup-open popup-animation');
     $(targetId).addClass('show');
     $(targetId).find('.popup-form').show();

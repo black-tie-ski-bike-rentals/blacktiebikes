@@ -766,6 +766,7 @@ html.popup-animation .popup-careers.popup-inner,
 .popup-careers.popup-inner {
   padding-top: 40px !important;
   padding-bottom: 15px !important;
+  background: #fff !important;
 }
 .popup-careers.popup-inner .popup-is-close-v2 {
   top: 25px !important;
@@ -777,6 +778,9 @@ html.popup-animation .popup-careers.popup-inner,
   }
 }
 @media (max-width: 767px) {
+  .popup-careers.popup-inner {
+    padding: 30px !important;
+  }
   .popup-careers .career-content p {
     font-size: 0.9rem;
   }
@@ -1990,7 +1994,7 @@ html.html-popup-content .popup-inner > p a:hover {
 /* Background photo */
 .btb-hero__photo {
   position: absolute;
-  top: -225px;
+  top: -255px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -2001,7 +2005,7 @@ html.html-popup-content .popup-inner > p a:hover {
 }
 @media (min-width: 992px) {
   .btb-hero__photo {
-    top: calc(35px - 20vw);
+    top: calc(-90px - 20vw);
   }
 }
 
@@ -2048,13 +2052,13 @@ html.html-popup-content .popup-inner > p a:hover {
 .btb-hero__content {
   position: relative;
   z-index: 3;
-  padding-top: 90px;
+  padding-top: 150px;
   text-align: left;
 }
 @media (min-width: 992px) {
   .btb-hero__content {
-    padding-top: calc(16px + 7vw);
-    padding-left: 100px;
+    padding-top: calc(58px + 9vw);
+    padding-left: 30px;
     padding-right: 100px;
   }
 }
