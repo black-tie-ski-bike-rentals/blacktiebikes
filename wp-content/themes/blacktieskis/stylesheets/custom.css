@@ -507,6 +507,11 @@ body div.gform_wrapper div.gform_body select {
 .step-item-content p {
   padding: 0;
 }
+/* Step descriptions match the subheading color (steps 1–4 and step 5). */
+.step-item-content p,
+.step-item-image-cont p {
+  color: #333;
+}
 .main-menu-ul li a {
   color: #000 !important;
   padding: 5px;
@@ -2859,7 +2864,7 @@ html.html-popup-content .popup-inner > p a:hover {
   padding: 0;
   margin-bottom: 12px;
   text-transform: uppercase !important;
-  color: #568f3b;
+  color: #282828;
 }
 .steps-headline h3 {
   /* Match the hero subtitle size */
@@ -2891,7 +2896,9 @@ html.html-popup-content .popup-inner > p a:hover {
   margin: 30px auto 0 !important;
 }
 .animation5 .step-item-image-cont h2 {
-  color: inherit;
+  /* Match the global heading color; inherit fell back to near-black because
+     the parent is a <div>, not a heading. */
+  color: #282828;
 }
 
 /* WW-20: newsletter callout */
