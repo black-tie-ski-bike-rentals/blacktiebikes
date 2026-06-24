@@ -13,7 +13,16 @@ $hero_image = get_field( 'svc_hero_image' );
 $hero_head  = get_field( 'svc_hero_heading' );
 $hero_sub   = get_field( 'svc_hero_subheading' );
 $intro      = get_field( 'svc_intro' );
+$products   = get_field( 'svc_products' );
+$faqs       = get_field( 'svc_faqs' );
 $book_url   = 'https://booknow.blacktiebikes.com/reservations/step1';
+
+// Page is "empty" until it has an intro, a product, or FAQs (the hero always
+// renders). Empty -> show the "Content coming soon" notice; the moment any of
+// those is filled, the notice disappears and the page shows whatever's there.
+$has_body = ( '' !== trim( wp_strip_all_tags( (string) $intro ) ) )
+	|| ( is_array( $products ) && count( $products ) )
+	|| ( '' !== trim( wp_strip_all_tags( (string) $faqs ) ) );
 ?>
 
 <?php /* ── Hero ─────────────────────────────────────────────── */ ?>
@@ -25,6 +34,16 @@ $book_url   = 'https://booknow.blacktiebikes.com/reservations/step1';
     <a href="<?php echo esc_url( $book_url ); ?>" class="btn">Book Now</a>
   </div>
 </section>
+
+<?php /* ── Content coming soon (only when the body is empty) ── */ ?>
+<?php if ( ! $has_body ) : ?>
+<section class="module mod-service-comingsoon">
+  <div class="container text-center">
+    <h2 class="service-comingsoon__heading">Content Coming Soon</h2>
+    <p class="service-comingsoon__text">We're currently updating this page and will have more information available soon. Please check back later.</p>
+  </div>
+</section>
+<?php endif; ?>
 
 <?php /* ── Intro (centered, 70%) ────────────────────────────── */ ?>
 <?php if ( ! empty( $intro ) ) : ?>

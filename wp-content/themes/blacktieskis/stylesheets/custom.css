@@ -3360,6 +3360,18 @@ html body .mod-book-ski .btn-outline-primary:focus {
   margin-bottom: 32px;
 }
 /* FAQ accordion itself uses the existing .accordion-list styles */
+.mod-service-comingsoon {
+  padding: 80px 0;
+}
+.service-comingsoon__heading {
+  font-size: 1.875rem;
+  margin-bottom: 12px;
+}
+.service-comingsoon__text {
+  max-width: 480px;
+  margin: 0 auto;
+  color: var(--color-text);
+}
 @media (min-width: 768px) and (max-width: 991px) {
   .service-product {
     flex: 0 0 calc((100% - 36px) / 2);

@@ -63,16 +63,22 @@ function blacktieskis_main_menu()
 $location_menu_slug  = '';
 $location_page_title = '';
 
-if ( is_page_template( 'page-location.php' ) ) {
-	$location_page_title = get_the_title();
-	$location_menu_slug  = 'btb-' . sanitize_title( $location_page_title ) . '-nav';
-} elseif ( is_page() ) {
+if ( is_page() ) {
+	// Prefer a location ANCESTOR's menu, so a page nested under a location (e.g. a
+	// bike-shop /service page — itself on page-location.php) shows the PARENT
+	// location's nav instead of treating its own title ("Service") as a location.
 	foreach ( get_ancestors( get_the_ID(), 'page' ) as $ancestor_id ) {
 		if ( get_page_template_slug( $ancestor_id ) === 'page-location.php' ) {
 			$location_page_title = get_the_title( $ancestor_id );
-			$location_menu_slug  = 'btb-' . sanitize_title( $location_page_title ) . '-nav';
 			break;
 		}
+	}
+	// No location ancestor: if this page itself is a location, use its own title.
+	if ( ! $location_page_title && is_page_template( 'page-location.php' ) ) {
+		$location_page_title = get_the_title();
+	}
+	if ( $location_page_title ) {
+		$location_menu_slug = 'btb-' . sanitize_title( $location_page_title ) . '-nav';
 	}
 }
 
