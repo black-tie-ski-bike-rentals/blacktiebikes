@@ -160,7 +160,8 @@ if ( $location_page_title ) {
  * sub-menu lists every other visible location from the taxonomy.
  */
 function btb_location_picker_li( string $current_location_name ): string {
-	$hidden_slugs = [ 'north-tahoe' ];
+	// Breckenridge: not operating this season — hidden from the location switcher.
+	$hidden_slugs = [ 'north-tahoe', 'breckenridge' ];
 
 	$all_terms = get_terms( [ 'taxonomy' => 'category_state_location', 'hide_empty' => false ] );
 	$all_terms = is_wp_error( $all_terms ) ? [] : (array) $all_terms;
