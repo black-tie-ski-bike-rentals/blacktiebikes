@@ -445,11 +445,12 @@ function blacktieskis_gear_bullet_html( $text ) {
 
 	// Must start with a street number ("123 Main St ...").
 	if ( preg_match( '/^\d{1,6}\s+\S/', $text ) ) {
-		$suffixes = 'st|street|ave|avenue|rd|road|blvd|boulevard|dr|drive|ln|lane|way|ct|court|hwy|highway|pkwy|parkway|pl|place|ter|terrace|cir|circle|trl|trail|sq|square|loop|row|run|pass|pt|point|spur';
+		$suffixes = 'st|street|ave|avenue|rd|road|blvd|boulevard|dr|drive|ln|lane|way|ct|court|hwy|highway|pkwy|parkway|pl|place|ter|terrace|cir|circle|trl|trail|sq|square|loop|row|run|pass|pt|point|spur|crescent|cres|close|grove|gate|gates|mews|common|commons|green|crossing|landing|villas|bay|cove|gardens|heights|hill|hollow|knoll|meadow|ridge|vista';
 
 		if (
-			preg_match( '/\b(?:' . $suffixes . ')\b\.?/i', $text )   // a street-type word, or
-			|| preg_match( '/\b\d{5}(?:-\d{4})?\b/', $text )         // a US ZIP code
+			preg_match( '/\b(?:' . $suffixes . ')\b\.?/i', $text )                  // a street-type word, or
+			|| preg_match( '/\b\d{5}(?:-\d{4})?\b/', $text )                        // a US ZIP code, or
+			|| preg_match( '/\b[A-Za-z]\d[A-Za-z]\s?\d[A-Za-z]\d\b/', $text )       // a Canadian postal code
 		) {
 			$looks_like_address = true;
 		}
