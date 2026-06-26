@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" id="htmlid">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, viewport-fit=cover" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 	<?php blacktieskis_favicon(); ?>	
 	<link rel="apple-touch-icon" href="<?php echo blacktieskis_apple_touch_icon(); ?>">
     <meta name="apple-mobile-web-app-capable" content="yes">

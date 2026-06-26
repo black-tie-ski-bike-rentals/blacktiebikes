@@ -2073,19 +2073,23 @@ html.html-popup-content .popup-inner > p a:hover {
   cursor: pointer;
 }
 
-/* H1 */
+/* H1 — floor lowered so it keeps scaling down on narrow phones (was 1.8rem,
+   which pinned the headline oversized on small/zoomed screens). !important
+   beats any inline font-size the WP editor injects into the rich-text field.
+   At widths >= ~457px the computed size is unchanged from before. */
 .btb-hero__content h1 {
   color: #fff;
-  font-size: clamp(1.8rem, calc(4px + 4.2vw), 4rem);
+  font-size: clamp(1.45rem, calc(4px + 4.2vw), 4rem) !important;
   line-height: 1.15;
   margin: 0 0 15px;
 }
 
-/* H2 — override global uppercase + italic from <em> */
+/* H2 — override global uppercase + italic from <em>; !important also guards
+   against editor-injected inline font-size */
 .btb-hero__content h2,
 .btb-hero__content h2 em {
   color: #fff;
-  font-size: clamp(0.8rem, calc(6px + 0.69vw), 1rem);
+  font-size: clamp(0.8rem, calc(6px + 0.69vw), 1rem) !important;
   font-weight: 400;
   line-height: 1.4;
   font-style: normal !important;
