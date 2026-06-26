@@ -3520,13 +3520,13 @@ html body .mod-book-ski .btn-outline-primary:focus {
   text-shadow: none !important;
 }
 
-/* Submit button — global button styling (WW-4), left-aligned to line up with
-   the form fields. The Gravity "gravity-theme" footer is a flex container, so
-   set justify-content as well as text-align to cover both layout modes. */
+/* Submit button — global button styling (WW-4), centred. The Gravity
+   "gravity-theme" footer is a flex container, so set justify-content as well
+   as text-align to cover both layout modes. */
 .page-id-33645 .mod-about .gform_footer,
 .page-id-33645 .mod-about .gform-footer {
-  text-align: left !important;
-  justify-content: flex-start !important;
+  text-align: center !important;
+  justify-content: center !important;
 }
 .page-id-33645 .mod-about .gform_button {
   display: inline-block;
