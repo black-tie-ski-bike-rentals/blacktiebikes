@@ -21,8 +21,10 @@
 
 $gear_subheading  = get_sub_field( 'gear_subheading' );
 $delivery_enabled = get_sub_field( 'delivery_enabled' );
+$delivery_heading = get_sub_field( 'delivery_heading' ) ?: 'Delivery';
 $delivery_image   = get_sub_field( 'delivery_image' );
 $delivery_cta_url = get_sub_field( 'delivery_cta_url' );
+$pickup_heading   = get_sub_field( 'pickup_heading' ) ?: 'Shop Pickup';
 $pickup_image     = get_sub_field( 'pickup_image' );
 $pickup_cta_url   = get_sub_field( 'pickup_cta_url' );
 $location_heading = get_sub_field( 'location_heading' );
@@ -49,7 +51,7 @@ $location_name    = get_the_title();
           </div>
           <?php endif; ?>
           <div class="gear-card__body">
-            <h3 class="gear-card__title">Delivery</h3>
+            <h3 class="gear-card__title"><?php echo esc_html( $delivery_heading ); ?></h3>
             <ul class="gear-card__list">
               <?php while ( have_rows( 'delivery_bullets' ) ) : the_row(); ?>
               <li><?php echo blacktieskis_gear_bullet_html( get_sub_field( 'bullet' ) ); ?></li>
@@ -73,7 +75,7 @@ $location_name    = get_the_title();
           </div>
           <?php endif; ?>
           <div class="gear-card__body">
-            <h3 class="gear-card__title">Shop Pickup</h3>
+            <h3 class="gear-card__title"><?php echo esc_html( $pickup_heading ); ?></h3>
             <ul class="gear-card__list">
               <?php if ( have_rows( 'pickup_bullets' ) ) : ?>
                 <?php while ( have_rows( 'pickup_bullets' ) ) : the_row(); ?>

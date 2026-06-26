@@ -627,7 +627,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "message": "Pull items from <a href=\"https://btshomepage.wpengine.com/wp-admin/edit.php\" target=\"_blank\">Posts</a> page.",
+                            "message": "Pull items from <a href=\"https:\/\/btshomepage.wpengine.com\/wp-admin\/edit.php\" target=\"_blank\">Posts<\/a> page.",
                             "new_lines": "wpautop",
                             "esc_html": 0
                         }
@@ -1555,6 +1555,34 @@
                             "ui_off_text": ""
                         },
                         {
+                            "key": "field_gear_delivery_heading",
+                            "label": "Option 1 Heading",
+                            "name": "delivery_heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Heading for the first card. Leave blank to show \"Delivery\".",
+                            "required": false,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_gear_delivery_enabled",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "Delivery",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
                             "key": "field_gear_delivery_image",
                             "label": "Delivery Image",
                             "name": "delivery_image",
@@ -1611,6 +1639,26 @@
                             },
                             "default_value": "",
                             "placeholder": ""
+                        },
+                        {
+                            "key": "field_gear_pickup_heading",
+                            "label": "Option 2 Heading",
+                            "name": "pickup_heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Heading for the second card. Leave blank to show \"Shop Pickup\".",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "Shop Pickup",
+                            "prepend": "",
+                            "append": ""
                         },
                         {
                             "key": "field_gear_pickup_image",
@@ -2028,6 +2076,6 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1781893333,
-    "local_file": "/Users/lauralong/Local Sites/blacktiebikes-sent/app/public/wp-content/themes/blacktieskis/acf-json/group_5bbc57f04d44c.json"
+    "modified": 1782489211,
+    "local_file": "\/Users\/lauralong\/Local Sites\/blacktiebikes-sent\/app\/public\/wp-content\/themes\/blacktieskis\/acf-json\/group_5bbc57f04d44c.json"
 }
