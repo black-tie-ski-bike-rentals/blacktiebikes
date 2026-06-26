@@ -61,6 +61,7 @@
   // Skip if the popup is already open — links inside it should open normally in a new tab.
   $(document).on('click', 'a[href*="booknow.blacktiebikes.com"], a[href*="blackdiamondbanff.com/book-now"], a[href*="checkfront.com/reserve"]', function (e) {
     if ($(this).hasClass('popup-is-open')) return;
+    if ($(this).hasClass('gear-card__cta')) return;  // WW-12: Getting Your Gear buttons use their own per-option link, not the popup
     if ($('html').hasClass('html-popup-content')) return;
     e.preventDefault();
     $('#boonowbutton').trigger('click');
