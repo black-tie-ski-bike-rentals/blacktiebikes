@@ -39,7 +39,7 @@ $location_name = get_the_title();
           <div class="explore-cat-header">
             <span class="explore-cat-label"><?php echo esc_html( $cat_label ); ?></span>
             <?php if ( $cat_cta_text && $cat_cta_url ) : ?>
-              <a href="<?php echo esc_url( $cat_cta_url ); ?>" class="explore-cat-cta"><?php echo $pkg_count === 1 ? 'Learn More' : esc_html( $cat_cta_text ); ?> &rarr;</a>
+              <a href="<?php echo esc_url( $cat_cta_url ); ?>" class="explore-cat-cta"><?php echo esc_html( $cat_cta_text ); ?> &rarr;</a>
             <?php endif; ?>
           </div>
 

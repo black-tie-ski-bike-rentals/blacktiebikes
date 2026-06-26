@@ -1376,7 +1376,7 @@
                                     "name": "cat_cta_text",
                                     "aria-label": "",
                                     "type": "text",
-                                    "instructions": "e.g. View All Bikes. Leave empty for single-package categories (CTA shows on the card instead).",
+                                    "instructions": "Header link label, e.g. \"View All Bikes\". Optional — leave blank to hide the header link; the cards stay clickable via the CTA URL.",
                                     "required": false,
                                     "conditional_logic": false,
                                     "wrapper": {
@@ -1947,6 +1947,6 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1782496087,
+    "modified": 1782513976,
     "local_file": "\/Users\/lauralong\/Local Sites\/blacktiebikes-sent\/app\/public\/wp-content\/themes\/blacktieskis\/acf-json\/group_5bbc57f04d44c.json"
 }
