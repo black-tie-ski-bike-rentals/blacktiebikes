@@ -3562,3 +3562,15 @@ html body .mod-book-ski .btn-outline-primary:focus {
   line-height: 2;
   margin-bottom: 1.25rem;
 }
+
+/* WW-28 Contact (mobile) — the 15% side padding (form + intro copy) squeezes
+   the content too narrow on phones; drop it so they use the full column width.
+   Bootstrap's column gutters still keep the inputs off the screen edges. */
+@media (max-width: 767px) {
+  #gform_1,
+  .page-id-33645 .mod-about .home-jumbotron .col-sm-12 > p:nth-child(1),
+  .page-id-33645 .mod-about .home-jumbotron .col-sm-12 > p:nth-child(2) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
